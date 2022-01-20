@@ -1,0 +1,30 @@
+{
+  "sqrm": {
+    "SQ_L00003": " Maintenance Infomation",
+    "SQ_L00004": "Menu description",
+    "SQ_L00005": "Menu",
+    "SQ_L00006": "Submenu",
+    "SQ_L00007": "Summary",
+    "SQ_L00008": "HOME",
+    "SQ_L00009": "計画書起案",
+    "SQ_L00010": "新規作成",
+    "SQ_L00011": "一時保存一覧",
+    "SQ_L00012": "処理待ち",
+    "SQ_L00013": "検索",
+    "SQ_L00014": "条件検索",
+    "SQ_L00015": "データDL",
+    "SQ_L00016": "MonthlyReport",
+    "SQ_L00017": "各種設定",
+    "SQ_L00018": "代理設定",
+    "SQ_L00019": "事務局専用",
+    "SQ_L00020": "承認者設定",
+    "SQ_L00021": "コメント依頼先設定",
+    "SQ_L00022": "配布先設定",
+    "SQ_L00023": "閲覧制御",
+    "SQ_L00024": "管理者専用",
+    "SQ_L00025": "マスター管理",
+    "SQ_L00026": "アクセス制御",
+    "SQ_L00027": "フロー概要",
+    "SQ_M00017": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+  }
+}

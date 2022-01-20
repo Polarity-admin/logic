@@ -1,0 +1,296 @@
+<div class="reception page-content">
+  <div class="main-screen">
+    <p class="main-screen-title">{{ "sqrm.SQ_L02001" | translate }}</p>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-title">
+      <p>{{ "sqrm.SQ_L02002" | translate }}</p>
+    </div>
+    <div class="sub-screen-container">
+      <table>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02003" | translate }}</p></td>
+          <td><label>test</label></td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02004" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02005" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02006" | translate }}</p></td>
+          <td colspan="3">
+            <input type="radio" class="radio" name="selection" style="width: auto;text-align: left;vertical-align: left;">{{ "sqrm.SQ_L02007" | translate }}
+            <input type="radio" class="radio" name="selection" style="width: auto;text-align: left;vertical-align: left;">{{ "sqrm.SQ_L02008" | translate }}
+            <input type="radio" class="radio" name="selection" style="width: auto;text-align: left;vertical-align: left;">{{ "sqrm.SQ_L02009" | translate }}</td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02010" | translate }}</p></td>
+          <td>
+            <input type="checkbox" class="checkbox" style="width: auto;text-align: left;vertical-align: left;">
+          </td>
+        </tr>
+        <tr>
+          <td class="label-cell"> 
+            <p class="required">{{ "sqrm.SQ_L02011" | translate }}</p>
+          </td>
+          <td> <wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
+          <td  class="label-cell"><p class="required">{{ "sqrm.SQ_L02012" | translate }}</p></td>
+          <td colspan="2"><select><option>-</option></select>&nbsp;
+          <input type="text" class="text" style="width: calc(80%);"></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02013" | translate }}</p></td>
+          <td><select><option>-</option></select></td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02014" | translate }}</p></td>
+          <td><select><option>-</option></select></td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02015" | translate }}</p></td>
+          <td> <wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02016" | translate }}</p></td>
+          <td> <wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02017" | translate }}</p></td>
+          <td> <wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02018" | translate }}</p></td>
+          <td> <wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02019" | translate }}</button></td>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02020" | translate }}</p></td>
+          <td> <wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02021" | translate }}</p></td>
+          <td> <wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
+        </tr>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02022" | translate }}</p></td>
+          <td colspan="5"><input type="text" readonly="readonly" class="text" class="text" style="width: 80%;" />&nbsp;
+          <select><option>-</option></select>&nbsp;
+          <button type="button" class="btn btn-secondary" (click)="showSelectCustomerDialog()">{{ "sqrm.SQ_L02023" | translate }}</button></td>
+        </tr>x
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02024" | translate }}</p></td>
+          <td colspan="2"><input type="text" readonly="readonly" class="text" class="text" style="width: calc(100% - 18px);"></td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02025" | translate }}</p></td>
+          <td colspan="2"><input type="text" readonly="readonly" class="text" class="text" style="width: 30%;">&nbsp;
+          <input type="text" readonly="readonly" class="text" style="width: calc(60% - 18px);"></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02026" | translate }}</p></td>
+          <td colspan="2"><input type="text" readonly="readonly" class="text" class="text" style="width: calc(100% - 18px);"></td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02027" | translate }}</p></td>
+          <td colspan="2"><input type="text" readonly="readonly" class="text" class="text" style="width: calc(100% - 18px);">
+        </tr>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02028" | translate }}</p></td>
+          <td>IS</td>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02029" | translate }}</p></td>
+          <td><select><option>-</option></select></td>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02030" | translate }}</p></td>
+          <td><select><option>-</option></select></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02031" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: 40%;">&nbsp;
+          <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02032" | translate }}</button></td>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02033" | translate }}
+            <button type="button" (click)="showProductInformationDialog()">{{ "sqrm.SQ_L02034" | translate }}</button>
+          </p>
+          </td>
+          <td><input type="text" class="text" style="width: 40%;">&nbsp;
+            <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02035" | translate }}</button></td>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02036" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02037" | translate }}</p></td>
+          <td colspan="2"><select><option>-</option></select>&nbsp;
+            <select><option>-</option></select>&nbsp;
+            <input type="text" class="text" style="width: 70%;"></td>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02038" | translate }}</p></td>
+          <td colspan="2"><input type="text" class="text" style="width: calc(100% - 18px);">
+        </tr>
+        <tr>
+          <th rowspan="2" style="background-color: #eaeaea;"><p>{{ "sqrm.SQ_L02039" | translate }}</p></th>
+          <td colspan="2" rowspan="2"><textarea type ="text" rows ="6" cols="90%" max=500 style="overflow-y: scroll;"></textarea></td>
+          <td><button type="button" class="btn btn-secondary" (click)="showOccurenceConditionDialog()">{{ "sqrm.SQ_L02040" | translate }}</button></td>
+          <td colspan="2"><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+        </tr>
+        <tr>
+          <td><p class="required">{{ "sqrm.SQ_L02041" | translate }}</p></td>
+          <td colspan="2"><select><option>-</option></select>&nbsp;
+          <input type="text" class="text" style="width: 80%;"></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02042" | translate }}</p></td>
+          <td colspan="5">
+            <div class="file-upload">
+            <input type="file" style="width: 80%;"/>
+            <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02044" | translate }}</button>
+          </div>
+          </td>
+        </tr>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02045" | translate }}</p></td>
+          <td>/&nbsp;<select><option>-</option></select>&nbsp;/&nbsp;<select><option>-</option></select></td>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02046" | translate }}</p></td>
+          <td><select><option>SCK ID</option></select></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02047" | translate }}</p></td>
+          <td><select><option>-</option></select>&nbsp;/&nbsp;<select><option>-</option></select></td>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L02048" | translate }}</p></td>
+          <td><select><option>-</option></select></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02049" | translate }}</p></td>
+          <td><select><option>-</option></select>&nbsp;/&nbsp;<select><option>-</option></select>&nbsp;/&nbsp;<select><option>-</option></select></td>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L02050" | translate }}</p></td>
+          <td><select><option>-</option></select></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-title">
+      <p class="required">{{ "sqrm.SQ_L02051" | translate }}</p>
+      <div class="sub-screen-title-right" style="float: right;">
+      <button type="button" class="btn">{{ "sqrm.SQ_L02148" | translate }}</button>&nbsp;
+      <button type="button" class="btn">{{ "sqrm.SQ_L02149" | translate }}</button>&nbsp;
+      <label>1</label>&nbsp;
+      <select><option>1-1</option></select>&nbsp;
+      <a href="#"><u>Close</u></a>
+      </div>
+    </div>
+
+    <button type="button">{{ "sqrm.SQ_L02052" | translate }}</button>&nbsp;
+  <button type="button">{{ "sqrm.SQ_L02053" | translate }}</button>&nbsp;
+  <button type="button">{{ "sqrm.SQ_L02054" | translate }}</button>&nbsp;
+  {{ "sqrm.SQ_L02055" | translate }}
+  <input type="text" class="text" style="width: 60%;">
+  <button type="button">{{ "sqrm.SQ_L02056" | translate }}</button>&nbsp;
+  <button type="button">{{ "sqrm.SQ_L02057" | translate }}</button>&nbsp;
+  <button type="button">{{ "sqrm.SQ_L02058" | translate }}</button>
+  <br/><br/>
+  <button type="button">{{ "sqrm.SQ_L02059" | translate }}</button>
+  
+    <div class="sub-screen-container">
+      <wj-multi-row #returnedSamplesGrid
+        [headersVisibility]="'Column'" 
+        [selectionMode]="'None'"
+        [itemsSource]="SampleData"
+     
+      >
+
+        <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="no." [header]="'sqrm.SQ_L02060' | translate" [minWidth]="50">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <input type="checkbox" />
+          </ng-template>
+        </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="customersampleno" [header]="'sqrm.SQ_L02061' | translate" [minWidth]="250">
+            
+          </wj-multi-row-cell>
+          <wj-multi-row-cell binding="sonysampleno" [header]="'sqrm.SQ_L02062' | translate" [minWidth]="250"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="marklotno" [header]="'sqrm.SQ_L02063' | translate" [minWidth]="250">
+            
+          </wj-multi-row-cell>
+          <wj-multi-row-cell binding="id" [header]="'sqrm.SQ_L02064' | translate" [minWidth]="250"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="dateoffailureoccurence" [header]="'sqrm.SQ_L02065' | translate" [minWidth]="250">
+            
+          </wj-multi-row-cell>
+          <wj-multi-row-cell binding="region" [header]="'sqrm.SQ_L02066' | translate" [minWidth]="250"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="processoffailure" [header]="'sqrm.SQ_L02067' | translate" [minWidth]="250">
+            
+          </wj-multi-row-cell>
+          <wj-multi-row-cell binding="detailprocessoffailure" [header]="'sqrm.SQ_L02068' | translate" [minWidth]="250"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="failuremode" [header]="'sqrm.SQ_L02069' | translate" [minWidth]="200">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="dateoffailuremode" [header]="'sqrm.SQ_L02070' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="remounted" [header]="'sqrm.SQ_L02071' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="productcode" [header]="'sqrm.SQ_L02072' | translate" [minWidth]="300"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+      </wj-multi-row>
+    </div>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-title">
+      <p>{{ "sqrm.SQ_L02073" | translate }}</p>
+      <div class="action">
+        <button class="btn btn-secondary">{{ "sqrm.SQ_L02074" | translate }}</button>
+      </div>
+    </div>
+    <div class="sub-screen-container">
+      <table>
+        <tr>
+          <td><p class="label">{{ "sqrm.SQ_L02075" | translate }}</p></td>
+          <td><textarea rows="4" readonly="readonly" class="text" maxlength="1000" style="overflow-y: scroll;"></textarea></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-title">
+      <p>{{ "sqrm.SQ_L02076" | translate }}</p>
+    </div>
+    <div class="sub-screen-container">
+      <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+    </div>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-title">
+      <p>{{ "sqrm.SQ_L02077" | translate }}</p>
+    </div>
+
+    <table>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L02078" | translate }}</p></td>
+        <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L02079" | translate }}</p></td>
+        <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer-btn">
+    <button class="btn btn-primary">{{ "sqrm.SQ_L02080" | translate }}</button>
+    <div>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L02081" | translate }}</button>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L02082" | translate }}</button>
+    </div>
+  </div>
+</div>

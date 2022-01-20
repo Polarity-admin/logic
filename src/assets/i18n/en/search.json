@@ -1,0 +1,64 @@
+{
+  "sqrm": {
+
+    "SQ_L02287": "List of initial analysis requests",
+    "SQ_L02288": "Search conditions",
+    "SQ_L02289": "Close",
+    "SQ_L02290": "Category",
+    "SQ_L02291": "Product category",
+    "SQ_L02292": "Request No.",
+    "SQ_L02293": "Reception No.",
+    "SQ_L02294": "Request date",
+    "SQ_L02295": "Recipient group",
+    "SQ_L02296": "Product name",
+    "SQ_L02297": "Reception date",
+    "SQ_L02298": "Status",
+    "SQ_L02299": "Requested section",
+    "SQ_L02300": "Customer name",
+    "SQ_L02301": "Select customer",
+    "SQ_L02302": "Search",
+    "SQ_L02303": "Download",
+
+
+    "SQ_L02304": "Required data",
+    "SQ_L02305": "Open",
+
+
+    "SQ_L02306": "Status",
+    "SQ_L02307": "Request no.",
+    "SQ_L02308": "Ver",
+    "SQ_L02309": "Reception No.",
+    "SQ_L02310": "Reception date",
+    "SQ_L02311": "Customer name",
+    "SQ_L02312": "Product name",
+    "SQ_L02313": "Number of analysis request",
+    "SQ_L02314": "Requested by",
+    "SQ_L02315": "Requested to",
+    "SQ_L02316": "Request date",
+    "SQ_L02317": "Required report date",
+    "SQ_L02318": "Report date",
+    "SQ_L02319": "Report TAT",
+    "SQ_L02320": "Remarks",
+    "SQ_L02321": "Reset",
+    "SQ_L02322": "Select all",
+
+
+    "SQ_L02323": "Search result:",
+    "SQ_L02324": "3",
+    "SQ_L02325": "[1]",
+    "SQ_L02326": "[3]",
+    "SQ_L02327": "Back",
+    "SQ_L02328": "Forward",
+    "SQ_L02329": "Requested section",
+    "SQ_L02330": "Person in charge",
+    "SQ_L02331": "Required report date [Initial]",
+    "SQ_L02332": "Required report date (Final)",
+    "SQ_L02333": "Person in charge of investigation",
+    "SQ_L02334": "Sample no.",
+    "SQ_L02335": "Investigation category",
+    "SQ_L02336": "Investigation result",
+    "SQ_L02337": "List of detail analysis requests"
+
+
+  }
+}

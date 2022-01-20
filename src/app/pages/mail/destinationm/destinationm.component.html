@@ -1,0 +1,105 @@
+<div class="header dialog-font-color custom-dialog-header"
+  cdkDragHandle cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+>
+<button type="button" aria-label="Close this dialog" mat-dialog-close style="cursor: pointer;">×</button>
+<p class="main-screen-title">{{ "sqrm.SQ_L02296" | translate }}</p>
+  <hr />
+</div>
+
+<mat-dialog-content class="dialog-font-color popup-90vh">
+<div class="destinationm">
+  <div class="sub-screen">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L02263" | translate }}
+    </div>
+    <div class="sub-screen-container">
+      <form>
+        <table>
+          <tr>
+            <td><p class="required">{{ "sqrm.SQ_L02264" | translate }}</p></td>
+            <td><select style="width: 50%;"><option>LSI</option></select></td>
+            <td><p>{{ "sqrm.SQ_L02265" | translate }}</p></td>
+            <td><select style="width: 50%;"><option>-</option></select>&nbsp;
+            <select style="width: 10%;"><option>-</option></select></td>
+            <td><p class="required">{{ "sqrm.SQ_L02290" | translate }}</p></td>
+            <td><select style="width: 70%;"><option>kouda</option></select></td>
+          </tr>
+        </table>
+        <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02271" | translate }}</button>
+      </form>
+
+      <div class="sub-screen-title"><p>{{ "sqrm.SQ_L02272" | translate }}
+        {{ "sqrm.SQ_L02291" | translate }}
+        {{ "sqrm.SQ_L02292" | translate }} -
+        {{ "sqrm.SQ_L02293" | translate }}
+      </p>
+        <div class="btnright" style="float: right;">
+        <button type="button" class="btn" style="border: 1px solid;">{{ "sqrm.SQ_L02273" | translate }}</button>&nbsp;
+        <button type="button" class="btn" style="border: 1px solid;">{{ "sqrm.SQ_L02274" | translate }}</button>
+        </div>
+      </div>
+    
+      <div class="sub-screen-container">
+        <wj-multi-row #grid
+        [itemsSource]="SampleDataDestinationm" 
+        [headersVisibility]="'Column'" 
+        [selectionMode]="'None'"
+      >
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="select" [header]="'sqrm.SQ_L02275' | translate" [width]="100">
+              <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <input type="checkbox" />
+              </ng-template>
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="productnamecategory" [header]="'sqrm.SQ_L02294' | translate" [width]="100">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="groupname" [header]="'sqrm.SQ_L02290' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="username" [header]="'sqrm.SQ_L02295' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="name" [header]="'sqrm.SQ_L02197' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="email" [header]="'sqrm.SQ_L02198' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="to_cc" [header]="'sqrm.SQ_L02199' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+          </wj-multi-row>
+      </div>
+
+      <div class="" style="float:left;width: 100%;">
+        <footer>
+        <button class="btn btn-primary">{{ "sqrm.SQ_L02200" | translate }}</button>&nbsp;
+        <button class="btn btn-primary">{{ "sqrm.SQ_L02201" | translate }}</button>
+        <button class="btn btn-primary" aria-label="Close this dialog" mat-dialog-close style="float: right;cursor: pointer;">{{ "sqrm.SQ_L02194" | translate }}</button>
+        </footer>
+        </div>
+    </div>
+  </div>
+</div>
+</mat-dialog-content>
+

@@ -1,0 +1,32 @@
+<div style="width: 100%; height: 48px; justify-content: space-between; display: flex; background-color:#f0bc00;">
+    <div style="padding-top: 8px;">
+        <ng-template [ngxPermissionsOnly]="'admin'">
+            <img alt="menu" (click)="clickMenu()" class="bars imgstyle" src="/assets/images/menu.png">
+        </ng-template>
+        <span id="pageTitle" class="headerstyle" *ngIf="url === '/dash-board'">{{ 'sqrm.SQ_L00028' | translate }}</span>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+        <div class="nav navbar-nav navbar-right" style="margin-right: 0px; height: 100%;">
+            <div class="top-right-info">
+                <div class="info" [ngStyle]="{'background-color': dropdownDisplay ? '#fff' : 'inherit'}">
+                    <a>
+                        <i class="fas fa-globe" style="color: black; font-size: 2rem;"
+                            (click)="dropdownDisplay = !dropdownDisplay"></i>
+                    </a>
+                </div>
+                <div class="info">
+                    <a target="_blank">
+                        <img alt="help" src="/assets/images/help.png" style="cursor: pointer;" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="dropdownDisplay" class="dropdown-content">
+    <div (click)="languageChange(language)" *ngFor="let language of this.languages"
+        [ngStyle]="{'background-color': language === this.currentLang ? '#dedede' : 'inherit'}">
+        <img alt="done" *ngIf="language === this.currentLang" src="/assets/images/done.png" />
+        <p>{{ language =='ja'?'日本語' : 'English' }}</p>
+    </div>
+</div>

@@ -1,0 +1,247 @@
+<div class="sub-screen" *ngIf="currentRoute === 'lsi-request'">
+    <div class="sub-screen-title">
+        <div class="header-title">
+            <span class="required">{{ "sqrm.SQ_L01012" | translate }}</span>
+            <div class="checkbox-input">
+              <input id="finalReport" type="checkbox" />
+              <label for="finalReport">{{ "sqrm.SQ_L01076" | translate }}</label>
+            </div>
+          </div>      
+          <div class="actions">
+            <p>{{ "sqrm.SQ_L01077" | translate  }}</p>
+            <p>{{ "sqrm.SQ_L01078" | translate  }}</p>
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L01018" | translate }}</button>
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L01019" | translate }}</button>
+            <div class="pagination-container">
+              <p>{{ currentPage }}</p>
+              <select>
+                <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
+              </select>
+            </div>
+            <button class="btn btn-secondary" style="margin-left: 10px;">{{ "sqrm.SQ_L01017" | translate }}</button>
+          </div>
+    </div>
+    <div class="sub-screen-container">
+        <wj-multi-row #returnedSamplesGrid
+            [headersVisibility]="'Column'" 
+            [selectionMode]="'None'"
+            [itemsSource]="returnedSamplesData">
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding='scope' header="{{ 'sqrm.SQ_L01062' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140"  >
+                  <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                      <div style="display: block;justify-content: lfet;">
+                          <div style="display:block">{{ 'sqrm.SQ_L01062' | translate }}</div>
+                          <button class="btn btn-secondary">{{ 'sqrm.SQ_L01025' | translate }}</button>  
+                      </div>
+                  </ng-template>
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                      <input type="checkbox" [(ngModel)]="item.selected" />
+                  </ng-template>
+              </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L01045' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+              <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L01046' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="customerName" header="{{ 'sqrm.SQ_L01047' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+              <wj-multi-row-cell header="{{ 'sqrm.SQ_L01048' | translate }} " [allowSorting]='false'
+                  [align]="'center'" binding="productName" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="customerSampleNo" header="{{ 'sqrm.SQ_L01049' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+              <wj-multi-row-cell binding="sonySampleNo" header="{{ 'sqrm.SQ_L01050' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="markLotNo" header="{{ 'sqrm.SQ_L01051' | translate }}" [allowSorting]='false'
+                  [align]="'center'"  [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+              <wj-multi-row-cell binding="id" header="{{ 'sqrm.SQ_L01052' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="dateOfFailureOccurence" header="{{ 'sqrm.SQ_L01053' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell> 
+            <wj-multi-row-cell binding="regionOfFailure" header="{{ 'sqrm.SQ_L01054' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+            <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='failureMode' header="{{ 'sqrm.SQ_L01055' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140"  ></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+    
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='detailsOfFailureMode' header="{{ 'sqrm.SQ_L01056' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="300"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+            <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='active' header="{{ 'sqrm.SQ_L01020' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="'*'"  >
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                    <button class="btn btn-secondary">Delete</button>
+                </ng-template>
+            </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+      </wj-multi-row>
+    </div>
+  </div>
+  
+  <!-- LSI answer OR LSI Approval-->
+  <div class="sub-screen" *ngIf="currentRoute === 'lsi-answer' || currentRoute === 'lsi-approval'">
+      <div class="sub-screen-title">
+        <div class="header-title">
+            <span class="required">{{ "sqrm.SQ_L01012" | translate }}</span>
+            <div class="checkbox-input">
+              <input id="finalReport" type="checkbox" />
+              <label for="finalReport">{{ "sqrm.SQ_L01076" | translate }}</label>
+            </div>
+          </div>      
+          <div class="actions" *ngIf="currentRoute === 'lsi-answer'">
+            <input type="file" id="myFile" name="filename">
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L01028" | translate }}</button>
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L01029" | translate }}</button>
+          </div>
+        
+      </div>
+      <div class="sub-screen-container">
+        <wj-multi-row class="girdlist"
+            #returnedSamplesGrid
+            [headersVisibility]="'Column'" 
+            [selectionMode]="'None'"
+            [itemsSource]="returnedSamplesData"
+            [frozenColumns]="3">
+  
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell  binding="receptionNo" header="{{ 'sqrm.SQ_L01045' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+                <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L01046' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="customerName" header="{{ 'sqrm.SQ_L01047' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+                <wj-multi-row-cell binding="productName" header="{{ 'sqrm.SQ_L01048' | translate }} " [allowSorting]='false'
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="customerSampleNo" header="{{ 'sqrm.SQ_L01049' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sonySampleNo" header="{{ 'sqrm.SQ_L01050' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+    
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="markLotNo" header="{{ 'sqrm.SQ_L01051' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+                <wj-multi-row-cell binding="id" header="{{ 'sqrm.SQ_L01052' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+                  <wj-multi-row-cell binding="dateOfFailureOccurence" header="{{ 'sqrm.SQ_L01053' | translate }}" [allowSorting]='false'
+                      [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+                  <wj-multi-row-cell binding="regionOfFailure" header="{{ 'sqrm.SQ_L01054' | translate }}" [allowSorting]='false'
+                      [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+             </wj-multi-row-cell-group>
+  
+              <wj-multi-row-cell-group>
+                  <wj-multi-row-cell binding="processOfFailure" header="{{ 'sqrm.SQ_L01063' | translate }}" [allowSorting]='false'
+                      [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+                  <wj-multi-row-cell binding="detailProcessOfFailure" header="{{ 'sqrm.SQ_L01064' | translate }}" [allowSorting]='false'
+                      [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+    
+              <wj-multi-row-cell-group>
+                  <wj-multi-row-cell binding='failureMode' header="{{ 'sqrm.SQ_L01055' | translate }}" [allowSorting]='false'
+                      [align]="'center'" [width]="140"  ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+    
+              <wj-multi-row-cell-group>
+                  <wj-multi-row-cell binding='detailsOfFailureMode' header="{{ 'sqrm.SQ_L01056' | translate }}" [allowSorting]='false'
+                      [align]="'center'" [width]="250"  ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+  
+              <!-- Tester -->
+              <wj-multi-row-cell-group *ngIf="currentRoute === 'lsi-answer'">
+                <wj-multi-row-cell binding='tester' header="{{ 'sqrm.SQ_L01058' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="250">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <input type="text"/>
+                        <button class="btn btn-secondary ml-10">Copy</button>
+                    </ng-template>
+                </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group *ngIf="currentRoute === 'lsi-approval'">
+                  <wj-multi-row-cell binding='tester' header="{{ 'sqrm.SQ_L01058' | translate }}" [allowSorting]='false'
+                      [align]="'center'" [width]="250"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+  
+              <!-- Customer's set -->
+              <wj-multi-row-cell-group *ngIf="currentRoute === 'lsi-answer'">
+                <wj-multi-row-cell binding='tester' header="{{ 'sqrm.SQ_L01059' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="250">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <input type="text"/>
+                        <button class="btn btn-secondary ml-10">Copy</button>
+                    </ng-template>
+                </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group *ngIf="currentRoute === 'lsi-approval'">
+                  <wj-multi-row-cell binding='customersSet' header="{{ 'sqrm.SQ_L01059' | translate }}" [allowSorting]='false'
+                      [align]="'center'" [width]="250"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+  
+              <!-- Evaluation board -->
+              <wj-multi-row-cell-group *ngIf="currentRoute === 'lsi-answer'">
+                <wj-multi-row-cell binding='evaluationBoard' header="{{ 'sqrm.SQ_L01060' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="250">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <input type="text"/>
+                        <button class="btn btn-secondary ml-10">Copy</button>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group *ngIf="currentRoute === 'lsi-approval'">
+                  <wj-multi-row-cell binding='evaluationBoard' header="{{ 'sqrm.SQ_L01060' | translate }}" [allowSorting]='false'
+                      [align]="'center'" [width]="250" ml-10></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+  
+              <!-- Details of analysis result -->
+              <wj-multi-row-cell-group *ngIf="currentRoute === 'lsi-answer'">
+                  <wj-multi-row-cell binding='detailsOfAnalysisResult' header="{{ 'sqrm.SQ_L01056' | translate }}" [allowSorting]='false'
+                      [align]="'left'" [width]="350" >
+                      <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea rows="2" style="width: 100%;"></textarea>
+                      </ng-template>
+                  </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group *ngIf="currentRoute === 'lsi-approval'">
+                <wj-multi-row-cell binding='detailsOfAnalysisResult' header="{{ 'sqrm.SQ_L01056' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="250"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+        </wj-multi-row>
+      </div>
+    </div>
+  
+  
+  

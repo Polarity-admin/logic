@@ -1,0 +1,56 @@
+<div class="sub-screen"  *ngIf="currentRoute === 'is-request' || currentRoute === 'is-answer' || currentRoute === 'is-approval'">
+  
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L03001" | translate }}</p>
+    <button class="btn btn-secondary " *ngIf="currentRoute === 'is-request'" > {{ "sqrm.SQ_L03016" | translate }}</button>
+  </div>
+  <div class="sub-screen-container">
+    <form>
+      <table class="style1">
+        <tr>
+            <td>{{ 'sqrm.SQ_L03038' | translate }}</td>
+            <td> <label>{{ 'sqrm.SQ_L01038' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L03039' | translate }}</td>
+            <td>
+              <wj-input-date id="reportDateInit" format="yyyy/MM/dd" *ngIf="currentRoute !=='is-approval'"></wj-input-date>
+              <label *ngIf="currentRoute === 'is-approval'">{{ 'sqrm.SQ_L03039' | translate }}</label>
+            </td>
+            <td>{{ 'sqrm.SQ_L03040' | translate }}<span *ngIf="currentRoute === 'is-request'" class="required"></span></td>
+            <td>
+              <wj-input-date id="reportDateInit" format="yyyy/MM/dd" *ngIf="currentRoute !=='is-approval'"></wj-input-date>
+              <label *ngIf="currentRoute === 'is-approval'">{{ 'sqrm.SQ_L03040' | translate }}</label>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>{{ 'sqrm.SQ_L03041' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L03041' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L03042' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L03042' | translate }}</label></td>
+        </tr>
+        <tr>
+          <td>{{ 'sqrm.SQ_L03058' | translate }}<span *ngIf="currentRoute === 'is-request'" class="required"></span></td>
+          <td colspan="5">
+             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > Pre-check</label>
+             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > Visual check</label>
+             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > M check</label>
+             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > C check</label>
+             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > S check</label>
+             <label><input type="checkbox" disabled="{ 'disabled': currentRoute ==='is-answer' || currentRoute === 'is-approval' }" > Result</label>
+             <button class="btn btn-secondary margin-rl" *ngIf ="currentRoute ==='is-request'">Select all</button>
+          </td>
+        </tr>
+        <tr>
+            <td>
+              {{ 'sqrm.SQ_L03043' | translate }}
+              <div *ngIf="currentRoute !=='is-approval'">{{ 'sqrm.SQ_L03044' | translate }}</div>
+            </td>
+            <td colspan="5" >
+                <textarea class="form-textarea style1" *ngIf="currentRoute !== 'is-approval'"></textarea>
+                <label *ngIf="currentRoute === 'is-approval'">{{ 'sqrm.SQ_L03043' | translate }}</label>
+            </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<!-- LSI answer -->
+<div class="sub-screen" *ngIf="currentRoute === 'lsi-answer' || currentRoute === 'lsi-approval'">
+  <div class="sub-screen-title">
+      <div *ngIf="currentRoute === 'lsi-answer'">
+        {{ "sqrm.SQ_L01006" | translate }}
+      </div>
+      <div *ngIf="currentRoute === 'lsi-approval'">
+        {{ "sqrm.SQ_L01086" | translate }}
+      </div>
+  </div>
+  <div class="sub-screen-container">
+    <div>
+      <textarea class="form-textarea style1" *ngIf="currentRoute === 'lsi-answer'"></textarea>
+      <p *ngIf="currentRoute === 'lsi-approval'">{{ "sqrm.SQ_L01085" | translate }}</p>
+    </div>
+    
+    
+  </div>
+</div>

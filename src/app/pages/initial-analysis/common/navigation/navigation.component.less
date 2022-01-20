@@ -1,0 +1,201 @@
+.main-screen {
+  margin-bottom: 15px;
+  padding: 3px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-left: 6px solid #757474;
+}
+
+.sub-screen-title {
+  p,
+  span {
+    display: inline-block;
+    margin: auto 0;
+    font-size: 16px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+
+    p {
+      margin: auto 0;
+    }
+  }
+}
+
+.sub-screen {
+  a {
+    text-decoration: underline;
+    margin: auto 0;
+  }
+
+  a:hover {
+    border: none;
+  }
+
+  .checkbox-input {
+    margin: auto 0;
+
+    input {
+      width: auto;
+    }
+  }
+
+  .column-row {
+    display: flex;
+    justify-content: center;
+    row-gap: 3px;
+    padding: 3px;
+    margin: 0;
+  }
+
+  input,
+  textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 4px 8px;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .right-align {
+    text-align: right;
+  }
+}
+
+table {
+  border: 1px solid #757474;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  textarea {
+    width: calc(100% - 20px);
+    margin: auto 0;
+  }
+
+  input,
+  textarea {
+    width: calc(100% - 18px);
+  }
+
+  input,
+  textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 4px 8px;
+    width: calc(100% - 18px);
+  }
+
+  tr {
+    td {
+      border: 1px solid #757474;
+      padding: 3px 5px;
+
+      p {
+        margin: 5px 0;
+      }
+    }
+
+    td:first-child,
+    td:nth-child(odd) {
+      background-color: #eaeaea;
+      font-weight: bold;
+      width: 20%;
+    }
+
+    td:nth-child(even) {
+      background-color: #fff;
+    }
+  }
+}
+
+.file-upload {
+  input[type="file"] {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 4px 8px;
+    width: auto;
+    margin-right: 10px;
+    width: calc(100% - 80px);
+  }
+
+  input[type="file"]::webkit-file-upload-button {
+    display: none;
+    visibility: hidden;
+  }
+
+  button {
+    margin-right: 5px;
+  }
+}
+
+.footer-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #fff9a9;
+  column-gap: 10px;
+  margin-top: 10px;
+  padding: 5px;
+
+  > div button:first-child {
+    margin-right: 5px;
+  }
+}
+
+.wj-flexgrid {
+  margin: 0;
+  margin-top: 10px;
+}
+/* default trees on this sample */
+.wj-treeview {
+  height: 350px;
+  font-size: 120%;
+  margin-bottom: 8px;
+  background: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.mat-tree-node { 
+  min-height:20px; 
+  height: 24px; 
+  a{text-decoration:none;}
+ }
+.mat-icon-button { width:25px }
+.material-icons { font-size:15px }
+
+.navi-invisible {
+  display: none;
+}
+
+.navi ul,
+.navi li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+/*
+ * This padding sets alignment of the nested nodes.
+ */
+.navi .mat-nested-tree-node div[role=group] {
+  padding-left: 15px;
+  margin-left: 12px;
+  border-left: 1px dotted gray;
+  text-decoration:none;
+}
+
+/*
+ * Padding for leaf nodes.
+ * Leaf nodes need to have padding so as to align with other non-leaf nodes
+ * under the same parent.
+ */
+
+
+.navi div[role=group] > .mat-tree-node {
+ padding-left:2px;
+ a { text-decoration:  none; }
+}

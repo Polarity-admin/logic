@@ -1,0 +1,248 @@
+<div class="sub-screen">
+  <div class="sub-screen-title">
+    <div class="header-title">
+      <span [ngClass]="{ 'required': currentRoute !== 'approve' }">{{ "sqrm.SQ_L00113" | translate }}</span>
+      <span *ngIf="currentRoute !== 'request'">{{ currentPage }}</span>
+      <div class="checkbox-input">
+        <input id="finalReport" type="checkbox" [disabled]="currentRoute === 'approve'" />
+        <label for="finalReport">{{ "sqrm.SQ_L00114" | translate }}</label>
+      </div>
+    </div>      
+    <div class="actions" *ngIf="currentRoute === 'request'">
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L00115" | translate }}</button>
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L00116" | translate }}</button>
+      <div class="pagination-container">
+        <p>{{ currentPage }}</p>
+        <select>
+          <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
+        </select>
+      </div>
+      <button class="btn btn-secondary" style="margin-left: 10px;">{{ "sqrm.SQ_L00117" | translate }}</button>
+    </div>
+    <div class="actions" *ngIf="currentRoute !== 'request'">
+      <div class="file-upload">
+        <input type="file" />
+      </div>
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L00118" | translate }}</button>
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L00119" | translate }}</button>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-multi-row #returnedSamplesGrid
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData"
+      [frozenColumns]="currentRoute !== 'request' ? 3 : 0"
+    >
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'request'">
+        <wj-multi-row-cell binding="scope" [width]="100">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <div class="column-header center">
+              <p>{{ 'sqrm.SQ_L00120' | translate }}</p>
+              <button class="btn btn-secondary">{{ 'sqrm.SQ_L00121' | translate }}</button>
+            </div>
+          </ng-template>
+
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <input type="checkbox" />
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="receptionNo" [header]="'sqrm.SQ_L00122' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="receptionDate" [header]="'sqrm.SQ_L00123' | translate" [minWidth]="150"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="customerName" [header]="'sqrm.SQ_L00124' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="productName" [header]="'sqrm.SQ_L00125' | translate" [minWidth]="150"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="customerSampleNo" [header]="'sqrm.SQ_L00126' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sonySampleNo" [header]="'sqrm.SQ_L00127' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="markLotNo" [header]="'sqrm.SQ_L00128' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="id" [header]="'sqrm.SQ_L00129' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group >
+        <wj-multi-row-cell binding="dateOfFailureOccurence" [header]="'sqrm.SQ_L00130' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="regionOfFailure" [header]="'sqrm.SQ_L00131' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="processOfFailure" [header]="'sqrm.SQ_L00132' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="detailProcessOfFailure" [header]="'sqrm.SQ_L00133' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="failureMode" [header]="'sqrm.SQ_L00134' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="detailsOfFailureMode" [minWidth]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <p class="column-header">
+              {{ 'sqrm.SQ_L00135' | translate }}
+              <br />
+              {{ 'sqrm.SQ_L00136' | translate }}
+            </p>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <!-- Columns for Request Screen -->
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'request'">
+        <wj-multi-row-cell binding="symptomConfirmedbySony" [header]="'sqrm.SQ_L00137' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'request'">
+        <wj-multi-row-cell binding="judgement" [header]="'sqrm.SQ_L00138' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'request'">
+        <wj-multi-row-cell binding="detailsOfRequest" [header]="'sqrm.SQ_L00139' | translate" [minWidth]="250">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <textarea rows="2"></textarea>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'request'">
+        <wj-multi-row-cell binding="delete" [header]="'sqrm.SQ_L00149' | translate" [width]="130">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <button class="btn btn-secondary">Delete</button>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <!-- Columns for Answer Screen -->
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'answer'">
+        <wj-multi-row-cell binding="symptomConfirmedbySony" [minWidth]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <div class="column-header">
+              <p>{{ 'sqrm.SQ_L00140' | translate }}</p>
+              <p>{{ 'sqrm.SQ_L00141' | translate }}</p>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'answer'">
+        <wj-multi-row-cell binding="judgement" [minWidth]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <div class="column-header">
+              <p>{{ 'sqrm.SQ_L00142' | translate }}</p>
+              <p>{{ 'sqrm.SQ_L00143' | translate }}</p>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'answer'">
+        <wj-multi-row-cell binding="detailsOfRequest" [header]="'sqrm.SQ_L00139' | translate" [minWidth]="250">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <textarea rows="2"></textarea>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'answer'">
+        <wj-multi-row-cell binding="symptomConfirmedbySonyDetailed" [minWidth]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <div class="column-header">
+              <p class="required">{{ 'sqrm.SQ_L00144' | translate }}</p>
+              <p>{{ 'sqrm.SQ_L00145' | translate }}</p>
+            </div>
+          </ng-template>
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <textarea rows="2"></textarea>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'answer'">
+        <wj-multi-row-cell binding="judgementDetailed" [minWidth]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <div class="column-header">
+              <p class="required">{{ 'sqrm.SQ_L00146' | translate }}</p>
+              <p>{{ 'sqrm.SQ_L00147' | translate }}</p>
+            </div>
+          </ng-template>
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="temp-fix various-survey actions">
+              <wj-combo-box
+                [itemsSource]="dropDownData1"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'answer'">
+        <wj-multi-row-cell binding="detailsOfAnalysisResult" [header]="'sqrm.SQ_L00148' | translate" [minWidth]="200">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <textarea rows="2" class="full-width"></textarea>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <!-- Columns for Approve Screen -->
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'approve'">
+        <wj-multi-row-cell binding="symptomConfirmedbySony" [minWidth]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <div class="column-header">
+              <p>{{ 'sqrm.SQ_L00140' | translate }}</p>
+              <p>{{ 'sqrm.SQ_L00141' | translate }}</p>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'approve'">
+        <wj-multi-row-cell binding="judgement" [minWidth]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <div class="column-header">
+              <p>{{ 'sqrm.SQ_L00142' | translate }}</p>
+              <p>{{ 'sqrm.SQ_L00143' | translate }}</p>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'approve'">
+        <wj-multi-row-cell binding="detailsOfRequest" [header]="'sqrm.SQ_L00139' | translate" [minWidth]="250">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <textarea rows="2"></textarea>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'approve'">
+        <wj-multi-row-cell binding="symptomConfirmedbySonyDetailed" [minWidth]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <div class="column-header">
+              <p>{{ 'sqrm.SQ_L00144' | translate }}</p>
+              <p>{{ 'sqrm.SQ_L00145' | translate }}</p>
+            </div>
+          </ng-template>
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <textarea rows="2"></textarea>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'approve'">
+        <wj-multi-row-cell binding="judgementDetailed" [minWidth]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <div class="column-header">
+              <p>{{ 'sqrm.SQ_L00146' | translate }}</p>
+              <p>{{ 'sqrm.SQ_L00147' | translate }}</p>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group *ngIf="currentRoute === 'approve'">
+        <wj-multi-row-cell binding="detailsOfAnalysisResult" [header]="'sqrm.SQ_L00148' | translate" [minWidth]="200">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <textarea rows="2"></textarea>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+    </wj-multi-row>
+  </div>
+</div>  

@@ -1,0 +1,241 @@
+<div class="sub-screen" *ngIf="currentRoute === 'mdd-request'">
+    <div class="sub-screen-title">
+        <div class="header-title">
+            <span class="required">{{ "sqrm.SQ_L05012" | translate }}</span>
+            <div class="checkbox-input">
+              <input id="finalReport" type="checkbox" />
+              <label for="finalReport">{{ "sqrm.SQ_L05076" | translate }}</label>
+            </div>
+          </div>      
+          <div class="actions">
+            <p>{{ "sqrm.SQ_L05077" | translate  }}</p>
+            <p>{{ "sqrm.SQ_L05078" | translate  }}</p>
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L05018" | translate }}</button>
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L05019" | translate }}</button>
+            <div class="pagination-container">
+              <select>
+                <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
+              </select>
+            </div>
+            <button class="btn btn-secondary" style="margin-left: 10px;">{{ "sqrm.SQ_L05017" | translate }}</button>
+          </div>
+    </div>
+    <div class="sub-screen-container">
+        <wj-multi-row #returnedSamplesGrid
+            [headersVisibility]="'Column'" 
+            [selectionMode]="'None'"
+            [itemsSource]="returnedSamplesData">
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding='scope' header="{{ 'sqrm.SQ_L05062' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140"  >
+                  <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                      <div style="display: block;justify-content: lfet;">
+                          <div style="display:block">{{ 'sqrm.SQ_L05062' | translate }}</div>
+                          <button class="btn btn-secondary">{{ 'sqrm.SQ_L05025' | translate }}</button>  
+                      </div>
+                  </ng-template>
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                      <input type="checkbox" [(ngModel)]="item.selected" />
+                  </ng-template>
+              </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L05045' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+              <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L05046' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="customerName" header="{{ 'sqrm.SQ_L05047' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+              <wj-multi-row-cell header="{{ 'sqrm.SQ_L05048' | translate }} " [allowSorting]='false'
+                  [align]="'center'" binding="productName" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="customerSampleNo" header="{{ 'sqrm.SQ_L05049' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+              <wj-multi-row-cell binding="sonySampleNo" header="{{ 'sqrm.SQ_L05050' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="markLotNo" header="{{ 'sqrm.SQ_L05051' | translate }}" [allowSorting]='false'
+                  [align]="'center'"  [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+              <wj-multi-row-cell binding="id" header="{{ 'sqrm.SQ_L05052' | translate }}" [allowSorting]='false'
+                  [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="dateOfFailureOccurence" header="{{ 'sqrm.SQ_L05053' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell> 
+            <wj-multi-row-cell binding="regionOfFailure" header="{{ 'sqrm.SQ_L05054' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+            <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='failureMode' header="{{ 'sqrm.SQ_L05055' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140"  >
+                
+            </wj-multi-row-cell>
+
+
+            </wj-multi-row-cell-group>
+    
+    
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='detailsOfFailureMode' header="{{ 'sqrm.SQ_L05056' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="400">
+                    <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                        <div style="display:block">{{ 'sqrm.SQ_L05056' | translate }}</div>
+                        <div style="display:block">{{ 'sqrm.SQ_L05057' | translate }}</div>
+                </ng-template></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell [allowSorting]='false'
+                    [align]="'center'" [width]="'*'">
+                    <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                        <button class="btn btn-secondary">{{ 'sqrm.SQ_L05020' | translate }}</button>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+      </wj-multi-row>
+    </div>
+  </div>
+  
+
+  <!-- MDD Answer -->
+  <div class="sub-screen" *ngIf="currentRoute === 'mdd-answer' || currentRoute ==='mdd-approval'">
+    <div class="sub-screen-title">
+        <div class="header-title">
+            <span class="required" *ngIf="currentRoute ==='mdd-answer'">{{ "sqrm.SQ_L05012" | translate }}</span>
+            <span *ngIf="currentRoute ==='mdd-approval'">{{ "sqrm.SQ_L05012" | translate }}</span>
+            <p *ngIf="currentRoute === 'mdd-answer' || currentRoute === 'mdd-approval'">{{ currentPage }}</p>
+            <div class="checkbox-input">
+              <input id="finalReport" type="checkbox" [disabled]="currentRoute === 'mdd-approval'"/>
+              <label for="finalReport">{{ "sqrm.SQ_L05076" | translate }}</label>
+            </div>
+          </div>      
+          <div class="actions" *ngIf="currentRoute === 'mdd-answer'">
+            <div>
+              <input type="file" id="myFile" name="filename">
+            </div>
+            <button class="btn btn-secondary">{{ 'sqrm.SQ_L05028' | translate }}</button>
+            <button class="btn btn-secondary">{{ 'sqrm.SQ_L05029' | translate }}</button>
+            <div class="checkbox-input">
+              <input id="finalReport" type="checkbox" />
+              <label for="finalReport">{{ "sqrm.SQ_L05098" | translate }}</label>
+            </div>
+            <button class="btn btn-secondary">{{ 'sqrm.SQ_L05030' | translate }}</button>
+          </div>
+    </div>
+    <div class="sub-screen-container">
+      <wj-multi-row [frozenColumns]="3">
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05045' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05046' | translate }}"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05047' | translate }}" [width]="250"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05048' | translate }}" [width]="250"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05049' | translate }}" [width]="250"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05050' | translate }}" [width]="250"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05051' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05052' | translate }}"  [width]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05053' | translate }}"  [width]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05054' | translate }}"  [width]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05063' | translate }}"  [width]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05064' | translate }}" [width]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05065' | translate }}"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05066' | translate }}" [width]="200">
+            <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell" >
+              <div style="display: block;">{{ 'sqrm.SQ_L05066' | translate }}</div>
+              <div style="display: block;">{{ 'sqrm.SQ_L05057' | translate }}</div>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05099' | translate }}" [width]="250"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05100' | translate }}" [colspan]="4"></wj-multi-row-cell>
+          <!-- <wj-multi-row-cell header="{{ 'sqrm.SQ_L05101' | translate }}"></wj-multi-row-cell> -->
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05102' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05103' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05122' | translate }}" [width]="140" *ngIf="currentRoute ==='mdd-approval'"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05104' | translate }}" [width]="250" *ngIf="currentRoute ==='mdd-answer'"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05105' | translate }}" [colspan]="2"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05106' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05107' | translate }}" [width]="250" *ngIf="currentRoute ==='mdd-answer'"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05123' | translate }}" [width]="140" *ngIf="currentRoute ==='mdd-approval'"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05108' | translate }}" [colspan]="3"></wj-multi-row-cell>
+          <!-- <wj-multi-row-cell header="{{ 'sqrm.SQ_L05109' | translate }}"></wj-multi-row-cell> -->
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05110' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05111' | translate }}" [width]="250" *ngIf="currentRoute ==='mdd-answer'"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05124' | translate }}" [width]="140" *ngIf="currentRoute ==='mdd-approval'"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05112' | translate }}" [colspan]="2"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05113' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05121' | translate }}" *ngIf="currentRoute === 'mdd-approval'"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05114' | translate }}" [width]="250" *ngIf="currentRoute === 'mdd-answer'"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05115' | translate }}" [width]="250"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05116' | translate }}" [width]="250">
+            <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+              <div style="display:block">{{ 'sqrm.SQ_L05116' | translate }}</div>
+              <div style="display:block">{{ 'sqrm.SQ_L05117' | translate }}</div>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05118' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05119' | translate }}" [width]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L05120' | translate }}"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+      </wj-multi-row>
+        
+    </div>
+  </div>
+ 

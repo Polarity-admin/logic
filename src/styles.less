@@ -1,0 +1,638 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html {
+    font-size: 12px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Meiryo UI", "Meiryo", "メイリオ", "Yu Gothic UI", "游ゴシック",
+        "Segoe UI", system-ui, sans-serif;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+
+.mat-body, 
+.mat-body-1, 
+.mat-typography { 
+    font-family: "Meiryo UI", "Meiryo", "メイリオ", "Yu Gothic UI", "游ゴシック",
+    "Segoe UI", system-ui, sans-serif;
+}
+
+.container {
+    margin: 20px;
+}
+
+.page-content {
+    margin: 0 5%;
+}
+
+a {
+    color: #337ab7;
+    cursor: pointer;
+    text-decoration: none;
+    transition: none 86ms ease-out;
+    outline: none !important;
+}
+
+a:hover {
+    border-bottom: 1px solid #337ab7;
+}
+
+textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    resize: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    padding: 4px 8px;
+    outline: none;
+}
+
+.mat-dialog-container {
+    overflow: hidden !important;
+}
+
+.swal2-actions {
+    justify-content: space-around !important;
+}
+
+.custom-swal-header {
+    margin-top: 4px;
+}
+
+.custom-swal-title {
+    margin-right: auto !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin-bottom: 0px !important;
+}
+
+.custom-swal-confirm {
+    width: 110px !important;
+    height: 30px !important;
+    padding: 0em !important;
+}
+
+.custom-swal-cancel {
+    width: 110px !important;
+    height: 30px !important;
+    padding: 0em !important;
+}
+
+.custom-close-button {
+    top: 7px !important;
+    right: 8px !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.custom-swal-content {
+    height: 100px;
+}
+
+.swal2-html-container hr {
+    margin-bottom: 40px !important;
+    margin-top: 0px !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.swal2-html-container span {
+    font-size: 1.1rem;
+}
+
+.custom-dialog-header h2 {
+    display: inline-block;
+    font-size: 1.667rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 0px;
+    user-select: none;
+}
+
+.custom-dialog-header button {
+    display: block;
+    float: right;
+    position: relative;
+    font-size: 2.5rem;
+    top: -12px;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: serif;
+    border: none;
+    background-color: #fff;
+    height: 1.2em;
+}
+
+.custom-dialog-header hr {
+    margin-bottom: 15px;
+    border-top: 1px solid #eee;
+    border-bottom: 0;
+}
+
+.dialog-font-color {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.overlay {
+    position: fixed;
+    cursor: pointer;
+    top: 32px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+.overlay-open .sidebar {
+    margin-left: 0;
+    z-index: 99999999;
+}
+
+.sidebar {
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    font-family: "Roboto", sans-serif;
+    background: #f2f2f2;
+    width: 280px;
+    overflow: hidden;
+    display: none;
+    height: calc(100vh - 32px);
+    position: fixed;
+    top: 32px;
+    left: 0;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1001 !important;
+}
+
+.menubar {
+    position: sticky;
+    display: flex;
+    background: #fddfa7;
+    padding: 12px;
+    top: 0;
+}
+
+.navbar {
+    font-family: "Roboto", sans-serif;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    width: 100%;
+}
+
+.navbar .navbar-brand {
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.navbar .navbar-custom-right-menu {
+    float: right;
+}
+
+.navbar .navbar-toggle {
+    text-decoration: none;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    margin-top: -4px;
+    margin-right: 17px;
+}
+
+.navbar .navbar-toggle:before {
+    content: "\E8D5";
+    font-family: "Material Icons";
+    font-size: 2.166rem;
+}
+
+.navbar .navbar-collapse.in {
+    overflow: visible;
+}
+
+.ls-closed .sidebar {
+    margin-left: -300px;
+}
+
+.ls-closed section.content {
+    margin-left: 0px;
+}
+
+.ls-closed .bars:after,
+.ls-closed .bars:before {
+    font-family: "Material Icons";
+    font-size: 2rem;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    margin-right: 10px;
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.ls-closed .bars:before {
+    content: "\E5D2";
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.ls-closed .bars:after {
+    content: "\E5C4";
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.ls-closed .navbar-brand {
+    margin-left: 30px;
+}
+
+.overlay-open .bars:before {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.overlay-open .bars:after {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.navbar-header {
+    padding: 10px 7px;
+}
+
+.navbar-header .bars {
+    float: left;
+    text-decoration: none;
+}
+
+.navbar-nav > li > a {
+    padding: 7px 7px 2px 7px;
+    margin-top: 17px;
+    margin-left: 5px;
+}
+
+.navbar-nav .dropdown-menu {
+    margin-top: -40px !important;
+}
+
+.overlay-open .bars:before {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.overlay-open .bars:after {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.overlay-open .bars:before {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.overlay-open .bars:after {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.overlay-open .sidebar {
+    margin-left: 0;
+    z-index: 99999999;
+    display: block;
+}
+
+.wj-menu {
+    padding: 6px 14px;
+    border: none;
+    background: transparent;
+}
+
+.wj-menu:hover,
+.wj-menu.wj-state-focused {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.wj-menu .wj-input-group .wj-input-group-btn {
+    display: none;
+}
+
+.wj-listbox.wj-menu-items {
+    min-width: 8em;
+    border: none;
+    background: #fddfa7;
+}
+
+.wj-listbox.wj-menu-items .wj-listbox-item:not(.wj-separator) {
+    padding: 6px 12px;
+}
+
+.wj-listbox {
+    max-height: 200px;
+}
+
+.wj-viewer {
+    width: 100%;
+    display: block;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 1.1666rem;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s,
+        -webkit-box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.file-upload-button {
+    padding: -2px 6px;
+}
+
+.link-ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: fit-content;
+}
+
+.wj-flexgrid {
+    margin: 10px 0px;
+}
+
+.wj-flexgrid .wj-cell input.wj-column-selector {
+    margin: 2px !important;
+}
+
+.wj-cell {
+    font-size: 1rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.2) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.wj-cell .v-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: pre-wrap;
+}
+
+.wj-accordion > .wj-header {
+    padding: 3px 10px;
+    font-weight: inherit;
+    font-size: 1.333rem;
+    border-left: 6px solid #757474;
+    border-bottom: 3px solid #757474;
+}
+
+.wj-accordion > .wj-header.wj-state-active {
+    background: #fff;
+    color: black;
+    border-left: 6px solid #757474;
+    border-bottom: 3px solid #757474;
+}
+
+.wj-accordion > .wj-header:focus {
+    outline: none;
+}
+
+.wj-combo-box {
+    height: 26px;
+}
+
+.wj-input-date {
+    height: 26px;
+}
+
+.wj-content.wj-dropdown,
+.wj-content.wj-inputnumber,
+.wj-content.wj-inputmask,
+.wj-content.wj-pager {
+    height: 30px;
+}
+
+.ng-valid {
+    font-size: 1rem;
+    vertical-align: text-top;
+}
+
+.pane-part {
+    background: #fff;
+    color: black;
+    border-left: 6px solid #757474;
+    border-bottom: 3px solid #757474;
+    padding: 3px 10px;
+    height: 17px;
+    font-size: 1.333rem;
+}
+
+.file {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    resize: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    padding: 3px 5px;
+    outline: none;
+}
+
+.wj-listbox .wj-listbox-item {
+    height: 27px;
+}
+
+// Global styles for SQRM, added by ATCP Devs
+
+// button styles
+button.btn {
+    border-radius: 4px;
+    height: 30px;
+    cursor: pointer;
+
+    * {
+        cursor: pointer;
+    }
+}
+
+button.btn.btn-primary {
+    background-color: #409eff;
+    color: #ffffff;
+    border: 1px solid #409eff;
+}
+
+button.btn.btn-secondary {
+    background-color: #ecf5ff;
+    color: #409eff;
+    border: 1px solid #409eff;
+}
+
+button.btn.disabled,
+button.btn[disabled] {
+    background-color: #c8c9cc;
+    color: #ffffff;
+    border: 1px solid #c8c9cc;
+}
+
+button.btn-fw {
+    width: 110px;
+}
+
+button.btn-fw-80 {
+    width: 80px;
+}
+
+// title styles
+.main-app-title {
+    font-size: 1.5rem;
+}
+.sub-screen-title,
+.menu-item {
+    font-size: 1.333rem;
+}
+.modal-title {
+    font-size: 1.333rem;
+}
+
+// container title styles
+.main-screen-title {
+    margin: auto 0 !important;
+    font-size: 24px;
+    text-align: left;
+}
+
+.sub-screen-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    padding: 3px 10px;
+    border-left: 6px solid #757474;
+    border-bottom: 3px solid #757474;
+    text-align: left;
+}
+
+.required-before:before,
+.required:after {
+    content: " *";
+    color: red;
+}
+
+// Main links styling
+.main-screen-links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    padding: 0 10px;
+
+    a,
+    a:hover {
+        padding-right: 10px;
+        border: none;   
+        border-right: 2px solid #757474;
+    }
+
+    a:last-child {
+        border: none;
+    }
+}
+
+// This is a temporary fix for the wijmo input date styling in the Various Survey - Actions
+.temp-fix.various-survey.actions {
+    .wj-input-group {
+        display: flex;
+    }
+}
+
+//override wijmo multirow grid styling
+.wj-cells .wj-cell.wj-state-selected {
+    background: #ffffff;
+    color: #222;
+}
+
+//override wijmo frozen column 
+.wj-cell.wj-frozen {
+    background-color: #ffffff;
+}
+
+// Vertically center align cells 
+.wj-flexgrid.wj-vertical-align .wj-cell {
+    display: flex;
+    align-items: center;
+}
+.wj-flexgrid.wj-vertical-align .wj-cell.wj-align-right {
+    justify-content: flex-end;
+}
+.wj-flexgrid.wj-vertical-align .wj-cell.wj-align-left {
+    justify-content: flex-start;
+}
+.wj-flexgrid.wj-vertical-align .wj-cell.wj-align-center {
+    justify-content: center;
+}

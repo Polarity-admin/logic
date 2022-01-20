@@ -1,0 +1,24 @@
+﻿<div class="topstyle">
+    <div class="leftliststyle">
+        <div class="tec">
+            <p style="float: left; margin-top: 7px; margin-left: 16px;" class="main-app-title">{{ 'sqrm.SQ_L00316' |
+                translate }}</p>
+        </div>
+    </div>
+
+    <div class="centerstyle"
+        [ngStyle]="{'background-color': env === 'dev' ? 'red' : env === 'test' ? 'orange' : 'inherit'}">
+        <p *ngIf="env === 'dev'">DEVELOPMENT SERVER</p>
+        <p *ngIf="env === 'test'">TEST SERVER</p>
+    </div>
+
+    <div class="rightliststyle">
+        <div class="usercontent" [ngStyle]="{'border-left': loginDisplay ? '1px solid #fff' : 'none'}">
+            <button class="btn btn-primary" style="height: inherit;" *ngIf="!loginDisplay" (click)="login()">
+                {{'sqrm.SQ_L00317' | translate }}
+            </button>
+
+            <span class="namestyle" *ngIf="loginDisplay">{{ globalId }} {{ userName }}</span>
+        </div>
+    </div>
+</div>

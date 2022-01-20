@@ -1,0 +1,46 @@
+<div class="sub-screen"  *ngIf="currentRoute === 'mdd-request' || currentRoute === 'mdd-answer' || currentRoute === 'mdd-approval'">
+  
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L05001" | translate }}</p>
+    <button class="btn btn-secondary " *ngIf="currentRoute === 'mdd-request'" > {{ "sqrm.SQ_L05016" | translate }}</button>
+  </div>
+
+  <div class="sub-screen-container">
+    <form>
+      <table class="style1">
+        <tr>
+            <td>{{ 'sqrm.SQ_L05038' | translate }}</td>
+            <td> <label>{{ 'sqrm.SQ_L05038' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L05039' | translate }}</td>
+            <td>
+              <wj-input-date id="reportDateInit" format="yyyy/MM/dd" *ngIf="currentRoute=== 'mdd-request' || currentRoute === 'mdd-answer'"></wj-input-date>
+              <label *ngIf ="currentRoute === 'mdd-approval'">{{ 'sqrm.SQ_L05039' | translate }}</label>
+            </td>
+            <td>{{ 'sqrm.SQ_L05040' | translate }}<span *ngIf="currentRoute === 'mdd-request'" class="required"></span></td>
+            <td>
+              <wj-input-date id="reportDateInit" format="yyyy/MM/dd" *ngIf="currentRoute=== 'mdd-request' || currentRoute === 'mdd-answer'"></wj-input-date>
+              <label *ngIf ="currentRoute === 'mdd-approval'">{{ 'sqrm.SQ_L05040' | translate }}</label>
+            </td>
+        </tr>
+        <tr>
+            <td>{{ 'sqrm.SQ_L05041' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L05041' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L05042' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L05042' | translate }}</label></td>
+        </tr>
+        <tr>
+            <td>
+              {{ 'sqrm.SQ_L05043' | translate }}
+              <div *ngIf="currentRoute === 'mdd-request' || currentRoute ==='mdd-answer'">{{ 'sqrm.SQ_L05044' | translate }}</div>
+            </td>
+            <td colspan="5" >
+                <textarea class="form-textarea style1" *ngIf="currentRoute !== 'mdd-approval'"></textarea>
+                <label *ngIf="currentRoute === 'mdd-approval'"></label>
+            </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+
+

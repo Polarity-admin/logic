@@ -1,0 +1,329 @@
+<div class="page-content">
+  <div class="main-screen">
+    <p class="main-screen-title">{{ 'sqrm.SQ_L17000' | translate }}</p>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-title">
+      <p>{{ 'sqrm.SQ_L17001' | translate }}<span>mclariza</span></p>
+      <div class="actions">
+        <button class="btn btn-primary">{{ 'sqrm.SQ_L17002' | translate }}</button>
+      </div>
+    </div>
+    <div class="sub-screen-container">
+      <table>
+        <tr>
+          <td class="label-cell">
+            <p>{{ 'sqrm.SQ_L17003' | translate }}</p>
+          </td>
+          <td><label>{{ 'sqrm.SQ_L17003' | translate }}</label></td>
+          <td class="label-cell">
+            <p>{{ 'sqrm.SQ_L17004' | translate }}</p>
+          </td>
+          <td><label>{{ 'sqrm.SQ_L17004' | translate }}</label></td>
+        </tr>
+        <tr>
+          <td class="label-cell">{{ 'sqrm.SQ_L17005' | translate }}</td>
+          <td colspan="3">
+            <select>
+              <option>ITS-LSI</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <div style="margin:20px 0">
+        <wj-tab-panel [selectedIndex]="0">
+          <wj-tab>
+            <a>{{ 'sqrm.SQ_L17006' | translate }}<span>(7)</span></a>
+            <div>
+              <wj-multi-row class="girdlist" #multirow 
+              [headersVisibility]="'Column'" 
+              [allowMerging]="'Cells'" 
+              [itemsSource] ="testData"
+              >
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L17007' | translate }}" [rowspan]="1" [width]="'*'" [allowMerging]='true'>
+                  <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                    <a href="#">{{ 'sqrm.SQ_L17008' | translate }}</a>
+                </ng-template>
+                </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="uor" header="{{ 'sqrm.SQ_L17009' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="custName" header="{{ 'sqrm.SQ_L17010' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="prodName" header="{{ 'sqrm.SQ_L17011' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="custReqDate" header="{{ 'sqrm.SQ_L17012' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="returnedQty" header="{{ 'sqrm.SQ_L17013' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="failurePhenom" header="{{ 'sqrm.SQ_L17014' | translate }}"  [rowspan]="1" [width]="400" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="reqRepDateInitial" header="{{ 'sqrm.SQ_L17015' | translate }}" [rowspan]="1"  [width]="'*'" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="reqRepDateFinal" header="{{ 'sqrm.SQ_L17016' | translate }}" [rowspan]="1"  [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="lastUpdate" header="{{ 'sqrm.SQ_L17017' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="lastUpdatedby" header="{{ 'sqrm.SQ_L17018' | translate }}" [rowspan]="1"  [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+            </wj-multi-row>
+            </div>
+          </wj-tab>
+          <wj-tab>
+            <a>{{ 'sqrm.SQ_L17019' | translate }}<span>(16)</span></a>
+            <div>
+              <wj-multi-row class="girdlist" #multirow 
+              [headersVisibility]="'Column'" 
+              [allowMerging]="'Cells'" 
+              [itemsSource] ="testData2"
+              >
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="status" header="{{ 'sqrm.SQ_L17020' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="reqNo" header="{{ 'sqrm.SQ_L17021' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="reqDate" header="{{ 'sqrm.SQ_L17022' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="ver" header="{{ 'sqrm.SQ_L17023' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="custName" header="{{ 'sqrm.SQ_L17024' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="prodName" header="{{ 'sqrm.SQ_L17025' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="reqBy" header="{{ 'sqrm.SQ_L17026' | translate }}" [rowspan]="1" [width]="200" >
+                  <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                    <div>
+                        <div style="display:block">{{ 'sqrm.SQ_L17026' | translate }}</div>
+                        <div style="display:block">{{ 'sqrm.SQ_L17027' | translate }}</div>
+                    </div>
+                </ng-template>
+                </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="requester" header="{{ 'sqrm.SQ_L17028' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="reqSection" header="{{ 'sqrm.SQ_L17029' | translate }}" [rowspan]="1"  [width]="400" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="pic" header="{{ 'sqrm.SQ_L17030' | translate }}" [rowspan]="1"  [width]="400" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="rrdinitial" header="{{ 'sqrm.SQ_L17031' | translate }}" [rowspan]="1" [align]="'center'" [width]="250" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="rrdFinal" header="{{ 'sqrm.SQ_L17032' | translate }}" [rowspan]="1" [align]="'center'" [width]="250" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="lastUpdate" header="{{ 'sqrm.SQ_L17033' | translate }}" [rowspan]="1"  [width]="'*'" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="lastUpdatedBy" header="{{ 'sqrm.SQ_L17034' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+            </wj-multi-row>
+            </div>
+          </wj-tab>
+          <wj-tab>
+            <a>{{ 'sqrm.SQ_L17035' | translate }}<span>(19)</span></a>
+            <div>
+              <wj-multi-row class="girdlist" #multirow 
+              [headersVisibility]="'Column'" 
+              [allowMerging]="'Cells'" 
+              [itemsSource] ="testData2"
+              >
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="status" header="{{ 'sqrm.SQ_L17036' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="reqNo" header="{{ 'sqrm.SQ_L17037' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="reqDate" header="{{ 'sqrm.SQ_L17038' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="ver" header="{{ 'sqrm.SQ_L17039' | translate }}" [rowspan]="1" [width]="'*'" ></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="custName" header="{{ 'sqrm.SQ_L17040' | translate }}" [rowspan]="1" [width]="200"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="prodName" header="{{ 'sqrm.SQ_L17041' | translate }}" [rowspan]="1" [width]="200"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="investigationCateg" header="{{ 'sqrm.SQ_L17042' | translate }}" [rowspan]="1" [width]="300" [allowMerging]='true'></wj-multi-row-cell>
+                <wj-multi-row-cell binding="reqBy" header="{{ 'sqrm.SQ_L17043' | translate }}" [rowspan]="1" [width]="300">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                    <div>
+                        <div style="display:block">{{ 'sqrm.SQ_L17043' | translate }}<span>{{ 'sqrm.SQ_L17044' | translate }}</span> </div>
+                    </div>
+                </ng-template>
+              </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="requester" header="{{ 'sqrm.SQ_L17045' | translate }}" [rowspan]="1" [width]="100"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="reqSection" header="{{ 'sqrm.SQ_L17046' | translate }}" [rowspan]="1"  [width]="400"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="pic" header="{{ 'sqrm.SQ_L17047' | translate }}" [rowspan]="1"  [width]="400"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="rrdinitial" header="{{ 'sqrm.SQ_L17048' | translate }}" [rowspan]="1"  [width]="250"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="rrdFinal" header="{{ 'sqrm.SQ_L17049' | translate }}" [rowspan]="1"  [width]="250"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="lastUpdate" header="{{ 'sqrm.SQ_L17050' | translate }}" [rowspan]="1"  [width]="'*'"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="lastUpdatedBy" header="{{ 'sqrm.SQ_L17051' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+            </wj-multi-row>
+            </div>
+          </wj-tab>
+          <wj-tab>
+            <a>{{ 'sqrm.SQ_L17052' | translate }}<span>(22)</span></a>
+            
+            <div>
+              <div class="tab-container">
+                <button class="btn btn-primary margin-t-10">{{ 'sqrm.SQ_L17053' | translate }}</button>
+    
+                <p style="padding-top: 15px;">Description of shaded areas(s)</p>
+              </div>
+              
+
+              <wj-multi-row class="girdlist" #multirow 
+              [headersVisibility]="'Column'" 
+              [allowMerging]="'Cells'" 
+              [itemsSource] ="testData2"
+              >
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L17054' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="status" header="{{ 'sqrm.SQ_L17055' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="uor" header="{{ 'sqrm.SQ_L17056' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="ver" header="{{ 'sqrm.SQ_L17057' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="repNo" header="{{ 'sqrm.SQ_L17058' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+      
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="custName" header="{{ 'sqrm.SQ_L17059' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="prodName" header="{{ 'sqrm.SQ_L17060' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="pic" header="{{ 'sqrm.SQ_L17061' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="prd" header="{{ 'sqrm.SQ_L17062' | translate }}" [rowspan]="1" [width]="300"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="deadline" header="{{ 'sqrm.SQ_L17063' | translate }}" [rowspan]="1" [width]="300"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="pfrd" header="{{ 'sqrm.SQ_L17064' | translate }}" [rowspan]="1"  [width]="250"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="dffr" header="{{ 'sqrm.SQ_L17065' | translate }}" [rowspan]="1"  [width]="250"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="lastUpdate" header="{{ 'sqrm.SQ_L17066' | translate }}" [rowspan]="1"  [width]="'*'"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="lastUpdatedBy" header="{{ 'sqrm.SQ_L17067' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+            </wj-multi-row>
+            </div>
+          </wj-tab>
+          <wj-tab>
+            <a>{{ 'sqrm.SQ_L17068' | translate }}<span>(1)</span> </a>
+            <div>
+              <wj-multi-row class="girdlist" #multirow 
+              [headersVisibility]="'Column'" 
+              [allowMerging]="'Cells'" 
+              [itemsSource] ="testData2"
+              >
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="status" header="{{ 'sqrm.SQ_L17069' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="custName" header="{{ 'sqrm.SQ_L17070' | translate }}" [rowspan]="1" [width]="'*'"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L17071' | translate }}" [rowspan]="1" [width]="'*'">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <div>
+                      <p>IMX00AKE-1</p>
+                      <p>IMX00AKE-1</p>
+                    </div>
+                   </ng-template>
+                </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L17072' | translate }}" [rowspan]="1" [width]="'*'">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <div>
+                      <p>Ver.2</p>
+                      <p>-</p>
+                    </div>
+                   </ng-template>
+                </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L17073' | translate }}" [rowspan]="1" [width]="'*'">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <div>
+                      <p>S18-00010H02</p>
+                      <p>-</p>
+                    </div>
+                   </ng-template>
+                </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L17074' | translate }}" [rowspan]="1" [width]="'*'">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <div>
+                      <p>2019/07/04</p>
+                      <p>-</p>
+                    </div>
+                  </ng-template>
+                </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+
+              
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L17075' | translate }}" [rowspan]="1" [width]="'*'" >
+                  <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                    <div>
+                        <div style="display:block">{{ 'sqrm.SQ_L17075' | translate }}</div>
+                        <div style="display:block">{{ 'sqrm.SQ_L17076' | translate }}</div>
+                    </div>
+                    </ng-template>
+                    <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                      <div>
+                        <p>2021/12/08 16:28</p>
+                        <p>mon clariza</p>
+                      </div>
+                    </ng-template>
+                </wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              </wj-multi-row>
+            </div>
+          </wj-tab>
+        </wj-tab-panel>
+      </div>
+    </div>
+  </div>
+
+</div>

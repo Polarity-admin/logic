@@ -1,0 +1,51 @@
+<div class="sub-screen">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L00104" | translate }}</p>
+    <div class="actions">
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L00105" | translate }}</button>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <table>
+      <tr class="three">
+        <td class="label-cell"><p>{{ "sqrm.SQ_L00106" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L00107" | translate }}</p></td>
+        <td>
+          <wj-input-date *ngIf="currentRoute !== 'approve'" id="reportDateInit" format="yyyy/MM/dd"></wj-input-date>
+          <span *ngIf="currentRoute === 'approve'">Test Data</span>
+        </td>
+
+        <td class="label-cell"><p [ngClass]="{ 'required': currentRoute === 'request' }">{{ "sqrm.SQ_L00108" | translate }}</p></td>
+        <td>
+          <wj-input-date *ngIf="currentRoute !== 'approve'" id="reportDateFinal" format="yyyy/MM/dd"></wj-input-date>
+          <span *ngIf="currentRoute === 'approve'">Test Data</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L00109" | translate }}</p></td>
+        <td colspan="2">Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L00110" | translate }}</p></td>
+        <td colspan="2">Test Data</td>
+      </tr>
+      <tr>
+        <td class="label-cell"> 
+          <p>{{ "sqrm.SQ_L00111" | translate }}</p>
+          <p *ngIf="currentRoute === 'request'">{{ "sqrm.SQ_L00112" | translate }}</p>
+        </td>
+        <td colspan="5">
+          <textarea
+            type="text"
+            class="text"
+            style="width: calc(100% - 18px)"
+            rows="3"
+            *ngIf="currentRoute !== 'approve'" 
+          ></textarea>
+          <span *ngIf="currentRoute === 'approve'">Test Data</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

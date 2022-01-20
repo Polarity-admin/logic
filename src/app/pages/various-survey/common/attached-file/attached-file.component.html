@@ -1,0 +1,55 @@
+<div class="sub-screen" *ngIf="currentRoute === 'request'">
+  <div class="sub-screen-title">
+    <div class="header-title">
+      <span>{{ "sqrm.SQ_L00154" | translate }}</span>
+      <span>{{ "sqrm.SQ_L00155" | translate }}</span>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <div class="file-upload">
+      <input type="file" />
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L00156" | translate }}</button>
+    </div>
+  </div>
+</div>
+
+<!-- Attached file reply side -->
+<div class="sub-screen" *ngIf="currentRoute !== 'request'">
+  <div class="sub-screen-title">
+    <div class="header-title">
+      <span>{{ "sqrm.SQ_L00180" | translate }}</span>
+      <span>{{ "sqrm.SQ_L00181" | translate }}</span>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-flex-grid
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="testData" 
+    >
+      <wj-flex-grid-column binding="fileName" [header]="'sqrm.SQ_L00222' | translate" [minWidth]="100" [width]="'*'">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <a>{{ cell.item.fileName }}</a>
+        </ng-template>
+      </wj-flex-grid-column>  
+      <wj-flex-grid-column binding="fileSize" [header]="'sqrm.SQ_L00223' | translate" [minWidth]="200"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="date" [header]="'sqrm.SQ_L00224' | translate" [minWidth]="200" ></wj-flex-grid-column>
+    </wj-flex-grid>
+  </div>
+</div>
+
+<!-- Attached file answer side -->
+<div class="sub-screen" *ngIf="currentRoute !== 'request'">
+  <div class="sub-screen-title">
+    <div class="header-title">
+      <span>{{ "sqrm.SQ_L00180" | translate }}</span>
+      <span>{{ "sqrm.SQ_L00181" | translate }}</span>
+    </div>
+  </div>
+  <div class="sub-screen-container" *ngIf="currentRoute === 'answer'">
+    <div class="file-upload" >
+      <input type="file" />
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L00156" | translate }}</button>
+    </div>
+  </div>
+</div>

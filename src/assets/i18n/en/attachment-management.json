@@ -1,0 +1,23 @@
+{
+  "sqrm": {
+    "SQ_L07000": "Modify attached files",
+    "SQ_L07001": "Modify attached files",
+    "SQ_L07002": "Close",
+    "SQ_L07003": "Addition, update file",
+    "SQ_L07004": "Clear",
+    "SQ_L07005": "Add",
+    "SQ_L07006": "Targeted for deletion",
+    "SQ_L07007": "File name",
+    "SQ_L07008": "File size",
+    "SQ_L07009": "Password",
+    "SQ_L07010": "Comments",
+    "SQ_L07011": "Update date/Last updated by",
+    "SQ_L07012": "Update",
+    "SQ_L07013": "Delete",
+    "SQ_L07014": "Modify attached files",
+    "SQ_L07015": "Attached file will be saved. Would you like to continue?",
+    "SQ_L07016": "Comments",
+    "SQ_L07017": "OK",
+    "SQ_L07018": "Cancel"
+  }
+}

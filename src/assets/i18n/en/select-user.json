@@ -1,0 +1,26 @@
+{
+  "sqrm": {
+    "SQ_L08000": "Select a user",
+    "SQ_L08001": "Search conditions",
+    "SQ_L08002": "Name",
+    "SQ_L08003": "E-mail",
+    "SQ_L08004": "Section",
+    "SQ_L08005": "Company",
+    "SQ_L08006": "Search",
+    "SQ_L08007": "Search result : ",
+    "SQ_L08008": "Back",
+    "SQ_L08009": "Forward",
+    "SQ_L08010": "Select",
+    "SQ_L08011": "Name",
+    "SQ_L08012": "E-mail",
+    "SQ_L08013": "Section",
+    "SQ_L08014": "Supervisor",
+    "SQ_L08015": "Close",
+    "SQ_L08016": "Confirmer",
+    "SQ_L08017": "Approver",
+    "SQ_L08018": "Select",
+    "SQ_L08019": "Select all",
+    "SQ_L08020": "Select",
+    "SQ_L08021": "The selected users have been added successfully."
+  }
+}

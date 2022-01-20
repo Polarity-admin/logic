@@ -1,0 +1,1136 @@
+<div class="sub-screen" *ngIf="currentRoute.includes('is-')">
+    <div class="sub-screen-title">
+        <div class="header-title">
+            <span>{{ "sqrm.SQ_L10006" | translate }}</span>
+        </div>
+        <div class="actions">
+            <button class="btn btn-secondary">Back</button>
+            <button class="btn btn-secondary">Forward</button>
+            <div class="pagination-container">
+                <p>{{ currentPage }}</p>
+                <select>
+                  <option *ngFor="let i of pages" value="">{{ i }} - {{ totalPages }}</option>
+                </select>
+            </div>
+            <select [(ngModel)]="irsModeStatus">
+              <option *ngFor="let i of irsMode">{{i}}</option>
+            </select>
+            <a href="#" *ngIf="currentRoute ==='is-approval'">{{ 'sqrm.SQ_L10146' | translate }}</a>
+        </div>
+    </div>
+    <div class="sub-screen-container">
+        <wj-multi-row class="girdlist" #multirow 
+          [frozenColumns]="3" 
+          [headersVisibility]="'Column'"
+          [allowMerging]="'Cells'"
+          [itemsSource]="returnedSamplesData1"
+          *ngIf="irsModeStatus === 'PKG Soc'">
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L10031' | translate }}" [rowspan]="2"
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+                <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L10032' | translate }}" [rowspan]="2"
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="customerName" [rowspan]="2" [width]="150"
+                    header="{{ 'sqrm.SQ_L10033' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="productName" [rowspan]="2" [width]="150"
+                    header="{{ 'sqrm.SQ_L10034' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="customerSampleNo" [rowspan]="2" [width]="200"
+                    header="{{ 'sqrm.SQ_L10035' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sonySampleNo" [rowspan]="2" [width]="200"
+                    header="{{ 'sqrm.SQ_L10036' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="markLotNo" [rowspan]="2" [width]="150"
+                    header="{{ 'sqrm.SQ_L10037' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="id" [rowspan]="2" [width]="150" header="{{ 'sqrm.SQ_L10038' | translate }}">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="dateOfFailureOccurence" [rowspan]="2" [width]="250"
+                    header="{{ 'sqrm.SQ_L10039' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="regionOfFailure" [rowspan]="2" [width]="250"
+                    header="{{ 'sqrm.SQ_L10040' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="processOfFailure" [rowspan]="2" [width]="250"
+                    header="{{ 'sqrm.SQ_L10041' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="detailProcessOfFailure" [rowspan]="2" [width]="250"
+                    header="{{ 'sqrm.SQ_L10042' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="failureMode" [rowspan]="4" header="{{ 'sqrm.SQ_L10043' | translate }}">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="detailsOfFailureMode" [rowspan]="4" [width]="250" header="{{ 'sqrm.SQ_L10044' | translate }}">
+                    <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                        <div>
+                            <div style="display:block"> {{ 'sqrm.SQ_L10044' | translate }}</div>
+                            <div style="display:block"> {{ 'sqrm.SQ_L10045' | translate }}</div>
+                        </div>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <!-- PKG Soc -->
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell [header]="'sqrm.SQ_L10046' | translate" [colspan]="2" [width]="400"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="pTest" [header]="'sqrm.SQ_L10047' | translate" [width]="200"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="pSoldier" [header]="'sqrm.SQ_L10048' | translate" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="pFailureMode" [header]="'sqrm.SQ_L10049' | translate" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="pWhitePixel" [header]="'sqrm.SQ_L10050' | translate" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="pIllustration" [header]="'sqrm.SQ_L10051' | translate" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <button class="btn btn-secondary">Refer</button>
+                    <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="pReplacement" [header]="'sqrm.SQ_L10052' | translate" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell [header]="'sqrm.SQ_L10053' | translate" [colspan]="2" [width]="400"></wj-multi-row-cell>
+                <wj-multi-row-cell binding ="vcVisualCheckresult" [header]="'sqrm.SQ_L10054' | translate" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding ="vcPersonInCharge" [header]="'sqrm.SQ_L10055' | translate" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%" />
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell [colspan]="2">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%" />
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding ="vcIllustration" [header]="'sqrm.SQ_L10057' | translate" [colspan]="2">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <button class="btn btn-secondary">Making</button>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="null" [header]="'sqrm.SQ_L10058' | translate" [colspan]="2" [width]="400"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="mcResult" [header]="'sqrm.SQ_L10058' | translate" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="mPersonInCharge" [header]="'sqrm.SQ_L10060' | translate" [width]="150">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%" />
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="mcEquipment" [header]="'sqrm.SQ_L10061' | translate" [colspan]="2">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%" />
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="mIllustration" [header]="'sqrm.SQ_L10062' | translate" [colspan]="2">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <button class="btn btn-secondary">Making</button>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="cCheck" [header]="'sqrm.SQ_L10063' | translate" [colspan]="8" [width]="600"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cTestDate" [header]="'sqrm.SQ_L10064' | translate" [width]="150">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-input-date format="yyyy/MM/dd"></wj-input-date>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cResult" [header]="'sqrm.SQ_L10065' | translate" [width]="150">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="c1Time" [header]="'sqrm.SQ_L10066' | translate" [rowspan]="3" [width]="40" [wordWrap]="true"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cNgItem1" [header]="'sqrm.SQ_L10067' | translate" [width]="150">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="c2Time" [header]="'sqrm.SQ_L10068' | translate" [rowspan]="3" [width]="40" [wordWrap]="true"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cNgItem2" [header]="'sqrm.SQ_L10069' | translate" >
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="c3Time" [header]="'sqrm.SQ_L10070' | translate" [rowspan]="3" [width]="40" [wordWrap]="true"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cNgItem3" [header]="'sqrm.SQ_L10071' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cPersonInCharge" [header]="'sqrm.SQ_L10072' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cEquipmentNo" [header]="'sqrm.SQ_L10073' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cLevel1" [header]="'sqrm.SQ_L10074' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cLevel2" [header]="'sqrm.SQ_L10075' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cLevel3" [header]="'sqrm.SQ_L10076' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cTestFile" [header]="'sqrm.SQ_L10077' | translate" [colspan]="2">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cAddress1" [header]="'sqrm.SQ_L10078' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cAddress2" [header]="'sqrm.SQ_L10079' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="cAddress3" [header]="'sqrm.SQ_L10080' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="sCheck" [header]="'sqrm.SQ_L10081' | translate" [colspan]="8" [width]="600"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sTestDate" [header]="'sqrm.SQ_L10082' | translate" [width]="150">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-input-date format="yyyy/MM/dd"></wj-input-date>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sResult" [header]="'sqrm.SQ_L10083' | translate" [width]="150">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="s1Time" [header]="'sqrm.SQ_L10084' | translate" [rowspan]="3" [width]="40" [wordWrap]="true"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sNgItem1" [header]="'sqrm.SQ_L10085' | translate" [width]="150">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="s2Time" [header]="'sqrm.SQ_L10086' | translate" [rowspan]="3" [width]="40" [wordWrap]="true"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sNgItem2" [header]="'sqrm.SQ_L10087' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="s3Time" [header]="'sqrm.SQ_L10088' | translate" [rowspan]="3" [width]="40" [wordWrap]="true"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sNgItem3" [header]="'sqrm.SQ_L10089' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sPersonInCharge" [header]="'sqrm.SQ_L10090' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sEquipmentNo" [header]="'sqrm.SQ_L10091' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sLevel1" [header]="'sqrm.SQ_L10092' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sLevel2" [header]="'sqrm.SQ_L10093' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sLevel3" [header]="'sqrm.SQ_L10094' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sTestFile" [header]="'sqrm.SQ_L10095' | translate" [colspan]="2">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sAddress1" [header]="'sqrm.SQ_L10096' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sAddress2" [header]="'sqrm.SQ_L10097' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+                <wj-multi-row-cell binding="sAddress3" [header]="'sqrm.SQ_L10098' | translate">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <input type="search" style="width:99%"/>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+            <!-- End PKG Soc-->
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="finalCheck" header="{{ 'sqrm.SQ_L10135' | translate }}" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <div class="column-row temp-fix various-survey actions">
+                    <wj-combo-box
+                      [itemsSource]="comboBox1"
+                      [isDroppedDown]="false"
+                      [isAnimated]="true"
+                    ></wj-combo-box> 
+                    <textarea></textarea>
+                  </div>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="analysisresult" header="{{ 'sqrm.SQ_L10136' | translate }}" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <div class="column-row temp-fix various-survey actions">
+                    <wj-combo-box
+                      [itemsSource]="comboBox1"
+                      [isDroppedDown]="false"
+                      [isAnimated]="true"
+                    ></wj-combo-box> 
+                    <textarea></textarea>
+                  </div>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="analysisResultDetails" header="{{ 'sqrm.SQ_L10137' | translate }}" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <div class="column-row temp-fix various-survey actions">
+                    <wj-combo-box
+                      [itemsSource]="comboBox1"
+                      [isDroppedDown]="false"
+                      [isAnimated]="true"
+                    ></wj-combo-box> 
+                    <textarea></textarea>
+                  </div>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="responsibility" header="{{ 'sqrm.SQ_L10138' | translate }}" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <div class="column-row temp-fix various-survey actions">
+                    <wj-combo-box
+                      [itemsSource]="comboBox1"
+                      [isDroppedDown]="false"
+                      [isAnimated]="true"
+                    ></wj-combo-box> 
+                    <textarea></textarea>
+                  </div>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="summaryOfResult" header="{{ 'sqrm.SQ_L10139' | translate }}" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <div class="column-row temp-fix various-survey actions">
+                    <wj-combo-box
+                      [itemsSource]="comboBox1"
+                      [isDroppedDown]="false"
+                      [isAnimated]="true"
+                    ></wj-combo-box> 
+                    <textarea></textarea>
+                  </div>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="comments" header="{{ 'sqrm.SQ_L10140' | translate }}" [width]="200">
+                <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                  <textarea style="overflow-y: scroll;height: 100px;"></textarea>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="judgement" header="{{ 'sqrm.SQ_L10141' | translate }}" [width]="200">
+                <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item"></ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+        </wj-multi-row>
+
+        <wj-multi-row class="girdlist" #multirow 
+          [frozenColumns]="3" 
+          [headersVisibility]="'Column'"
+          [allowMerging]="'Cells'"
+          [itemsSource]="returnedSamplesData1"
+          [selectionMode]="'None'"
+          *ngIf="irsModeStatus === 'Module Soc'">
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L10031' | translate }}" [rowspan]="2"
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+                <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L10032' | translate }}" [rowspan]="2"
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="customerName" [rowspan]="2" [width]="150"
+                    header="{{ 'sqrm.SQ_L10033' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="productName" [rowspan]="2" [width]="150"
+                    header="{{ 'sqrm.SQ_L10034' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="customerSampleNo" [rowspan]="2" [width]="200"
+                    header="{{ 'sqrm.SQ_L10035' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sonySampleNo" [rowspan]="2" [width]="200"
+                    header="{{ 'sqrm.SQ_L10036' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="markLotNo" [rowspan]="2" [width]="150"
+                    header="{{ 'sqrm.SQ_L10037' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="id" [rowspan]="2" [width]="150" header="{{ 'sqrm.SQ_L10038' | translate }}">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="dateOfFailureOccurence" [rowspan]="2" [width]="250"
+                    header="{{ 'sqrm.SQ_L10039' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="regionOfFailure" [rowspan]="2" [width]="250"
+                    header="{{ 'sqrm.SQ_L10040' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="processOfFailure" [rowspan]="2" [width]="250"
+                    header="{{ 'sqrm.SQ_L10041' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="detailProcessOfFailure" [rowspan]="2" [width]="250"
+                    header="{{ 'sqrm.SQ_L10042' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="failureMode" [rowspan]="4" header="{{ 'sqrm.SQ_L10043' | translate }}">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="detailsOfFailureMode" [rowspan]="4" [width]="250" header="{{ 'sqrm.SQ_L10044' | translate }}">
+                    <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                        <div>
+                            <div style="display:block"> {{ 'sqrm.SQ_L10044' | translate }}</div>
+                            <div style="display:block"> {{ 'sqrm.SQ_L10045' | translate }}</div>
+                        </div>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <!-- Module Soc -->
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10158' | translate" [colspan]="2" [width]="400">
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10159' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <label>Unavailable</label>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10160' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10161' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox1" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10204' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10162' | translate" [colspan]="2">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <button class="btn btn-secondary">Refer</button>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group >
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10163' | translate" [colspan]="2" [width]="400"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10164' | translate" [rowspan]="2" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <div class="column-row temp-fix various-survey actions">
+                    <wj-combo-box
+                      [itemsSource]="comboBox1"
+                      [isDroppedDown]="false"
+                      [isAnimated]="true"
+                    ></wj-combo-box> 
+                    <wj-combo-box
+                      [itemsSource]="comboBox1"
+                      [isDroppedDown]="false"
+                      [isAnimated]="true"
+                    ></wj-combo-box> 
+                  </div>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10165' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:95%" [(ngModel)]="montext" />
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10166' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:95%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10167' | translate" [colspan]="2" >
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:95%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group >
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10168' | translate" [colspan]="2" [width]="400"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10169' | translate" [width]="150">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10170' | translate" [width]="250">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:95%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10171' | translate" [colspan]="2" [width]="250">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:95%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10172' | translate" [colspan]="2" [width]="250">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:95%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+
+            <wj-multi-row-cell-group >
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10173' | translate" [width]="500" [colspan]="3"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10174' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-input-date format="yyyy/MM/dd"></wj-input-date>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10175' | translate" [width]="100">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10176' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10177' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:95%" />
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10178' | translate" [width]="100">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:95%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10179' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10180' | translate" [colspan]="2" [width]="300">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%" />
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10181' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            
+            <wj-multi-row-cell-group >
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10182' | translate" [colspan]="3"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10183' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-input-date format="yyyy/MM/dd"></wj-input-date>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10184' | translate" [width]="100">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10185' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10186' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10187' | translate" [width]="100">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10188' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10189' | translate" [colspan]="2" [width]="300">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10190' | translate" [width]="200">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%"/>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10191' | translate" [width]="100"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10192' | translate">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10193' | translate">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%" />
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10194' | translate">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%" />
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10195' | translate" [colspan]="2" [width]="400"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10196' | translate" [width]="300">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10197' | translate" [rowspan]="3" [width]="100">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <button class="btn btn-secondary">Making</button>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10198' | translate" [width]="300">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%" />
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10199' | translate" [width]="300">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%" />
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10200' | translate" [width]="200"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10201' | translate">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10202' | translate">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <wj-combo-box [itemsSource]="comboBox" [isAnimated]="true"></wj-combo-box>
+                </ng-template>
+              </wj-multi-row-cell>
+              <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10203' | translate">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                  <input type="search" style="width:99%" />
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group> 
+            <!-- End Module Soc -->
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="finalCheck" header="{{ 'sqrm.SQ_L10135' | translate }}" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <div class="column-row temp-fix various-survey actions">
+                      <wj-combo-box
+                        [itemsSource]="comboBox1"
+                        [isDroppedDown]="false"
+                        [isAnimated]="true"
+                      ></wj-combo-box> 
+                      <textarea></textarea>
+                    </div>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="analysisresult" header="{{ 'sqrm.SQ_L10136' | translate }}" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <div class="column-row temp-fix various-survey actions">
+                      <wj-combo-box
+                        [itemsSource]="comboBox1"
+                        [isDroppedDown]="false"
+                        [isAnimated]="true"
+                      ></wj-combo-box> 
+                      <textarea style="overflow-y: scroll;height: 80px;"></textarea>
+                    </div>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="analysisResultDetails" header="{{ 'sqrm.SQ_L10137' | translate }}" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <div class="column-row temp-fix various-survey actions">
+                      <wj-combo-box
+                        [itemsSource]="comboBox1"
+                        [isDroppedDown]="false"
+                        [isAnimated]="true"
+                      ></wj-combo-box> 
+                      <textarea style="overflow-y: scroll;height: 80px;"></textarea>
+                    </div>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="responsibility" header="{{ 'sqrm.SQ_L10138' | translate }}" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <div class="column-row temp-fix various-survey actions">
+                      <wj-combo-box
+                        [itemsSource]="comboBox1"
+                        [isDroppedDown]="false"
+                        [isAnimated]="true"
+                      ></wj-combo-box> 
+                      <textarea style="overflow-y: scroll;height: 80px;"></textarea>
+                    </div>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="summaryOfResult" header="{{ 'sqrm.SQ_L10139' | translate }}" [width]="200">
+                  <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <div class="column-row temp-fix various-survey actions">
+                      <wj-combo-box
+                        [itemsSource]="comboBox1"
+                        [isDroppedDown]="false"
+                        [isAnimated]="true"
+                      ></wj-combo-box> 
+                      <textarea style="overflow-y: scroll;height: 80px;"></textarea>
+                    </div>
+                  </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="comments" header="{{ 'sqrm.SQ_L10140' | translate }}" [width]="200">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea style="overflow-y: scroll;height: 100px;"></textarea>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="judgement" header="{{ 'sqrm.SQ_L10141' | translate }}" [width]="200">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea style="overflow-y: scroll;height: 100px;"></textarea>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+        </wj-multi-row>
+
+        
+    </div>
+</div>
+
+<!-- MDD -->
+<div class="sub-screen" *ngIf="currentRoute.includes('mdd-')">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L16021" | translate }}</p>
+    <div class="actions">
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L16022" | translate }}</button>
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L16023" | translate }}</button>
+      <div class="pagination-container">
+        <p>{{ currentPage }}</p>
+        <select>
+          <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
+        </select>
+      </div>
+      <a *ngIf="currentRoute === 'mdd-approval'">{{ "sqrm.SQ_L16083" | translate }}</a>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-multi-row #grid
+      [allowMerging]="'All'" 
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData"
+      [headerLayoutDefinition]="headerLayout"
+      (formatItem)="formatItem(grid, $event)"
+      (initialized)="onInitialized()"
+    >
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="customerSampleNo" [header]="'sqrm.SQ_L16024' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sonySampleNo" [header]="'sqrm.SQ_L16025' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="markLotNo" [header]="'sqrm.SQ_L16026' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="id" [header]="'sqrm.SQ_L16027' | translate" [minWidth]="150"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="dateOfFailureOccurence" [header]="'sqrm.SQ_L16028' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="regionOfFailure" [header]="'sqrm.SQ_L16029' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="detailProcessOfFailure" [header]="'sqrm.SQ_L16030' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="failureMode" [header]="'sqrm.SQ_L16031' | translate" [colspan]="3"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="confirmationSymptom" [header]="'sqrm.SQ_L16032' | translate"  [allowMerging]="true" [minWidth]="200">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <wj-combo-box
+              [itemsSource]="dropDownData"
+              [isDroppedDown]="false"
+              [isAnimated]="true"
+              *ngIf="currentRoute === 'mdd-creation'"
+            ></wj-combo-box>
+            <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.confirmationSymptom}}</span>
+          </ng-template>
+        </wj-multi-row-cell>
+        <wj-multi-row-cell binding="confirmationSymptom" [header]="'sqrm.SQ_L16032' | translate" [allowMerging]="true" [minWidth]="200">  
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="full-width right-align">
+              <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+              <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.confirmationSymptom}}</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="judgement" [header]="'sqrm.SQ_L16033' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="defectivenessModeNo" [header]="'sqrm.SQ_L16034' | translate" [minWidth]="200">  
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="column-row flex-row" *ngIf="currentRoute === 'mdd-creation'">
+              <button class="btn btn-secondary">{{ "sqrm.SQ_L16036" | translate }}</button>
+              <input type="number" class="input-number" />
+            </div>
+            <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.defectivenessModeNo}}</span>
+          </ng-template>
+        </wj-multi-row-cell>
+        <wj-multi-row-cell binding="sampleTreatment" [header]="'sqrm.SQ_L16035' | translate" [minWidth]="200">  
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <wj-combo-box
+              [itemsSource]="dropDownData"
+              [isDroppedDown]="false"
+              [isAnimated]="true"
+              *ngIf="currentRoute === 'mdd-creation'"
+            ></wj-combo-box>
+            <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.sampleTreatment}}</span>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="remarks" [minWidth]="200">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+            <p class="column-header">
+              {{ 'sqrm.SQ_L16037' | translate }}
+              <br />
+              {{ 'sqrm.SQ_L16038' | translate }}
+            </p>
+          </ng-template>
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <textarea class="form-textarea style1" rows="3"></textarea>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+    </wj-multi-row>
+  </div>
+</div>
+
+<!-- LSI -->
+<div class="sub-screen" *ngIf="currentRoute.includes('lsi-')">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L04025" | translate }}</p>
+    <div class="actions">
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L04026" | translate }}</button>
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L04027" | translate }}</button>
+      <div class="pagination-container">
+        <p>{{ currentPage }}</p>
+        <select>
+          <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
+        </select>
+      </div>
+      <a *ngIf="currentRoute === 'lsi-approval'">{{ "sqrm.SQ_L04028" | translate }}</a>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-multi-row #returnedSample
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData"
+    >
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="customerSampleNo" [header]="'sqrm.SQ_L04029' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sonySampleNo" [header]="'sqrm.SQ_L04030' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="markLotNo" [header]="'sqrm.SQ_L04031' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="id" [header]="'sqrm.SQ_L04032' | translate" [minWidth]="150"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="dateOfFailure" [header]="'sqrm.SQ_L04033' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="regionOfFailure" [header]="'sqrm.SQ_L04034' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="processOfFailure" [header]="'sqrm.SQ_L04035' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="failureMode" [header]="'sqrm.SQ_L04036' | translate" [minWidth]="150" [colspan]="3"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell [minWidth]="150">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'">
+            <p class="column-header">
+              {{ 'sqrm.SQ_L04037' | translate }}<br/>
+              {{ 'sqrm.SQ_L04038' | translate }}<br/>
+              {{ 'sqrm.SQ_L04039' | translate }}
+            </p>
+          </ng-template>
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="column-row temp-fix various-survey actions" *ngIf="currentRoute === 'lsi-creation'">
+              <wj-combo-box
+                [itemsSource]="dropDownData1"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+              <wj-combo-box
+                [itemsSource]="dropDownData1"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+              <wj-combo-box
+                [itemsSource]="dropDownData2"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+            </div>
+            <div class="column-row" *ngIf="currentRoute === 'lsi-approval'">
+              <span>-</span>
+              <span>-</span>
+              <span>-</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell [minWidth]="150">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'">
+            <p class="column-header">
+              {{ 'sqrm.SQ_L04128' | translate }}<br/>
+              {{ 'sqrm.SQ_L04129' | translate }}<br/>
+              {{ 'sqrm.SQ_L04130' | translate }}
+            </p>
+          </ng-template>
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="column-row temp-fix various-survey actions" *ngIf="currentRoute === 'lsi-creation'">
+              <wj-combo-box
+                [itemsSource]="dropDownData1"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+              <wj-combo-box
+                [itemsSource]="dropDownData1"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+              <wj-combo-box
+                [itemsSource]="dropDownData2"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+            </div>
+            <div class="column-row" *ngIf="currentRoute === 'lsi-approval'">
+              <span>-</span>
+              <span>-</span>
+              <span>-</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="resultOfCharacteristicsEvaluation" [minWidth]="250" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'">
+            <p class="column-header">
+              {{ 'sqrm.SQ_L04040' | translate }}
+              <br />
+              {{ 'sqrm.SQ_L04041' | translate }}
+            </p>
+          </ng-template>
+          
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="column-row">
+              <textarea rows="4"></textarea>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="judment1" [header]="'sqrm.SQ_L04042' | translate" [minWidth]="150">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="column-row temp-fix various-survey actions" *ngIf="currentRoute === 'lsi-creation'">
+              <wj-combo-box
+                [itemsSource]="dropDownData3"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+            </div>
+            <div class="column-row" *ngIf="currentRoute === 'lsi-approval'">
+              <span>-</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+        <wj-multi-row-cell binding="judgement" [header]="'sqrm.SQ_L04043' | translate" [minWidth]="150">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="column-row temp-fix various-survey actions" *ngIf="currentRoute === 'lsi-creation'">
+              <wj-combo-box
+                [itemsSource]="dropDownData4"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+            </div>
+            <div class="column-row" *ngIf="currentRoute === 'lsi-approval'">
+              <span>-</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="resultOfDetailedInvestigation" [minWidth]="250" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'">
+            <p class="column-header">
+              {{ 'sqrm.SQ_L04044' | translate }}
+              <br />
+              {{ 'sqrm.SQ_L04045' | translate }}
+            </p>
+          </ng-template>
+
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="column-row">
+              <textarea rows="4"></textarea>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="judgement2" [header]="'sqrm.SQ_L04046' | translate" [minWidth]="150">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="column-row temp-fix various-survey actions" *ngIf="currentRoute === 'lsi-creation'">
+              <wj-combo-box
+                [itemsSource]="dropDownData3"
+                [isDroppedDown]="false"
+                [isAnimated]="true"
+              ></wj-combo-box> 
+            </div>
+            <div class="column-row" *ngIf="currentRoute === 'lsi-approval'">
+              <span>-</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+        <wj-multi-row-cell binding="responsibility" [header]="'sqrm.SQ_L04047' | translate" [minWidth]="150"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="remarks" [minWidth]="250" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'">
+            <p class="column-header">
+              {{ 'sqrm.SQ_L04048' | translate }}
+              <br />
+              {{ 'sqrm.SQ_L04049' | translate }}
+            </p>
+          </ng-template>
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="column-row">
+              <textarea rows="4"></textarea>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+    </wj-multi-row>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+{
+  "sqrm": {
+
+    "SQ_L14467": "List of detail analysis request",
+    "SQ_L14468": "Search conditions",
+    "SQ_L14469": "Close",
+    "SQ_L14470": "Category",
+    "SQ_L14471": "Product category",
+    "SQ_L14472": "Request No.",
+    "SQ_L14473": "Reception No.",
+    "SQ_L14474": "Request date",
+    "SQ_L14475": "Recipient group",
+    "SQ_L14476": "Product name",
+    "SQ_L14477": "Reception date",
+    "SQ_L14478": "Status",
+    "SQ_L14479": "Requested section",
+    "SQ_L14480": "Person in charge of investigation",
+    "SQ_L14481": "Customer name",
+    "SQ_L14482": "Select customer",
+    "SQ_L14483": "Download",
+    "SQ_L14505": "Search",
+
+
+    "SQ_L14484": "Required data",
+    "SQ_L14485": "Open",
+
+
+    "SQ_L14486": "Status",
+    "SQ_L14487": "Request No.",
+    "SQ_L14488": "Ver.",
+    "SQ_L14489": "Reception No.",
+    "SQ_L14490": "Reception date",
+    "SQ_L14491": "Sample No.",
+    "SQ_L14492": "Customer name",
+    "SQ_L14493": "Product name",
+    "SQ_L14494": "Number of analysis request",
+    "SQ_L14495": "Requested by",
+    "SQ_L14496": "Request to",
+    "SQ_L14497": "Request date",
+    "SQ_L14498": "Required report date",
+    "SQ_L14499": "Report date",
+    "SQ_L14500": "Report TAT",
+    "SQ_L14501": "Investigation category",
+    "SQ_L14502": "Investigation result",
+    "SQ_L14503": "Reset",
+    "SQ_L14504": "Select all",
+
+
+    "SQ_L14506": "Search result:",
+    "SQ_L14507": "6",
+    "SQ_L14508": "[1]",
+    "SQ_L14509": "[6]",
+    "SQ_L14510": "Requested section",
+    "SQ_L14511": "Person in charge",
+    "SQ_L14512": "Required report date [Initial]",
+    "SQ_L14513": "Required report date [Final]",
+    "SQ_L14514": "Back",
+    "SQ_L14515": "Forward",
+    "SQ_L14516": "Requester"
+
+  }
+}

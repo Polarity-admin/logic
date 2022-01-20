@@ -1,0 +1,47 @@
+<div class="sub-screen" *ngIf="currentRoute.includes('is-')">
+  <div class="sub-screen-title">
+    <div>
+      {{ "sqrm.SQ_L10013" | translate }}
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <div>
+      <div class="file-upload" *ngIf="currentRoute === 'is-creation'">
+        <input type="file" />
+        <button class="btn btn-secondary">{{ "sqrm.SQ_L10143" | translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MDD -->
+<div class="sub-screen" *ngIf="currentRoute.includes('mdd-')">
+  <div class="sub-screen-title">      
+    <div class="header-title">
+      <span>{{ "sqrm.SQ_L16059" | translate }}</span>
+      <span>{{ "sqrm.SQ_L16060" | translate }}</span>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <div class="file-upload" *ngIf="currentRoute === 'mdd-creation'">
+      <input type="file" />
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L16061" | translate }}</button>
+    </div>
+  </div>
+</div>
+
+<!-- LSI -->
+<div class="sub-screen" *ngIf="currentRoute.includes('lsi-')">
+  <div class="sub-screen-title">      
+    <div class="header-title">
+      <span>{{ "sqrm.SQ_L04075" | translate }}</span>
+      <span>{{ "sqrm.SQ_L04076" | translate }}</span>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <div class="file-upload" *ngIf="currentRoute === 'lsi-creation'">
+      <input type="file" />
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L04077" | translate }}</button>
+    </div>
+  </div>
+</div>

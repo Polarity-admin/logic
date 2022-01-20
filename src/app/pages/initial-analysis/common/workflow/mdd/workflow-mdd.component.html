@@ -1,0 +1,79 @@
+<!-- MDD request-->
+<div class="sub-screen">
+    <div class="sub-screen-title">
+        <div class="header-title">
+          <span *ngIf="currentRoute === 'mdd-request' || currentRoute === 'mdd-answer'" class="required">{{ "sqrm.SQ_L05007" | translate }}</span>
+          <span *ngIf="currentRoute === 'mdd-approval'">{{ "sqrm.SQ_L05007" | translate }}</span>
+        </div>
+
+        <div class="actions">
+            <div class="checkbox-input">
+                <input id="emailNotice" type="checkbox" />
+                <label for="emailNotice">{{ "sqrm.SQ_L05079" | translate }}</label>
+            </div>
+            <button class="btn btn-secondary" *ngIf=" currentRoute === 'mdd-request' ">{{ "sqrm.SQ_L05021" | translate }}</button>
+            <button class="btn btn-secondary" *ngIf=" currentRoute === 'mdd-answer' ">{{ 'sqrm.SQ_L05033' | translate }} </button>
+        </div>
+    </div>
+    <div class="sub-screen-container">
+        <wj-multi-row class="girdlist " #multirow  [itemsSource]="workFlowData" [headersVisibility]="'Column'" [selectionMode]="'Cell'">
+            
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='step' header="{{ 'sqrm.SQ_L05067' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="80">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+            
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='name' header="{{ 'sqrm.SQ_L05068' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="250">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='sectionName' header="{{ 'sqrm.SQ_L05069' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="450">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='completionDate' header="{{ 'sqrm.SQ_L05070' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="180">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='result' header="{{ 'sqrm.SQ_L05071' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="80">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='comments' header="{{ 'sqrm.SQ_L05072' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="'*'">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group *ngIf="currentRoute ==='mdd-request'">
+                <wj-multi-row-cell [allowSorting]='false'
+                    [align]="'center'" [width]="140">
+                    <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                        <button class="btn btn-secondary">{{ 'sqrm.SQ_L05020' | translate }}</button>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group> 
+
+            <wj-multi-row-cell-group *ngIf="currentRoute ==='mdd-answer'">
+                <wj-multi-row-cell [allowSorting]='false'  header="{{ 'sqrm.SQ_L05020' | translate }}"
+                    [align]="'center'" [width]="140">
+                    <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" 
+                    let-cell="cell" let-item="item">
+                        <button class="btn btn-secondary">{{ 'sqrm.SQ_L05020' | translate }}</button>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group> 
+            
+            </wj-multi-row>
+
+    </div>
+</div>

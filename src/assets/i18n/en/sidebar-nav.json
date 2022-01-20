@@ -1,0 +1,81 @@
+{
+  "sqrm": {
+    "SQ_M00001": "HOME",
+    "SQ_M00002": "Create New",
+    "SQ_M00003": "Task List",
+    "SQ_M00004": "Search/Download",
+    "SQ_M00005": "Data Analysis",
+    "SQ_M00006": "Status of Returned Samples",
+    "SQ_M00007": "Import/Export",
+    "SQ_M00008": "Master Maintenance",
+    "SQ_M00009": "Administrator",
+
+    "SQ_M00021": "Manual",
+    "SQ_M00022": "Information",
+    "SQ_M00023": "Select Delegate",
+
+    "SQ_M00041": "Failure Analysis Request (FAR)",
+    "SQ_M00042": "Initial Analysis Request (IAR)",
+    "SQ_M00043": "Detailed Analysis Request (DAR)",
+    "SQ_M00044": "Issue Failure Analysis Report",
+    "SQ_M00045": "Send Failure Analysis Report",
+
+    "SQ_M00061": "Inbox",
+    "SQ_M00062": "Temporary Saved",
+
+    "SQ_M00081": "List of FARs",
+    "SQ_M00082": "List of Initial Analysis Requests",
+    "SQ_M00083": "List of Detailed Analysis Requests",
+    "SQ_M00084": "List of Corrective Actions",
+    "SQ_M00085": "List of Failure Analysis Reports",
+    "SQ_M00086": "List of Sending Failure Analysis Report",
+    "SQ_M00087": "List of Returned Samples",
+    "SQ_M00088": "MDD Illustration Offline Tool",
+    "SQ_M00089": "IS Illustration Offline Tool",
+
+    "SQ_M00101": "Number of FARs",
+    "SQ_M00102": "TAT",
+    "SQ_M00103": "Hit Rate for Customer Required",
+    "SQ_M00104": "Failure Rate",
+    "SQ_M00105": "Responsibility",
+    "SQ_M00106": "Product Shipment",
+
+    "SQ_M00121": "By category",
+    "SQ_M00122": "By product, customer",
+    "SQ_M00123": "By customer, product",
+    "SQ_M00124": "By customer",
+    "SQ_M00125": "By product",
+
+    "SQ_M00141": "List of Returned Samples' Status",
+
+    "SQ_M00161": "Input Import Information",
+    "SQ_M00162": "Input Export Information",
+    "SQ_M00163": "List of Import Information",
+    "SQ_M00164": "List of Export Information",
+
+    "SQ_M00181": "Users (SQRM)",
+    "SQ_M00182": "Users (Customer Website)",
+    "SQ_M00183": "Authorization Group",
+    "SQ_M00184": "Customers",
+    "SQ_M00185": "Customer Sales, Agent Company",
+    "SQ_M00186": "Report E-mail Destinations",
+    "SQ_M00187": "Production Line Divisions",
+    "SQ_M00188": "Investigation Category Templates",
+    "SQ_M00189": "Mail Templates for DAR",
+    "SQ_M00190": "Failure Modes for MDD",
+    "SQ_M00191": "Target Products",
+    "SQ_M00192": "Daily Report Email Destinations",
+    "SQ_M00193": "Report Templates",
+    "SQ_M00194": "LSI Product Masters",
+    "SQ_M00195": "IS Product Masters",
+    "SQ_M00196": "Access Control",
+
+    "SQ_M00201": "System Information",
+    "SQ_M00202": "List of Inquiries",
+    "SQ_M00203": "Division Master",
+    "SQ_M00204": "Delegation",
+    "SQ_M00205": "Operation Hours Setting",
+
+    "SQ_M00301": "Project Selection"
+  }
+}

@@ -1,0 +1,233 @@
+<div
+  class="header dialog-font-color custom-dialog-header"
+  cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+  cdkDragHandle
+>
+  <h2>{{ "sqrm.SQ_L20106" | translate }}</h2>
+  <button type="button" aria-label="Close this dialog" mat-dialog-close>×</button>
+  <hr />
+</div>
+<mat-dialog-content class="search-dialog dialog-font-color popup-60vh">
+    <!-- Search conditions -->
+    <div class="sub-screen">
+        <div class="sub-screen-title">
+            <p>{{ 'sqrm.SQ_L20107' | translate }}</p>
+            <div class="actions">
+                <a mat-dialog-close>{{ 'sqrm.SQ_L20108' | translate }}</a>
+            </div>
+        </div>
+        <div class="sub-screen-container">
+            <table>
+                <tr>
+                    <td class="label-cell">
+                        <p class="required">{{ 'sqrm.SQ_L20109' | translate }}</p>
+                    </td>
+                    <td>
+                        <select>
+                            <option>IS</option>
+                        </select>
+                    </td>
+                    <td class="label-cell">
+                        <p>{{ 'sqrm.SQ_L20110' | translate }}</p>
+                    </td>
+                    <td>
+                        <select>
+                            <option>-</option>
+                        </select>-
+                        <select>
+                            <option>-</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">
+                        <p>{{ 'sqrm.SQ_L20111' | translate }}</p>
+                    </td>
+                    <td><input type="text" /></td>
+                    <td class="label-cell">
+                        <p>{{ 'sqrm.SQ_L20112' | translate }}</p>
+                    </td>
+                    <td>
+                        <wj-input-date id="reportDateFinal" format="yyyy/MM/dd"></wj-input-date>
+                        -
+                        <wj-input-date id="reportDateFinal" format="yyyy/MM/dd"></wj-input-date>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">
+                        <p>{{ 'sqrm.SQ_L20113' | translate }}</p>
+                    </td>
+                    <td><input type="text" /></td>
+                    <td class="label-cell">
+                        <p>{{ 'sqrm.SQ_L20114' | translate }}</p>
+                    </td>
+                    <td>
+                        <input type="text" />
+                        <button class="btn btn-secondary" (click)="showSelectCustomerDialog()">{{ 'sqrm.SQ_L20115' | translate }}</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">
+                        <p>{{ 'sqrm.SQ_L20116' | translate }}<br />{{ 'sqrm.SQ_L20117' | translate }}</p>
+                    </td>
+                    <td>
+                        <select>
+                            <option>ITS-IS</option>
+                        </select>-
+                        <select>
+                            <option>-</option>
+                        </select>
+                    </td>
+                    <td colspan="2"></td>
+                </tr>
+            </table>
+        </div>         
+    </div>
+    <div>
+        <button class="btn btn-primary btn-fw mt-10">{{ 'sqrm.SQ_L20118' | translate }}</button>
+   </div>
+    <!-- Search result -->
+    <div class="sub-screen">
+        <div class="sub-screen-title">
+            <p>{{ 'sqrm.SQ_L20119' | translate }}<span>{{ 'sqrm.SQ_L20120' | translate }}</span></p>
+            <div class="actions">
+                <button class="btn btn-primary btn-fw">{{ 'sqrm.SQ_L20121' | translate }}</button>
+                <button class="btn btn-primary btn-fw">{{ 'sqrm.SQ_L20122' | translate }}</button>
+            </div>
+        </div>
+        <div class="sub-screen-container">
+            <wj-multi-row class="girdlist" #multirow [headersVisibility]="'Column'" [allowMerging]="'Cells'" [selectionMode]="'None'"
+                [itemsSource]="testData">
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20123' | translate }}" [rowspan]="1" [align]="'center'" [minWidth]="80"
+                        [width]="80" [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:table; height:37px; width:100%">
+                                <p style="display:table-cell; vertical-align: middle;">{{ 'sqrm.SQ_L20123' | translate }}</p>
+                            </div>
+                        </ng-template>
+                        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                            <input type="checkbox">
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group header="{{ 'sqrm.SQ_L20124' | translate }}">
+                    <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L20124' | translate }}" [rowspan]="1"
+                        [align]="'center'" [minWidth]="200" [width]="'*'" [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:table; height:37px; width:100%">
+                                <p style="display:table-cell; vertical-align: middle;">{{ 'sqrm.SQ_L20124' | translate }}</p>
+                            </div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20125' | translate }}" [rowspan]="1" [align]="'left'"
+                        [minWidth]="200" [width]="'*'" [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:table; height:37px; width:100%">
+                                <p style="display:table-cell; vertical-align: middle;">{{ 'sqrm.SQ_L20125' | translate }}</p>
+                            </div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20126' | translate }}" [rowspan]="1" [align]="'center'" [width]="'*'"
+                        [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:table; height:37px; width:100%">
+                                <p style="display:table-cell; vertical-align: middle; text-decoration: underline;">
+                                    {{ 'sqrm.SQ_L20126' | translate }}</p>
+                            </div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20127' | translate }}" [rowspan]="1" [align]="'center'"
+                        [width]="'*'" [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:table; height:37px; width:100%">
+                                <p style="display:table-cell; vertical-align: middle;">{{ 'sqrm.SQ_L20127' | translate }}</p>
+                            </div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20128' | translate }}" [rowspan]="1" [align]="'center'" [width]="'*'"
+                        [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:table; height:37px; width:100%">
+                                <p style="display:table-cell; vertical-align: middle; text-decoration: underline;">
+                                    {{ 'sqrm.SQ_L20128' | translate }}</p>
+                            </div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20129' | translate }}" [rowspan]="1" [align]="'center'"
+                        [width]="'*'" [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:table; height:37px; width:100%">
+                                <p style="display:table-cell; vertical-align: middle;">{{ 'sqrm.SQ_L20129' | translate }}</p>
+                            </div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20130' | translate }}" [rowspan]="1" [align]="'center'" [width]="'*'"
+                        [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:table; height:37px; width:100%">
+                                <p style="display:table-cell; vertical-align: middle; text-decoration: underline;">
+                                    {{ 'sqrm.SQ_L20130' | translate }}</p>
+                            </div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20131' | translate }}" [rowspan]="1" [align]="'left'" [width]="'*'"
+                        [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:block;">{{ 'sqrm.SQ_L20131' | translate }}</div>
+                            <div style="display:block;">{{ 'sqrm.SQ_L20132' | translate }}</div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20133' | translate }}" [rowspan]="1" [align]="'center'" [width]="'*'"
+                        [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:table; height:37px; width:100%">
+                                <p style="display:table-cell; vertical-align: middle; text-decoration: underline;">
+                                    {{ 'sqrm.SQ_L20133' | translate }}</p>
+                            </div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" header="{{ 'sqrm.SQ_L20134' | translate }}" [rowspan]="1" [align]="'left'"
+                        [width]="'*'" [minWidth]="200" [allowMerging]='true'>
+                        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                            <div style="display:block;">{{ 'sqrm.SQ_L20134' | translate }}</div>
+                            <div style="display:block;">{{ 'sqrm.SQ_L20135' | translate }}</div>
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+            </wj-multi-row>
+        </div>
+        <div>
+            <button class="btn btn-primary btn-fw">Select</button>
+        </div>
+    </div>
+
+</mat-dialog-content>

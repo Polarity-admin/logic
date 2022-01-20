@@ -1,0 +1,21 @@
+<!-- IS request -->
+<div class="sub-screen">
+    <div class="sub-screen-title">
+        <div *ngIf = "currentRoute === 'is-request' ">
+           {{ "sqrm.SQ_L03004" | translate }}
+          
+        </div>
+        <div *ngIf = "currentRoute === 'is-answer' ||currentRoute === 'is-approval' ">
+          {{ "sqrm.SQ_L03009" | translate }}
+         
+       </div>
+        <div *ngIf = "currentRoute === 'is-request' ">
+          <button class="btn btn-secondary">{{ "sqrm.SQ_L03024" | translate }}</button>
+        </div>
+    </div>
+    <div class="sub-screen-container">
+      <div>
+        <textarea class="form-textarea style1" disabled="{ 'disabled': currentRoute==='is-answer' || currentRoute ==='is-approval' }"></textarea>
+      </div>
+    </div>
+</div>

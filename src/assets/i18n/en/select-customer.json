@@ -1,0 +1,28 @@
+{
+  "sqrm": {
+    "SQ_L09000": "Select a Customer",
+    "SQ_L09001": "Search conditions",
+    "SQ_L09002": "Category",
+    "SQ_L09003": "Product category 1",
+    "SQ_L09004": "Customer name",
+    "SQ_L09005": "Customer code",
+    "SQ_L09006": "Customer's section",
+    "SQ_L09007": "Customer's contact person",
+    "SQ_L09008": "Search",
+    "SQ_L09009": "Search result : ",
+    "SQ_L09010": "Back",
+    "SQ_L09011": "Forward",
+    "SQ_L09012": "Customer code",
+    "SQ_L09013": "Customer name (Abbr.)",
+    "SQ_L09014": "Customer name",
+    "SQ_L09015": "Factory Location",
+    "SQ_L09016": "Customer's section",
+    "SQ_L09017": "Customer's contact person",
+    "SQ_L09018": "Sales Type",
+    "SQ_L09019": "Select",
+    "SQ_L09020": "Close",
+    "SQ_L09021": "",
+    "SQ_L09022": "",
+    "SQ_L09023": ""
+  }
+}

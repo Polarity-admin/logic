@@ -1,0 +1,63 @@
+<mat-dialog-content class="dialog-font-color popup-90vh">
+  <div class="sub-screen">
+    <div class="sub-screen-container">
+      <wj-multi-row class="girdlist" #multirow [headersVisibility]="'Column'"
+            [allowMerging]="'Cells'" [itemsSource]="testData">
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="" header="Select" [rowspan]="1" [align]="'left'" [minWidth]="50 " [width]="50"
+                [allowMerging]='true'>
+                <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                  <input type="checkbox" checked>
+                </ng-template>
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group header="sampleNo">
+              <wj-multi-row-cell binding="test" header="Sample No." [rowspan]="1" [align]="'left'" [minWidth]="140 " [width]="'*'"
+                [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group header="markLotNo">
+              <wj-multi-row-cell binding="markLotNo" header="Marklot No." [rowspan]="1" [align]="'left'" [minWidth]="140 " [width]="'*'"
+                [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group header="failureMode">
+              <wj-multi-row-cell binding="failureMode" header="Failure mode" [rowspan]="1" [align]="'left'" [minWidth]="140 " [width]="'*'"
+                [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group header="tester">
+              <wj-multi-row-cell binding="tester" header="Tester" [rowspan]="1" [align]="'left'" [minWidth]="140 " [width]="'*'"
+                [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group header="custSet">
+              <wj-multi-row-cell binding="custSet" header="Customer's set" [rowspan]="1" [align]="'left'" [minWidth]="140 " [width]="'*'"
+                [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group header="evalBoard">
+              <wj-multi-row-cell binding="evalBoard" header="Evaluatiion board" [rowspan]="1" [align]="'left'" [minWidth]="140 " [width]="'*'"
+                [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group header="judgement">
+              <wj-multi-row-cell binding="judgement" header="Judgement" [rowspan]="1" [align]="'left'" [minWidth]="140 " [width]="'*'"
+                [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+            <wj-multi-row-cell-group header="responsibility">
+              <wj-multi-row-cell binding="responsibility" header="Responsibility" [rowspan]="1" [align]="'left'" [minWidth]="140 " [width]="'*'"
+                [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    </wj-multi-row>
+</div>
+</div>
+
+<!-- Dialog Footer -->
+  <div class="footer-btn">
+    <div>
+      <button class="btn btn-primary btn-fw" mat-dialog-close>Close</button>
+    </div>
+  </div>
+</mat-dialog-content>

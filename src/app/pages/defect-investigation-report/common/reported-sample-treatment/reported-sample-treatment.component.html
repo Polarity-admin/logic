@@ -1,0 +1,229 @@
+<div class="sub-screen" *ngIf="currentRoute.includes('is-')">
+  <div class="sub-screen-title">
+    <p>Reported sample treatment</p>
+    <a href="#" *ngIf="currentRoute ==='is-approval'">{{ 'sqrm.SQ_L10145' | translate }}</a>
+  </div>
+  <div class="sub-screen-container">
+    <wj-multi-row #returnedSamplesGrid
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData">
+      <wj-multi-row-cell-group header="sonyResponsibility" >
+        <wj-multi-row-cell binding="sonyResponsibility" header="{{'sqrm.SQ_L10024' | translate}}"[minWidth]="200" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
+            <div style="text-align:right">
+              <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
+              <span class="align-right" *ngIf="currentRoute === 'is-approval'">{{cell.item.sonyResponsibility}}</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="custResponsility" header="{{ 'sqrm.SQ_L10025' | translate }}" [minWidth]="200" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
+            <div style="text-align:right">
+              <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
+              <span class="align-right" *ngIf="currentRoute === 'is-approval'">{{cell.item.sonyResponsibility}}</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="goodSample" header="{{ 'sqrm.SQ_L10026' | translate }}" [minWidth]="200" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
+            <div style="text-align:right">
+              <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
+              <span class="align-right" *ngIf="currentRoute === 'is-approval'">{{cell.item.sonyResponsibility}}</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="others" header="{{ 'sqrm.SQ_L10027' | translate }}" [minWidth]="200" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
+            <div style="text-align:right">
+              <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
+              <span class="align-right" *ngIf="currentRoute === 'is-approval'">{{cell.item.sonyResponsibility}}</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="underAnalysis" header="{{ 'sqrm.SQ_L10028' | translate }}" [minWidth]="200" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
+            <div style="text-align:right">
+              <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
+              <span class="align-right" *ngIf="currentRoute === 'is-approval'">{{cell.item.sonyResponsibility}}</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="total" header="{{ 'sqrm.SQ_L10029' | translate }}" [minWidth]="143" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
+            <div style="text-align:right">
+              <span class="align-right">{{cell.item.sonyResponsibility}}</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="analyzedQuantity" header="{{ 'sqrm.SQ_L10030' | translate }}" [minWidth]="143" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item"  v-slot="cell">
+            <div style="text-align:right">
+              <input type="text" class="align-right" *ngIf="currentRoute === 'is-creation'" value="{{cell.item.sonyResponsibility}}"/>
+              <span class="align-right" *ngIf="currentRoute === 'is-approval'">{{cell.item.sonyResponsibility}}</span>
+            </div>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+    </wj-multi-row>
+
+  </div>
+</div>
+
+<!-- MDD -->
+<div class="sub-screen" *ngIf="currentRoute.includes('mdd-')">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L16013" | translate }}</p>
+    <div class="actions" *ngIf="currentRoute === 'mdd-approval'">
+      <a>{{ "sqrm.SQ_L16083" | translate }}</a>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-flex-grid
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData"
+    >
+      <wj-flex-grid-column binding="sonyResponsibility" [header]="'sqrm.SQ_L16014' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width right-align">
+            <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+            <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.sonyResponsibility}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="custResponsibility" [header]="'sqrm.SQ_L16015' | translate" [minWidth]="200" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width right-align">
+            <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+            <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.customerResponsibility}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="goodSample" [header]="'sqrm.SQ_L16016' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width right-align">
+            <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+            <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.goodSample}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="others" [header]="'sqrm.SQ_L16017' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width right-align">
+            <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+            <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.others}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="underAnalysis" [header]="'sqrm.SQ_L16018' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width right-align">
+            <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+            <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.underAnalysis}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="total" [header]="'sqrm.SQ_L16019' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width right-align">
+            <span>{{cell.item.total}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="analyzedQuantity" [header]="'sqrm.SQ_L16020' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width right-align">
+            <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+            <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.analyzedQuantity}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+    </wj-flex-grid>
+  </div>
+</div>
+
+<!-- LSI -->
+<div class="sub-screen" *ngIf="currentRoute.includes('lsi-')">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L04016" | translate }}</p>
+    <div class="actions" *ngIf="currentRoute === 'lsi-approval'">
+      <a>{{ "sqrm.SQ_L04028" | translate }}</a>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-flex-grid
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData"
+    >
+      <wj-flex-grid-column binding="sonyResponsibility" [header]="'sqrm.SQ_L04018' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width align-right">
+            <input type="text" class="full-width align-right" *ngIf="currentRoute === 'lsi-creation'" value="{{cell.item.sonyResponsibility}}"/>
+            <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.sonyResponsibility}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="custResponsibility" [header]="'sqrm.SQ_L04019' | translate" [minWidth]="200" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width align-right">
+            <input type="text" class="full-width align-right" *ngIf="currentRoute === 'lsi-creation'" value="{{cell.item.custResponsibility}}"/>
+            <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.custResponsibility}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="goodSample" [header]="'sqrm.SQ_L04020' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width align-right">
+            <input type="text" class="full-width align-right" *ngIf="currentRoute === 'lsi-creation'" value="{{cell.item.goodSample}}"/>
+            <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.goodSample}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="others" [header]="'sqrm.SQ_L04021' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width align-right">
+            <input type="text" class="full-width align-right" *ngIf="currentRoute === 'lsi-creation'" value="{{cell.item.others}}"/>
+            <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.others}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="underAnalysis" [header]="'sqrm.SQ_L04022' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width align-right">
+            <input type="text" class="full-width align-right" *ngIf="currentRoute === 'lsi-creation'" value="{{cell.item.underAnalysis}}"/>
+            <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.underAnalysis}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="total" [header]="'sqrm.SQ_L04023' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width right-align">
+            <span>{{cell.item.total}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="analyzedQuantity" [header]="'sqrm.SQ_L04024' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width align-right">
+            <input type="text" class="full-width align-right" *ngIf="currentRoute === 'lsi-creation'" value="{{cell.item.analyzedQuantity}}"/>
+            <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.analyzedQuantity}}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+    </wj-flex-grid>
+  </div>
+</div>

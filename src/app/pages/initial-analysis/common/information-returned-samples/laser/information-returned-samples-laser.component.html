@@ -1,0 +1,140 @@
+<div class="sub-screen" *ngIf="currentRoute === 'laser-request' || currentRoute ==='laser-answer' || currentRoute === 'laser-approval'">
+    <div class="sub-screen-title">
+        <div class="header-title">
+            <span class="required" *ngIf="currentRoute === 'laser-request' || currentRoute ==='laser-answer'">{{ "sqrm.SQ_L06012" | translate }}</span>
+            <span *ngIf="currentRoute === 'laser-approval'">{{ "sqrm.SQ_L06012" | translate }}</span>
+            <p *ngIf="currentRoute === 'laser-answer' || currentRoute === 'laser-approval'">{{ currentPage }}</p>
+            <div class="checkbox-input">
+              <input id="finalReport" type="checkbox" disabled="{'disabled': currentRoute === 'laser-approval'}"/>
+              <label for="finalReport">{{ "sqrm.SQ_L06076" | translate }}</label>
+            </div>
+          </div>      
+          <div class="actions" *ngIf="currentRoute ==='laser-request'">
+            <p>{{ "sqrm.SQ_L06077" | translate  }}</p>
+            <p>{{ "sqrm.SQ_L06078" | translate  }}</p>
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L06018" | translate }}</button>
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L06019" | translate }}</button>
+            <div class="pagination-container">
+              <select>
+                <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
+              </select>
+            </div>
+            <button class="btn btn-secondary" style="margin-left: 10px;">{{ "sqrm.SQ_L06017" | translate }}</button>
+          </div>
+
+          <div class="actions" *ngIf="currentRoute === 'laser-answer'">
+            <input type="file" id="myFile" name="filename">
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L06028" | translate }}</button>
+            <button class="btn btn-secondary">{{ "sqrm.SQ_L06029" | translate }}</button>
+          </div>
+    </div>
+    <div class="sub-screen-container">
+        <wj-multi-row #returnedSamplesGrid
+            [frozenColumns]="3"
+            [headersVisibility]="'Column'" 
+            [selectionMode]="'None'"
+            [itemsSource]="returnedSamplesData">
+          
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L06045' | translate }}" [width]="150"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L06046' | translate }}" [width]="150"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="customerName" header="{{ 'sqrm.SQ_L06047' | translate }}" [width]="150"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="productName" header="{{ 'sqrm.SQ_L06048' | translate }}" [width]="150"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="customerSampleNo" header="{{ 'sqrm.SQ_L06049' | translate }}" [width]="250"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="sonySampleNo" header="{{ 'sqrm.SQ_L06050' | translate }}" [width]="250"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="markLotNo" header="{{ 'sqrm.SQ_L06051' | translate }}" [width]="150"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="id" header="{{ 'sqrm.SQ_L06052' | translate }}" [width]="150"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="dateOfFailureOccurence" header="{{ 'sqrm.SQ_L06053' | translate }}" [width]="200"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="regionOfFailure" header="{{ 'sqrm.SQ_L06054' | translate }}" [width]="200"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="processOfFailure" header="{{ 'sqrm.SQ_L06063' | translate }}" [width]="200"></wj-multi-row-cell>
+              <wj-multi-row-cell binding="detailProcessOfFailure" header="{{ 'sqrm.SQ_L06064' | translate }}" [width]="200"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="failureMode" header="{{ 'sqrm.SQ_L06065' | translate }}"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="detailsOfFailureMode" header="{{ 'sqrm.SQ_L06066' | translate }}" [width]="250">
+              <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                    <div style="display:block;">{{ 'sqrm.SQ_L06066' | translate }}</div>
+                    <div style="display:block;">{{ 'sqrm.SQ_L06057' | translate }}</div>  
+              </ng-template>
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="appearance" header="{{ 'sqrm.SQ_L06093' | translate }}" [width]="150">
+              <ng-template *ngIf="currentRoute === 'laser-answer'" wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <select style="border: 1px solid rgba(0, 0, 0, 0.2);padding: 4px 8px;margin-right: 8px;width: 80px;">
+                  <option>-</option>
+                </select>
+                <button class="btn btn-secondary">Copy</button>
+              </ng-template>
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="nfpObserv" header="{{ 'sqrm.SQ_L06094' | translate }}" [width]="150">
+              <ng-template *ngIf="currentRoute === 'laser-answer'" wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <select style="border: 1px solid rgba(0, 0, 0, 0.2);padding: 4px 8px;margin-right: 8px;width: 80px;">
+                  <option>-</option>
+                </select>
+                <button class="btn btn-secondary">Copy</button>
+              </ng-template>
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="electricalOptChar" header="{{ 'sqrm.SQ_L06095' | translate }}" [width]="250">
+              <ng-template *ngIf="currentRoute ==='laser-answer'" wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <select style="border: 1px solid rgba(0, 0, 0, 0.2);padding: 4px 8px;margin-right: 8px;width: 140px;">
+                  <option>-</option>
+                </select>
+                <button class="btn btn-secondary">Copy</button>
+              </ng-template>
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="ldLeak" header="{{ 'sqrm.SQ_L06096' | translate }}" [width]="150">
+              <ng-template *ngIf="currentRoute ==='laser-answer'" wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <select style="border: 1px solid rgba(0, 0, 0, 0.2);padding: 4px 8px;margin-right: 8px;width: 80px;">
+                  <option>-</option>
+                </select>
+                <button class="btn btn-secondary">Copy</button>
+              </ng-template>
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="detailAnalysisResult" header="{{ 'sqrm.SQ_L06097' | translate }}" [width]="250">
+              <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell" *ngIf="currentRoute ==='laser-answer'" >
+                <div style="display:block;">{{ 'sqrm.SQ_L06066' | translate }}</div>
+                <div style="display:block;">{{ 'sqrm.SQ_L06044' | translate }}</div>  
+              </ng-template>
+              <ng-template *ngIf="currentRoute ==='laser-answer'" wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <textarea style="width:100%; overflow-y: scroll;"></textarea>
+              </ng-template>
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+      </wj-multi-row>
+    </div>
+  </div>
+ 

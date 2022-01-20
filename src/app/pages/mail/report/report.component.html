@@ -1,0 +1,127 @@
+<div class="header dialog-font-color custom-dialog-header"
+  cdkDragHandle cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+>
+<button type="button" aria-label="Close this dialog" mat-dialog-close style="cursor: pointer;">×</button>
+  <!-- <p class="main-screen-title">{{ "sqrm.SQ_L02263" | translate }}</p> -->
+  <!-- <hr /> -->
+</div>
+
+<mat-dialog-content class="dialog-font-color popup-90vh">
+<div class="report">
+  <div class="sub-screen">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L02263" | translate }}
+    </div>
+    <div class="sub-screen-container">
+      <form>
+        <table>
+          <tr>
+            <td><p class="required">{{ "sqrm.SQ_L02264" | translate }}</p></td>
+            <td><select><option>LSI</option></select></td>
+            <td><p>{{ "sqrm.SQ_L02265" | translate }}</p></td>
+            <td><select style="width: 50%;"><option>-</option></select></td>
+          </tr>
+          <tr>
+            <td><p>{{ "sqrm.SQ_L02266" | translate }}</p></td>
+            <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+            <td><p>{{ "sqrm.SQ_L02267" | translate }}</p></td>
+            <td><input type="text" class="text" style="width: calc(50%);">&nbsp;
+            <button type="button" class="btn btn-secondary" style="width: auto;">{{ "sqrm.SQ_L02268" | translate }}</button></td>
+          </tr>
+          <tr>
+            <td><p>{{ "sqrm.SQ_L02269" | translate }}</p></td>
+            <td><input type="checkbox" style="width: auto;" /></td>
+            <td><p>{{ "sqrm.SQ_L02270" | translate }}</p></td>
+            <td><input type="checkbox" style="width: auto;"></td>
+          </tr>
+        </table>
+        <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02271" | translate }}</button>
+      </form>
+
+      <div class="sub-screen-title"><p>{{ "sqrm.SQ_L02272" | translate }}
+        {{ "sqrm.SQ_L02287" | translate }}
+        {{ "sqrm.SQ_L02288" | translate }} -
+        {{ "sqrm.SQ_L02289" | translate }}
+      </p>
+        <div class="btnright" style="float: right;">
+        <button type="button" class="btn" style="border: 1px solid;">{{ "sqrm.SQ_L02273" | translate }}</button>&nbsp;
+        <button type="button" class="btn" style="border: 1px solid;">{{ "sqrm.SQ_L02274" | translate }}</button>
+        </div>
+      </div>
+    
+      <div class="sub-screen-container">
+        <wj-multi-row #grid
+        [itemsSource]="SampleDataReport" 
+        [headersVisibility]="'Column'" 
+        [selectionMode]="'None'"
+      >
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="select" [header]="'sqrm.SQ_L02275' | translate" [width]="100">
+              <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <input type="checkbox" />
+              </ng-template>
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="ver" [header]="'sqrm.SQ_L02276' | translate" [width]="100">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="customername" [header]="'sqrm.SQ_L02277' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="productname" [header]="'sqrm.SQ_L02278' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="reportno" [header]="'sqrm.SQ_L02279' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="filename" [header]="'sqrm.SQ_L02280' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="password" [header]="'sqrm.SQ_L02281' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="filesize" [header]="'sqrm.SQ_L02282' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+            <wj-multi-row-cell-group>
+              <wj-multi-row-cell binding="sentdate" [header]="'sqrm.SQ_L02283' | translate" [width]="200">
+                
+              </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+    
+          </wj-multi-row>
+      </div>
+
+      <div class="" style="float:left;width: 100%;">
+        <footer>
+        <button class="btn btn-primary">{{ "sqrm.SQ_L02200" | translate }}</button>&nbsp;
+        <button class="btn btn-primary">{{ "sqrm.SQ_L02201" | translate }}</button>
+        <button class="btn btn-primary" aria-label="Close this dialog" mat-dialog-close style="float: right;cursor: pointer;">{{ "sqrm.SQ_L02194" | translate }}</button>
+        </footer>
+        </div>
+    </div>
+  </div>
+</div>
+</mat-dialog-content>
+

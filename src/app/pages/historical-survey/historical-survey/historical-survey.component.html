@@ -1,0 +1,55 @@
+<div class="header dialog-font-color custom-dialog-header"
+  cdkDragHandle cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+>
+  <h2>{{ "sqrm.SQ_L13923" | translate }}</h2>
+    <button type="button" aria-label="Close this dialog" mat-dialog-close>×</button>
+  <hr />  
+</div>
+<p style="color: red;">It refers to a product name to the registration information on each system.(Except a lot history)<br>
+  It is not searched when not inputted by a formal product name by each system.<br>
+  It needed please log in to each system and check a history.</p>
+
+ <mat-dialog-content class="dialog-font-color popup-90vh"> 
+  <div class="sub-screen">
+    <div class="sub-screen-container">
+      <div style="margin:10px 0">
+            <div>
+              <div class="sub-screen-title">
+              <div class="header-title">
+              <span>{{ "sqrm.SQ_L13924" | translate }}</span>
+              </div>      
+              <div class="actions">
+                  <button class="btn btn-secondary">{{ "sqrm.SQ_L13929" | translate }}</button>&nbsp;
+                  <button class="btn btn-secondary">{{ "sqrm.SQ_L13930" | translate }}</button>
+              <a class="pagination-container">
+                  {{ currentPage }}
+                  <select>
+                      <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
+                  </select>
+              </a>
+              </div>
+              </div>
+
+              <wj-multi-row class="girdlist" #multirow 
+              [headersVisibility]="'Column'" 
+              [selectionMode]="'None'"
+              [itemsSource]="returnedSamplesData"
+              >
+
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="sonySampleNo" [header]="'sqrm.SQ_L13925' | translate" [minWidth]="150"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>    
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="marklotNo" [header]="'sqrm.SQ_L13926' | translate" [minWidth]="150"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              
+              <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="id" [header]="'sqrm.SQ_L13927' | translate" [minWidth]="150"></wj-multi-row-cell>
+              </wj-multi-row-cell-group>
+              </wj-multi-row>
+              <a><button class="btn btn-secondary">{{ "sqrm.SQ_L13928" | translate }}</button></a>
+          </div>
+      </div>
+    </div>
+  </div>
+  </mat-dialog-content> 

@@ -1,0 +1,24 @@
+<div class="sub-screen">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L00150" | translate }}</p>
+    <div class="actions">
+      <p>{{ "sqrm.SQ_L00151" | translate }}:</p>
+      <wj-combo-box
+        [itemsSource]="dropDownData"
+        [isDroppedDown]="false"
+        [isAnimated]="true"
+        *ngIf="currentRoute === 'request'"
+      ></wj-combo-box>
+      <p *ngIf="currentRoute !== 'request'">{{ selected }}</p>
+      <a class="btn btn-secondary">{{ "sqrm.SQ_L00152" | translate }}</a>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <textarea maxlength="1000" 
+      *ngIf="currentRoute !== 'answer'" 
+      [rows]="currentRoute === 'approve' ? 5 : 10" 
+      [value]="'Test data'" 
+      [disabled]="currentRoute === 'approve'"
+    ></textarea>
+  </div>
+</div>

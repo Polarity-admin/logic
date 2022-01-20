@@ -1,0 +1,79 @@
+<div class="header dialog-font-color custom-dialog-header"
+  cdkDragHandle cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+>
+  <h2>{{ "sqrm.SQ_L02140" | translate }}</h2>
+  <button type="button" aria-label="Close this dialog" mat-dialog-close>×</button>
+  <hr />
+</div>
+
+<mat-dialog-content class="dialog-font-color popup-90vh">
+  <table>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02142" | translate }}</p></td>
+      <td><div class="file-upload">
+        <input type="file" />
+        <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02143" | translate }}</button>
+      </div></td>
+    </tr>
+  </table>
+  <br/>
+
+  <div class="sub-screen-title">
+    <span>{{ "sqrm.SQ_L02144" | translate }}</span>
+    <button type="button" class="btn btn-primary" style="float: right;">{{ "sqrm.SQ_L02145" | translate }}</button>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-container">
+      <wj-multi-row #Grid
+        [headersVisibility]="'Column'" 
+        [selectionMode]="'None'"
+        [itemsSource]="SamplesData"
+      >
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="select" [header]="'sqrm.SQ_L02146' | translate" [width]="250">
+          
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="filename" [header]="'sqrm.SQ_L02147' | translate" [width]="250">
+          
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="filesize" [header]="'sqrm.SQ_L02150' | translate" [width]="250">
+          
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="comments" [header]="'sqrm.SQ_L02151' | translate" [width]="250">
+          
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+    
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="updatedate" [header]="'sqrm.SQ_L02152' | translate"  [width]="250">
+
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+    
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="" [header]=""  [width]="250">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <button class="button">Update</button>
+          </ng-template>
+      
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+    
+      </wj-multi-row>
+      <button class="button">{{ "sqrm.SQ_L02157" | translate }}</button> 
+    </div>
+  </div>
+</mat-dialog-content>
+
+

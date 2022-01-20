@@ -1,0 +1,110 @@
+[
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 2",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name 2",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 1",
+    "salesType": "Internal sale"
+  },
+  {
+    "customerCode": "test",
+    "customerNameAbbr": "test",
+    "customerName": "Test Name 2",
+    "factoryLocation": "test location",
+    "customerSection": "test",
+    "customerContactPerson": "Test Name 2",
+    "salesType": "Internal sale"
+  }
+]

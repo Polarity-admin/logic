@@ -1,0 +1,1328 @@
+<div class="search-list-defective-products-is page-content">
+  <div class="main-screen">
+    <p class="main-screen-title">{{ "sqrm.SQ_L13604" | translate }}</p>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L13605" | translate }}
+      <a href="#" style="float: right;"><u>{{ "sqrm.SQ_L13606" | translate }}</u></a>
+    </div>
+    <div class="sub-screen-container">
+      <table>
+        <tr>
+          <td><p class="required">{{ "sqrm.SQ_L13607" | translate }}</p></td>
+          <td>
+            <select style="width:30%">
+              <option>IS</option>
+              <option></option>
+            </select>
+          </td>
+          <td><p class="required">{{ "sqrm.SQ_L13608" | translate }}</p></td>
+        <td><select style="width: 20%;">
+          <option>-</option>
+        </select><br>
+        <wj-multi-select #theMultiSelect
+          text=""
+          [itemsSource]="testSelect"
+          [isDroppedDown]="false"
+          [isAnimated]="true"
+          ></wj-multi-select>
+        </td>
+          <td><p>{{ "sqrm.SQ_L13609" | translate }}</p></td>
+          <td><select style="width: 100%;">
+            <option>-</option>
+          </select>   
+          </td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13610" | translate }}</p></td>
+          <td>
+            <input type="text" class="text" style="width: calc(70% - 18px)">
+          </td>
+          <td><p>{{ "sqrm.SQ_L13611" | translate }}</p></td>
+          <td><wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 45%;"></wj-input-date>&nbsp;-&nbsp;
+            <wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 45%;"></wj-input-date></td>
+          <td><p>{{ "sqrm.SQ_L13612" | translate }}</p></td>
+          <td><select style="width: 80%;"><option>-</option></select></td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13613" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(70% - 18px);"></td>
+          <td><p>{{ "sqrm.SQ_L13614" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(50% - 18px);">&nbsp;
+            <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13615" | translate }}</button></td>
+            <td><p>{{ "sqrm.SQ_L13616" | translate }}</p></td>
+            <td>
+              <input type="text" class="text" style="width: calc(100% - 18px)">
+            </td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13617" | translate }}</p></td>
+          <td><select style="width: 100%;"><option>-</option></select></td>
+          <td><p>{{ "sqrm.SQ_L13618" | translate }}</p></td>
+        <td><select style="width: 40%;"><option>-</option></select>&nbsp;
+        <select style="width: 45%;"><option>-</option></select></td>
+        <td><p>{{ "sqrm.SQ_L13619" | translate }}</p></td>
+        <td><select style="width: 60%;"><option>-</option></select></td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13620" | translate }}</p></td>
+          <td><select style="width: 80%;"><option>-</option></select></td>
+          <td><p>{{ "sqrm.SQ_L13621" | translate }}</p></td>
+          <td>
+            <input type="text" class="text" style="width: calc(60% - 18px)">
+          </td>
+        <td><p>{{ "sqrm.SQ_L13622" | translate }}</p></td>
+        <td><select style="width: 70%;"><option>-</option></select></td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13616" | translate }}</p></td>
+          <td>
+            <input type="text" class="text" style="width: calc(65% - 18px)">
+          </td>
+          <td><p>{{ "sqrm.SQ_L13623" | translate }}</p></td>
+          <td>
+            <input type="text" class="text" style="width: calc(60% - 18px)">
+          </td>
+        <td><p>{{ "sqrm.SQ_L13624" | translate }}</p></td>
+        <td>
+          <input type="text" class="text" style="width: calc(100% - 18px)">
+        </td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13625" | translate }}</p></td>
+        <td>
+          <input type="text" class="text" style="width: calc(65% - 18px)">
+        </td>
+        <td><p>{{ "sqrm.SQ_L13626" | translate }}</p></td>
+        <td>
+          <input type="text" class="text" style="width: calc(60% - 18px)">
+        </td>
+        </tr>
+
+      </table>
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13775" | translate }}</button>&nbsp;
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13627" | translate }}</button>&nbsp;
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13628" | translate }}</button>&nbsp;
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13629" | translate }}</button>&nbsp;
+      <button type="button" class="btn btn-secondary" style="float: right;">{{ "sqrm.SQ_L13630" | translate }}</button>
+    </div>
+  </div>
+
+  <div class="sub-screen-title">
+    <p> {{ "sqrm.SQ_L13631" | translate }}
+    <label style="color: red;">{{ "sqrm.SQ_L13843" | translate }}</label></p>
+    <a href="#" style="float: right;"><u>{{ "sqrm.SQ_L13606" | translate }}</u></a>
+  </div>
+
+  <div class="tblcheck" style="border: 1px solid #757474;padding:2px;padding-bottom: 20px;">
+    <div><tr>-----PKG/Bare <font style="color:red;">*Product category "PKG", "Bare", "PKG_SOC" "Bare_SOC" will be reflected only when selected.</font>-----</tr><br>
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span> 
+    <label class="div-cell">{{ "sqrm.SQ_L13632" | translate }}
+    </label>  
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13633" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13634" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13635" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13636" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13637" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13638" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13639" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span> 
+    <label class="div-cell">{{ "sqrm.SQ_L13640" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13641" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13642" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13643" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13644" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13645" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13646" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13647" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13648" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13649" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13650" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13651" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13652" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13653" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13654" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13655" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13656" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13657" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13658" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13659" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13660" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13661" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13662" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13663" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13664" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13665" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13666" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13667" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13668" | translate }}
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+
+    <div class="btnright" style="padding:5px;">
+      <button type="button" class="btn" style="border: 1px solid;">{{ "sqrm.SQ_L13669" | translate }}</button>
+    </div></tr></div>
+
+    <div><tr>-----Module <font style="color:red;">-----Module *Product category "Module", "Module_SOC" will be reflected only when selected.</font>-----</tr><br>
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span> 
+    <label class="div-cell">{{ "sqrm.SQ_L13670" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13671" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13672" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13673" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13674" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13675" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13676" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13677" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span> 
+    <label class="div-cell">{{ "sqrm.SQ_L13678" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13679" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13680" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13681" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13682" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13683" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13684" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13685" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13686" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13687" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13688" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13689" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13690" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13691" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13692" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13693" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13694" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13695" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13696" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13697" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13698" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13699" | translate }}
+    </label></tr>
+    
+    <div class="btnright" style="padding:5px;">
+      <button type="button" class="btn" style="border: 1px solid;" >{{ "sqrm.SQ_L13669" | translate }}</button>
+    </div></div><br>
+
+  <div><tr>-----Common throughout--------------------------------------------------------------------------------------------------------------------------</tr><br>
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span> 
+    <label class="div-cell">{{ "sqrm.SQ_L13700" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13701" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13702" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13703" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13704" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13705" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13706" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13707" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span> 
+    <label class="div-cell">{{ "sqrm.SQ_L13708" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13709" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13710" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13711" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13712" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13713" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13714" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13715" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13716" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13717" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13718" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13719" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13720" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13721" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13722" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13723" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13724" | translate }}
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+  </tr>
+    
+    <tr>---------------------------------------------------------------------------------------------------------------------------------------------------------</tr><br>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span> 
+    <label class="div-cell">{{ "sqrm.SQ_L13725" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13726" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13727" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13728" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13729" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13730" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13731" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13732" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span> 
+    <label class="div-cell">{{ "sqrm.SQ_L13733" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13734" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13735" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13736" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13737" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13738" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13739" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13740" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13741" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13742" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13743" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13744" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13745" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13746" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13747" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13748" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13749" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13750" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13751" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13752" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13753" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13754" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13755" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13756" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13757" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13758" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13759" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13750" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13760" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13761" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13762" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13763" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13764" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13765" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13766" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13767" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13768" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13769" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13770" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13771" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13772" | translate }}
+    </label></tr>
+
+    <tr class="div">
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13773" | translate }}
+    </label>
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    <label class="div-cell">{{ "sqrm.SQ_L13774" | translate }}
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+    <label class="div-cell">
+    </label>
+  </tr>
+
+    <div class="btnright" style="padding:5px;">
+      <button type="button" class="btn" style="border: 1px solid;" >{{ "sqrm.SQ_L13669" | translate }}</button>
+    </div></div><br>
+    </div>
+
+    <div class="main-screen">
+      <p class="main-screen-title">{{ "sqrm.SQ_L13604" | translate }}</p>
+    </div>
+
+    <div class="sub-screen-container">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L13798" | translate }}&nbsp;
+      {{ "sqrm.SQ_L13799" | translate }}&nbsp;
+      {{ "sqrm.SQ_L13800" | translate }}&nbsp;-&nbsp;
+      {{ "sqrm.SQ_L13801" | translate }}
+     
+      <div class="btnright">
+        <div class="file-upload">
+          <input type="file" />
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13802" | translate }}</button>&nbsp;
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13803" | translate }}</button>
+          <input type="checkbox" style="width: auto;">
+          {{ "sqrm.SQ_L13804" | translate }}
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13805" | translate }}</button>&nbsp;
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13806" | translate }}</button>
+        </div>
+      </div>
+    </div>
+
+      <wj-multi-row #returnedSamplesGrid
+        [headersVisibility]="'Column'" 
+        [selectionMode]="'None'"
+        [itemsSource]="SampleData"
+        [frozenColumns]="4"
+      >
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="select" [header]="'sqrm.SQ_L13776' | translate" [minWidth]="50">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <input type="checkbox">
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="receptionNo" [header]="'sqrm.SQ_L13777' | translate" [minWidth]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="receptionDate" [header]="'sqrm.SQ_L13778' | translate" [minWidth]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="customerName" [header]="'sqrm.SQ_L13779' | translate" [minWidth]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="productName" [header]="'sqrm.SQ_L13780' | translate" [minWidth]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="customerSampleNo" [header]="'sqrm.SQ_L13781' | translate" [minWidth]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="sonySampleNo" [header]="'sqrm.SQ_L13782' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="markLotNo" [header]="'sqrm.SQ_L13783' | translate" [minWidth]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="id" [header]="'sqrm.SQ_L13784' | translate" [minWidth]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group >
+          <wj-multi-row-cell binding="dateOfFailureOccurence" [header]="'sqrm.SQ_L13785' | translate" [minWidth]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="regionOfFailure" [header]="'sqrm.SQ_L13786' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="processOfFailure" [header]="'sqrm.SQ_L13787' | translate" [minWidth]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="detailProcessOfFailure" [header]="'sqrm.SQ_L13788' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="failureMode" [header]="'sqrm.SQ_L13789' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="detailsOfFailureMode" [header]="'sqrm.SQ_L13790' | translate" [minWidth]="300"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="preCheck" header="{{ 'sqrm.SQ_L13791' | translate }}" [colspan]="2" [width]="400"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="test" header="{{ 'sqrm.SQ_L13792' | translate }}" [width]="250"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="solder" header="{{ 'sqrm.SQ_L13793' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="failureMode" header="{{ 'sqrm.SQ_L13794' | translate }}" [width]="250"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="whitePixel" header="{{ 'sqrm.SQ_L13795' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="replacement" header="{{ 'sqrm.SQ_L13797' | translate }}" [width]="150"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="visualCheck" header="{{ 'sqrm.SQ_L13807' | translate }}" [colspan]="2" [width]="250"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="resultOfVisualCheck" header="{{ 'sqrm.SQ_L13808' | translate }}" [width]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="personInCharge" header="{{ 'sqrm.SQ_L13809' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="comments" header="{{ 'sqrm.SQ_L13810' | translate }}" [colspan]="2" [width]="250"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="mCheck" header="{{ 'sqrm.SQ_L13811' | translate }}" [colspan]="2" [width]="250"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="mResult" header="{{ 'sqrm.SQ_L13812' | translate }}" [width]="50"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="mPersonInCharge" header="{{ 'sqrm.SQ_L13809' | translate }}" [width]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="mEquipmentNo" header="{{ 'sqrm.SQ_L13813' | translate }}" [colspan]="2" [width]="250"></wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="cCheck" header="{{ 'sqrm.SQ_L13824' | translate }}" [colspan]="8" [width]="600"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cTestDate" header="{{ 'sqrm.SQ_L13815' | translate }}"[width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cResult" header="{{ 'sqrm.SQ_L13812' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="c1Time" header="{{ 'sqrm.SQ_L13817' | translate }}" [rowspan]="3" [width]="80"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cNgItem1" header="{{ 'sqrm.SQ_L13818' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="c2Item" header="{{ 'sqrm.SQ_L13821' | translate }}" [rowspan]="3" [width]="80"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cNgItem2" header="{{ 'sqrm.SQ_L13818' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="c3Time" header="{{ 'sqrm.SQ_L13822' | translate }}" [rowspan]="3"[width]="80"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cNgItem3" header="{{ 'sqrm.SQ_L13818' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cPersonInCharge" header="{{ 'sqrm.SQ_L13809' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cEquipmentNo" header="{{ 'sqrm.SQ_L13813' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cLevel1" header="{{ 'sqrm.SQ_L13819' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cLevel2" header="{{ 'sqrm.SQ_L13819' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cLevel3" header="{{ 'sqrm.SQ_L13819' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cTestFile" header="{{ 'sqrm.SQ_L13816' | translate }}" [colspan]="2"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cAddress1" header="{{ 'sqrm.SQ_L13820' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cAddress2" header="{{ 'sqrm.SQ_L13820' | translate }}"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="cAddress3" header="{{ 'sqrm.SQ_L13820' | translate }}"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="sCheck" header="{{ 'sqrm.SQ_L13814' | translate }}" [colspan]="8" [width]="600"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sTestDate" header="{{ 'sqrm.SQ_L13815' | translate }}"[width]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sResult" header="{{ 'sqrm.SQ_L13812' | translate }}" [width]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="s1Time" header="{{ 'sqrm.SQ_L13817' | translate }}" [rowspan]="3" [width]="80"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sNgItem1" header="{{ 'sqrm.SQ_L13818' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="s2Item" header="{{ 'sqrm.SQ_L13821' | translate }}" [rowspan]="3" [width]="80"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sNgItem2" header="{{ 'sqrm.SQ_L13818' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="s3Time" header="{{ 'sqrm.SQ_L13822' | translate }}" [rowspan]="3"[width]="80"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sNgItem3" header="{{ 'sqrm.SQ_L13818' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sPersonInCharge" header="{{ 'sqrm.SQ_L13809' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sEquipmentNo" header="{{ 'sqrm.SQ_L13813' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sLevel1" header="{{ 'sqrm.SQ_L13819' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sLevel2" header="{{ 'sqrm.SQ_L13819' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sLevel3" header="{{ 'sqrm.SQ_L13819' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sTestFile" header="{{ 'sqrm.SQ_L13816' | translate }}" [colspan]="2"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sAddress1" header="{{ 'sqrm.SQ_L13820' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sAddress2" header="{{ 'sqrm.SQ_L13820' | translate }}"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sAddress3" header="{{ 'sqrm.SQ_L13820' | translate }}"></wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L13725' | translate }}" [width]="200">
+              <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+              </ng-template>
+          </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L13823' | translate }}" [width]="200">
+              <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+              </ng-template>
+          </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L13729' | translate }}" [width]="200">
+              <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+              </ng-template>
+          </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L13619' | translate }}" [width]="200">
+              <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+              </ng-template>
+          </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L13620' | translate }}" [width]="200">
+              <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+              </ng-template>
+          </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+          <wj-multi-row-cell header="{{ 'sqrm.SQ_L13735' | translate }}" [width]="200">
+              <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+              </ng-template>
+          </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell [header]="'sqrm.SQ_L13736' | translate" [minWidth]="300"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      </wj-multi-row>
+    </div>
+
+    <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13841" | translate }}</button>&nbsp;
+    <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13842" | translate }}</button>
+
+<div class="sub-screen-container">
+  <div class="sub-screen-title">{{ "sqrm.SQ_L13798" | translate }}&nbsp;
+    {{ "sqrm.SQ_L13799" | translate }}&nbsp;
+    {{ "sqrm.SQ_L13800" | translate }}&nbsp;-&nbsp;
+    {{ "sqrm.SQ_L13801" | translate }}
+   
+    <div class="btnright">
+      <div class="file-upload">
+        <input type="file" />
+        <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13802" | translate }}</button>&nbsp;
+        <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13803" | translate }}</button>
+        <input type="checkbox" style="width: auto;">
+        {{ "sqrm.SQ_L13804" | translate }}
+        <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13805" | translate }}</button>&nbsp;
+        <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13806" | translate }}</button>
+      </div>
+    </div>
+  </div>
+
+    <wj-multi-row #returnedSamplesGrid
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="SampleData"
+      [frozenColumns]="4"
+    >
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="select" [header]="'sqrm.SQ_L13776' | translate" [minWidth]="50">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <input type="checkbox">
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="receptionNo" [header]="'sqrm.SQ_L13777' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="receptionDate" [header]="'sqrm.SQ_L13778' | translate" [minWidth]="150"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="customerName" [header]="'sqrm.SQ_L13779' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="productName" [header]="'sqrm.SQ_L13780' | translate" [minWidth]="150"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="customerSampleNo" [header]="'sqrm.SQ_L13781' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="sonySampleNo" [header]="'sqrm.SQ_L13782' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="markLotNo" [header]="'sqrm.SQ_L13783' | translate" [minWidth]="150"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="id" [header]="'sqrm.SQ_L13784' | translate" [minWidth]="150"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group >
+        <wj-multi-row-cell binding="dateOfFailureOccurence" [header]="'sqrm.SQ_L13785' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="regionOfFailure" [header]="'sqrm.SQ_L13786' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="processOfFailure" [header]="'sqrm.SQ_L13787' | translate" [minWidth]="200"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="detailProcessOfFailure" [header]="'sqrm.SQ_L13788' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="failureMode" [header]="'sqrm.SQ_L13789' | translate" [minWidth]="200"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="detailsOfFailureMode" [header]="'sqrm.SQ_L13790' | translate" [minWidth]="300"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="preCheck" header="{{ 'sqrm.SQ_L13791' | translate }}" [colspan]="2" [width]="400"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="test" header="{{ 'sqrm.SQ_L13792' | translate }}" [width]="250"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="whitePixel" header="{{ 'sqrm.SQ_L13795' | translate }}" [width]="150">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <select style="width: 40%;"><option>No</option></select>
+         </ng-template>
+        </wj-multi-row-cell>
+        <wj-multi-row-cell binding="failureMode" header="{{ 'sqrm.SQ_L13794' | translate }}" [width]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <select style="width: 70%;"><option>-</option></select>
+        </ng-template>
+        </wj-multi-row-cell>
+        <wj-multi-row-cell binding="replacement" header="{{ 'sqrm.SQ_L13797' | translate }}" [width]="150">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <select style="width: 40%;"><option>No</option></select>
+         </ng-template>
+        </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="visualCheck" header="{{ 'sqrm.SQ_L13807' | translate }}" [colspan]="2" [width]="250"></wj-multi-row-cell>
+        <wj-multi-row-cell binding="resultOfVisualCheck" header="{{ 'sqrm.SQ_L13808' | translate }}" [rowspan]="2" [width]="200">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <p><select style="width: 40%;"><option>-</option></select></p>
+            <select style="width: 30%;"><option>-</option></select>
+          </ng-template>
+        </wj-multi-row-cell>
+        <wj-multi-row-cell binding="personInCharge" header="{{ 'sqrm.SQ_L13809' | translate }}" [width]="150">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <input type="text" class="text" style="width: calc(60% - 18px)">
+        </ng-template>
+        </wj-multi-row-cell>
+        <wj-multi-row-cell binding="comments" header="{{ 'sqrm.SQ_L13810' | translate }}" [width]="250">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <input type="text" class="text" style="width: calc(90% - 18px)">
+        </ng-template>
+        </wj-multi-row-cell>
+        <wj-multi-row-cell binding="photoFile" header="{{ 'sqrm.SQ_L13825' | translate }}" [colspan]="2" [width]="250">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <input type="text" class="text" style="width: calc(70% - 18px)">&nbsp;<button>Show</button>
+          </ng-template>
+        </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+      <wj-multi-row-cell binding="customerFinalForm" header="{{ 'sqrm.SQ_L13826' | translate }}" [colspan]="2" [width]="250"></wj-multi-row-cell>
+      <wj-multi-row-cell binding="repeatability" header="{{ 'sqrm.SQ_L13827' | translate }}" [width]="50">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <select style="width: 30%;"><option>No</option></select>
+       </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="customerProductName" header="{{ 'sqrm.SQ_L13828' | translate }}" [width]="200">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(90% - 18px)">
+       </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="cComments" header="{{ 'sqrm.SQ_L13735' | translate }}" [colspan]="2" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(50% - 18px)">
+       </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="imageFile" header="{{ 'sqrm.SQ_L13829' | translate }}" [colspan]="2" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">&nbsp;<button>Show</button>
+        </ng-template>
+      </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+      <wj-multi-row-cell binding="gfcImageTest" header="{{ 'sqrm.SQ_L13840' | translate }}" [colspan]="3" [width]="250"></wj-multi-row-cell>
+      <wj-multi-row-cell binding="gTestDate" header="{{ 'sqrm.SQ_L13815' | translate }}">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <wj-input-date [format]="'yyyy-MM-dd'"></wj-input-date>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="gResult" header="{{ 'sqrm.SQ_L13812' | translate }}" [width]="200">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <select style="width: 30%;"><option>-</option></select>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="gNgItem" header="{{ 'sqrm.SQ_L13818' | translate }}" [width]="250">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <select style="width: 60%;"><option>-</option></select>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="gPersonInCharge" header="{{ 'sqrm.SQ_L13809' | translate }}" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="gEquipmentNo" header="{{ 'sqrm.SQ_L13813' | translate }}" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="gLevel" header="{{ 'sqrm.SQ_L13819' | translate }}" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="gTestFile" header="{{ 'sqrm.SQ_L13816' | translate }}" [colspan]="2" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">&nbsp;<button>Show</button>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="gAddress" header="{{ 'sqrm.SQ_L13820' | translate }}" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+      <wj-multi-row-cell binding="oscOpenShortCheck" header="{{ 'sqrm.SQ_L13830' | translate }}" [colspan]="3" [width]="250"></wj-multi-row-cell>
+      <wj-multi-row-cell binding="oTestDate" header="{{ 'sqrm.SQ_L13815' | translate }}" [width]="50">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <wj-input-date [format]="'yyyy-MM-dd'"></wj-input-date>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="oResult" header="{{ 'sqrm.SQ_L13812' | translate }}" [width]="200">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <select style="width: 30%;"><option>-</option></select>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="oNgItem" header="{{ 'sqrm.SQ_L13818' | translate }}" [width]="250">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <select style="width: 50%;"><option>-</option></select>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="oPersonInCharge" header="{{ 'sqrm.SQ_L13809' | translate }}" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="oEquipmentNo" header="{{ 'sqrm.SQ_L13813' | translate }}" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="oNgTerminal" header="{{ 'sqrm.SQ_L13831' | translate }}" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="oTestFile" header="{{ 'sqrm.SQ_L13816' | translate }}" [colspan]="2" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">&nbsp;<button>Show</button>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="oComments" header="{{ 'sqrm.SQ_L13735' | translate }}" [width]="250">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+      <wj-multi-row-cell binding="xRay" header="{{ 'sqrm.SQ_L13832' | translate }}" [width]="200"></wj-multi-row-cell>
+      <wj-multi-row-cell binding="xResult" header="{{ 'sqrm.SQ_L13812' | translate }}" [width]="200">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <select style="width: 60%;"><option>-</option></select>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="pictures" header="{{ 'sqrm.SQ_L13833' | translate }}" [width]="200">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="xComments" header="{{ 'sqrm.SQ_L13735' | translate }}" [width]="200">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+      <wj-multi-row-cell binding="dAnalysis" header="{{ 'sqrm.SQ_L13834' | translate }}" [colspan]="2" [width]="200"></wj-multi-row-cell>
+      <wj-multi-row-cell binding="locationOfDust" header="{{ 'sqrm.SQ_L13835' | translate }}" [width]="200">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <select style="width: 60%;"><option>-</option></select>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="dSize" header="{{ 'sqrm.SQ_L13836' | translate }}" [width]="200">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(60% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="dElement" header="{{ 'sqrm.SQ_L13737' | translate }}" [rowspan]="2" [width]="200">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+      <wj-multi-row-cell binding="analysisVendor" header="{{ 'sqrm.SQ_L13838' | translate }}" [width]="200"></wj-multi-row-cell>
+      <wj-multi-row-cell binding="vendor" header="{{ 'sqrm.SQ_L13839' | translate }}" [width]="200">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <select style="width: 50%;"><option>-</option></select>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="aResult" header="{{ 'sqrm.SQ_L13812' | translate }}" [width]="200">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+          <select style="width: 20%;"><option>-</option></select>
+        </ng-template>
+      </wj-multi-row-cell>
+      <wj-multi-row-cell binding="aComments" header="{{ 'sqrm.SQ_L13735' | translate }}" [width]="200">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+          <input type="text" class="text" style="width: calc(70% - 18px)">
+        </ng-template>
+      </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+        <wj-multi-row-cell header="{{ 'sqrm.SQ_L13725' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <select style="width: 30%;"><option>-</option></select><br>
+              <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+            </ng-template>
+        </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+        <wj-multi-row-cell header="{{ 'sqrm.SQ_L13823' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <select style="width: 30%;"><option>-</option></select><br>
+              <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+            </ng-template>
+        </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+        <wj-multi-row-cell header="{{ 'sqrm.SQ_L13729' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <select style="width: 30%;"><option>-</option></select><br>
+              <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+            </ng-template>
+        </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+        <wj-multi-row-cell header="{{ 'sqrm.SQ_L13619' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <select style="width: 40%;"><option>-</option></select><br>
+              <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+            </ng-template>
+        </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+        <wj-multi-row-cell header="{{ 'sqrm.SQ_L13620' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <select style="width: 50%;"><option>-</option></select><br>
+              <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+            </ng-template>
+        </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+        <wj-multi-row-cell header="{{ 'sqrm.SQ_L13735' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <textarea maxlength="1000" rows="4" style="overflow-y: scroll;"></textarea>
+            </ng-template>
+        </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+      <wj-multi-row-cell [header]="'sqrm.SQ_L13736' | translate" [minWidth]="300"></wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    </wj-multi-row>
+  </div>

@@ -1,0 +1,102 @@
+<div class="header dialog-font-color custom-dialog-header"
+  cdkDragHandle cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+>
+<button type="button" aria-label="Close this dialog" mat-dialog-close style="cursor: pointer;">×</button>
+  <p class="main-screen-title">{{ "sqrm.SQ_L02337" | translate }}</p>
+  <hr />
+</div>
+
+<div class="search">
+  <div class="sub-screen">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L02288" | translate }}
+      <a href="#" style="float: right;"><u>{{ "sqrm.SQ_L02289" | translate }}</u></a>
+    </div>
+    <div class="sub-screen-container">
+      <table>
+        <tr>
+          <td><p class="required">{{ "sqrm.SQ_L02290" | translate }}</p></td>
+          <td>
+            <select>
+              <option>IS</option>
+              <option></option>
+            </select>
+          </td>
+          <td><p>{{ "sqrm.SQ_L02291" | translate }}</p></td>
+        <td><wj-multi-select #theMultiSelect
+          text=""
+          [itemsSource]="testSelect"
+          [isDroppedDown]="false"
+          [isAnimated]="true"
+          ></wj-multi-select></td>
+          <td><p>{{ "sqrm.SQ_L02292" | translate }}</p></td>
+          <td>
+            <input type="text" class="text" style="width: calc(100% - 18px)"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L02293" | translate }}</p></td>
+          <td>
+            <input type="text" class="text" style="width: calc(100% - 18px)">
+          </td>
+          <td><p>{{ "sqrm.SQ_L02294" | translate }}</p></td>
+          <td><wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 40%;"></wj-input-date>&nbsp;-&nbsp;
+            <wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 40%;"></wj-input-date></td>
+          <td><p>{{ "sqrm.SQ_L02295" | translate }}</p></td>
+          <td><select style="width: 100%;"><option>ITS-IS</option></select></td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L02296" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+          <td><p>{{ "sqrm.SQ_L02297" | translate }}</p></td>
+          <td><wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 40%;"></wj-input-date>&nbsp;-&nbsp;
+            <wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 40%;"></wj-input-date></td>
+          <td><p>{{ "sqrm.SQ_L02298" | translate }}</p></td>
+          <td><select style="width: 100%;"><option>-</option></select></td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L02299" | translate }}</p></td>
+          <td><input type="text" class="text"></td>
+          <td><p>{{ "sqrm.SQ_L02333" | translate }}</p></td>
+          <td><input type="text" class="text"></td>
+          <td><p>{{ "sqrm.SQ_L02300" | translate }}</p></td>
+        <td><input type="text" class="text" style="width: calc(100% - 18px)">
+        <button type="button" class="btn btn-secondary" style="margin-top:3px;">{{ "sqrm.SQ_L02301" | translate }}</button></td>
+        </tr>
+      </table>
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02303" | translate }}</button>
+    </div>
+  </div>
+
+  <div class="sub-screen-title">
+    {{ "sqrm.SQ_L02304" | translate }}
+    <a href="#" style="float: right;"><u>{{ "sqrm.SQ_L02305" | translate }}</u></a>
+  </div>
+
+  <div class="tblcheck">
+    <table style="padding-left: 30px;">
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02306" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02307" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02308" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02309" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02310" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02334" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02311" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02312" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02313" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02314" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02315" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02316" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02317" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02318" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02319" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02335" | translate }}
+      <input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02336" | translate }}
+      <div class="btnright" style="margin: 10px;">
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02321" | translate }}</button>&nbsp;
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02322" | translate }}</button>
+      </div>
+    </table>
+    </div>
+</div>
+
+

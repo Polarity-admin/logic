@@ -1,0 +1,31 @@
+<div
+  class="header dialog-font-color custom-dialog-header"
+  cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+  cdkDragHandle
+>
+  <h2>{{ "sqrm.SQ_L04125" | translate }}</h2>
+  <button type="button" aria-label="Close this dialog" mat-dialog-close>×</button>
+  <hr />
+</div>
+
+<mat-dialog-content class="dialog-font-color" 
+  style="max-height: 80vh; min-width: 80vh;"
+>
+  <div class="footer-btn"
+    style="margin: 10px 0; align-items: center;"
+  > 
+    <span>File: Test_File.pdf</span>
+    <div *ngIf="currentRoute.includes('mdd-')">
+      <button class="btn btn-primary">{{ "sqrm.SQ_L16091" | translate }}</button>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L16092" | translate }}</button>
+    </div>
+    <div *ngIf="currentRoute.includes('lsi-')">
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L04126" | translate }}</button>
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L04127" | translate }}</button>
+    </div>
+  </div>
+  <wj-pdf-viewer
+    #pdfViewer
+    [serviceUrl]="'https://www.grapecity.com/componentone/demos/aspnet/c1webapi/latest/api/pdf'"
+  ></wj-pdf-viewer>
+</mat-dialog-content>

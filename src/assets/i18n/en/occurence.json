@@ -1,0 +1,24 @@
+{
+  "sqrm": {
+    "SQ_L02084": "Usage conditions",
+    "SQ_L02085": "Application",
+    "SQ_L02086": "Q'ty shipped",
+    "SQ_L02087": "Q'ty used",
+    "SQ_L02088": "Q'ty failed",
+    "SQ_L02089": "Failure rate (Failure quantity / Input quantity / Mark-lot dependency)",
+    "SQ_L02090": "Ambient temperature",
+    "SQ_L02091": "Usage environment [Indoor/Outdoor]",
+    "SQ_L02092": "Temperature dependency",
+    "SQ_L02093": "Estimated total time of usage[h]",
+    "SQ_L02094": "Supply voltage [V]",
+    "SQ_L02095": "Light intensity[Dark/HL/LL]",
+    "SQ_L02096": "Shutter speed[/sec.]",
+    "SQ_L02097": "Gain[dB]",
+    "SQ_L02098": "Driving mode",
+    "SQ_L02099": "Signal output level[mV]",
+    "SQ_L02100": "Pictures (Charateristic defectiveness / deficient symptom of the poor appearance)",
+    "SQ_L02101": "Resistor characteristics of your set",
+    "SQ_L02102": "Select",
+    "SQ_L02103": "Close"
+  }
+}

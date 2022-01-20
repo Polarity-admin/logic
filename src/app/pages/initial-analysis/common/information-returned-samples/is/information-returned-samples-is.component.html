@@ -1,0 +1,329 @@
+<div class="sub-screen" *ngIf="currentRoute === 'is-request'">
+  <div class="sub-screen-title">
+    <div class="header-title">
+      <span class="required">{{ "sqrm.SQ_L00113" | translate }}</span>
+      <div class="checkbox-input">
+        <input id="finalReport" type="checkbox" />
+        <label for="finalReport">{{ "sqrm.SQ_L03045" | translate }}</label>
+      </div>
+    </div>      
+    <div class="actions">
+      <p>{{ "sqrm.SQ_L03046" | translate  }}</p>
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L00115" | translate }}</button>
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L00116" | translate }}</button>
+      <div class="pagination-container">
+        <p>{{ currentPage }}</p>
+        <select>
+          <option *ngFor="let i of pages">{{ i }} - {{ totalPages }}</option>
+        </select>
+      </div>
+      <button class="btn btn-secondary" receptionDatestyle="margin-left: 10px;">{{ "sqrm.SQ_L00117" | translate }}</button>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-multi-row class="girdlist" #multirow   [itemsSource]="returnedSamplesData" [headersVisibility]="'Column'">
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='requestBy' header="{{ 'sqrm.SQ_L03100' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140"  >
+                <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                    <div style="display: block;justify-content: lfet;">
+                        <div style="display:block">{{ 'sqrm.SQ_L03100' | translate }}</div>
+                        <button class="btn btn-secondary">{{ 'sqrm.SQ_L03101' | translate }}</button>  
+                    </div>
+                </ng-template>
+                <ng-template wjMultiRowCellTemplate>
+                    <input type="checkbox" />
+                </ng-template>
+            </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L03102' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+            <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L03103' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="customerName" header="{{ 'sqrm.SQ_L03104' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+            <wj-multi-row-cell binding="productName" header="{{ 'sqrm.SQ_L03105' | translate }} " [allowSorting]='false'
+                [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="customerSampleNo" header="{{ 'sqrm.SQ_L03106' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+            
+            <wj-multi-row-cell binding="sonySampleNo" header="{{ 'sqrm.SQ_L03107' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="markLotNo" header="{{ 'sqrm.SQ_L03108' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+            <wj-multi-row-cell binding="id" header="{{ 'sqrm.SQ_L03109' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="dateOfFailureOccurence" header="{{ 'sqrm.SQ_L03110' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+            <wj-multi-row-cell binding="regionOfFailure" header="{{ 'sqrm.SQ_L03111' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="processOfFailure" header="{{ 'sqrm.SQ_L03112' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+            <wj-multi-row-cell binding="detailProcessOfFailure" header="{{ 'sqrm.SQ_L03113' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="200" [allowMerging]='true'></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+            
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='failureMode' header="{{ 'sqrm.SQ_L03114' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='detailsOfFailureMode' header="{{ 'sqrm.SQ_L03115' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="250"  >
+                <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                    <div style="display: block;justify-content: lfet;">
+                        <div style="display:block"> {{ 'sqrm.SQ_L03115' | translate }}</div>
+                        <div style="display:block"> {{ 'sqrm.SQ_L03116' | translate }}</div>
+                    </div>
+                    
+                </ng-template>
+            </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='whitePixel' header="{{ 'sqrm.SQ_L03117' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='test' header="{{ 'sqrm.SQ_L03118' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='solder' header="{{ 'sqrm.SQ_L03121' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell  [allowSorting]='false' [align]="'center'" [width]="140"  >
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                    <button class="btn btn-secondary">Delete</button>
+                </ng-template>
+            </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+    </wj-multi-row>
+  </div>
+</div>
+
+<!-- IS answer -->
+<div class="sub-screen" *ngIf="currentRoute === 'is-answer' || currentRoute === 'is-approval'">
+    <div class="sub-screen-title">
+      <div class="header-title">
+        <span class="required"  *ngIf="currentRoute === 'is-answer'">{{ "sqrm.SQ_L03012" | translate }}</span>
+        <span *ngIf="currentRoute === 'is-approval'">{{ "sqrm.SQ_L03012" | translate }}</span>
+         <p>{{ currentPage }}</p>
+        <div class="checkbox-input">
+          <input id="finalReport" type="checkbox" />
+          <label for="finalReport">{{ "sqrm.SQ_L03045" | translate }}</label>
+        </div>
+      </div>      
+      <div class="actions" *ngIf="currentRoute === 'is-answer'">
+        <div class="file-upload">
+            <input type="file" />
+        </div>
+        <button class="btn btn-secondary">{{ "sqrm.SQ_L03028" | translate }}</button>
+        <button class="btn btn-secondary">{{ "sqrm.SQ_L03029" | translate }}</button>
+      </div>
+    </div>
+    <div class="sub-screen-container">
+        <wj-multi-row class="girdlist" #multirow 
+        [frozenColumns]="3" 
+        [headersVisibility]="'Column'" 
+        [allowMerging]="'Cells'" 
+        >
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L03102' | translate }}" [rowspan]="2"
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+                <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L03103' | translate }}" [rowspan]="2"
+                    [align]="'center'" [width]="140" [allowMerging]='true'></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="customerName" [rowspan]="2" [width]="150" header="{{ 'sqrm.SQ_L03104' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding ="productName" [rowspan]="2" [width]="150" header="{{ 'sqrm.SQ_L03105' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="customerSampleNo" [rowspan]="2" [width]="200" header="{{ 'sqrm.SQ_L03106' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sonySampleNo" [rowspan]="2" [width]="200" header="{{ 'sqrm.SQ_L03107' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="markLotNo" [rowspan]="2" [width]="150" header="{{ 'sqrm.SQ_L03108' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="id" [rowspan]="2" [width]="150" header="{{ 'sqrm.SQ_L03109' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="dateOfFailureOccurence" [rowspan]="2" [width]="250" header="{{ 'sqrm.SQ_L03110' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="regionOfFailure" [rowspan]="2" [width]="250" header="{{ 'sqrm.SQ_L03111' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="processOfFailure" [rowspan]="2" [width]="250" header="{{ 'sqrm.SQ_L03112' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="detailProcessOfFailure" [rowspan]="2" [width]="250" header="{{ 'sqrm.SQ_L03113' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="failureMode" [rowspan]="4" header="{{ 'sqrm.SQ_L03114' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="detailsOfFailureMode" [rowspan]="4" [width]="250" header="{{ 'sqrm.SQ_L03115' | translate }}">
+                    <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                        <div>
+                            <div style="display:block"> {{ 'sqrm.SQ_L03115' | translate }}</div>
+                            <div style="display:block"> {{ 'sqrm.SQ_L03116' | translate }}</div>
+                        </div>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L03122' | translate }}" [colspan]="2" [width]= "400" [format]="'n2'"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="illustration" header="{{ 'sqrm.SQ_L03123' | translate }}" [rowspan]="2" [width]= "250" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="replacement" header="{{ 'sqrm.SQ_L03124' | translate }}" [width]= "150"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="visualCheck" header="{{ 'sqrm.SQ_L03125' | translate }}" [width]= "150"></wj-multi-row-cell>
+                <!-- <wj-multi-row-cell binding="resultOfVisualCheck" header="{{ 'sqrm.SQ_L03126' | translate }}" *ngIf="currentRoute ==='is-approval'"></wj-multi-row-cell> -->
+                <wj-multi-row-cell binding="personInCharge" header="{{ 'sqrm.SQ_L03127' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L03128' | translate }}" [colspan]="2" [width]="400"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="resultOfVisualCheck" header="{{ 'sqrm.SQ_L03129' | translate }}" [width]="250"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="personInCharge"header="{{ 'sqrm.SQ_L03130' | translate }}" [width]="150"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="comments" header="{{ 'sqrm.SQ_L03131' | translate }}" [colspan]="2" *ngIf="currentRoute ==='is-answer' || currentRoute ==='is-approval'"></wj-multi-row-cell>
+                <!-- <wj-multi-row-cell binding="comments" header="{{ 'sqrm.SQ_L03131' | translate }}" [colspan]="2" *ngIf="currentRoute ==='is-approval'"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="preCheckIllustration" header="{{ 'sqrm.SQ_L03132' | translate }}" [colspan]="2" *ngIf="currentRoute ==='is-approval'"></wj-multi-row-cell> -->
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="null" header="{{ 'sqrm.SQ_L03133' | translate }}" [colspan]="2" [width]="400"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="result" header="{{ 'sqrm.SQ_L03134' | translate }}" [width]="200"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="mPersonInCharge" header="{{ 'sqrm.SQ_L03135' | translate }}" [width]="150"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="equipment" header="{{ 'sqrm.SQ_L03136' | translate }}" [colspan]="2" *ngIf="currentRoute === 'is-answer' || currentRoute === 'is-approval'"></wj-multi-row-cell>
+                <!-- <wj-multi-row-cell binding="equipment" header="{{ 'sqrm.SQ_L03136' | translate }}" [colspan]="2" *ngIf="currentRoute === 'is-approval'" ></wj-multi-row-cell>
+                <wj-multi-row-cell binding="mIllustration" header="{{ 'sqrm.SQ_L03137' | translate }}" [colspan]="2" *ngIf="currentRoute === 'is-approval'"></wj-multi-row-cell> -->
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="cCheck" header="{{ 'sqrm.SQ_L03138' | translate }}" [colspan]="8" [width]="600"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cTestDate" header="{{ 'sqrm.SQ_L03139' | translate }}"[width]="150"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cResult" header="{{ 'sqrm.SQ_L03140' | translate }}" [width]="150"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cPersonInCharge" header="{{ 'sqrm.SQ_L03144' | translate }}" [rowspan]="3" [width]="80"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cEquipmentNo" header="{{ 'sqrm.SQ_L03145' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cTestFile" header="{{ 'sqrm.SQ_L03148' | translate }}" [rowspan]="3" [width]="80"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="c1Time" header="{{ 'sqrm.SQ_L03149' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cNgItem1" header="{{ 'sqrm.SQ_L03152' | translate }}" [rowspan]="3"[width]="80"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cLevel1" header="{{ 'sqrm.SQ_L03153' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cAddress1" header="{{ 'sqrm.SQ_L03141' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="c2Time" header="{{ 'sqrm.SQ_L03142' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cNgItem2" header="{{ 'sqrm.SQ_L03146' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cLevel2" header="{{ 'sqrm.SQ_L03150' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cAddress2" header="{{ 'sqrm.SQ_L03154' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="c3Time" header="{{ 'sqrm.SQ_L03143' | translate }}" [colspan]="2"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cNgItem3" header="{{ 'sqrm.SQ_L03147' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cLevel3" header="{{ 'sqrm.SQ_L03151' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="cAddress3" header="{{ 'sqrm.SQ_L03155' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding="sCheck" header="{{ 'sqrm.SQ_L03156' | translate }}" [colspan]="8" [width]="600"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sTestDate" header="{{ 'sqrm.SQ_L03157' | translate }}" [width]="150"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sResult" header="{{ 'sqrm.SQ_L03158' | translate }}" [width]="150"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sPersonInCharge" header="{{ 'sqrm.SQ_L03162' | translate }}" [rowspan]="3" [width]="80"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sEquipmentNo" header="{{ 'sqrm.SQ_L03163' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sTestFile" header="{{ 'sqrm.SQ_L03166' | translate }}" [rowspan]="3" [width]="80"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="s1Time" header="{{ 'sqrm.SQ_L03167' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sNgItem1" header="{{ 'sqrm.SQ_L03170' | translate }}" [rowspan]="3"[width]="80"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sLevel1" header="{{ 'sqrm.SQ_L03171' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sAddress1" header="{{ 'sqrm.SQ_L03159' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="s2Time" header="{{ 'sqrm.SQ_L03160' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sNgItem2" header="{{ 'sqrm.SQ_L03164' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sLevel2" header="{{ 'sqrm.SQ_L03168' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sAddress2" header="{{ 'sqrm.SQ_L03172' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="s3Time" header="{{ 'sqrm.SQ_L03161' | translate }}" [colspan]="2"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sNgItem3" header="{{ 'sqrm.SQ_L03165' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sLevel3" header="{{ 'sqrm.SQ_L03169' | translate }}"></wj-multi-row-cell>
+                <wj-multi-row-cell binding="sAddress3" header="{{ 'sqrm.SQ_L03173' | translate }}"></wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L03174' | translate }}" [width]="200">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea></textarea>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L03175' | translate }}" [width]="200">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea></textarea>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L03176' | translate }}" [width]="200">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea></textarea>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L03177' | translate }}" [width]="200">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea></textarea>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L03178' | translate }}" [width]="200">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea></textarea>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L03179' | translate }}" [width]="200">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea></textarea>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell header="{{ 'sqrm.SQ_L03180' | translate }}" [width]="200">
+                    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                        <textarea></textarea>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+            
+        </wj-multi-row>
+    </div>
+  </div>
+  

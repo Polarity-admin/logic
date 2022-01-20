@@ -1,0 +1,33 @@
+<div class="footer-btn" *ngIf="currentRoute.includes('is-')" [ngStyle]="{ 'justify-content': 'flex-end' }">
+  <button class="btn btn-primary btn-fw" disabled="{'disabled': currentRoute === 'is-creation'}"
+    *ngIf="currentRoute === 'is-creation'">{{ "sqrm.SQ_L10130" | translate }}</button>
+  <button class="btn btn-primary" disabled="{'disabled': currentRoute === 'is-creation'}"
+    *ngIf="currentRoute === 'is-approval'">{{ "sqrm.SQ_L10156" | translate }}</button>
+  <button class="btn btn-primary btn-fw" *ngIf="currentRoute === 'is-approval'">{{ "sqrm.SQ_L10157" | translate }}</button>
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L10131" | translate }}</button>
+</div>
+
+<!-- MDD Creation -->
+<div class="footer-btn" *ngIf="currentRoute === 'mdd-creation'" [ngStyle]="{ 'justify-content': 'flex-end' }">
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L16080" | translate }}</button>
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L16081" | translate }}</button>
+</div>
+<!-- MDD Approval -->
+<div class="footer-btn" *ngIf="currentRoute === 'mdd-approval'" [ngStyle]="{ 'justify-content': 'flex-end' }">
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L16088" | translate }}</button>
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L16089" | translate }}</button>
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L16090" | translate }}</button>
+</div>
+
+<!-- LSI Creation -->
+<div class="footer-btn" *ngIf="currentRoute === 'lsi-creation'"  [ngStyle]="{ 'justify-content': 'flex-end' }">
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L04100" | translate }}</button>
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L04101" | translate }}</button>
+</div>
+
+<!-- LSI Creation -->
+<div class="footer-btn" *ngIf="currentRoute === 'lsi-approval'" [ngStyle]="{ 'justify-content': 'flex-end' }">
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L04102" | translate }}</button>
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L04103" | translate }}</button>
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L04104" | translate }}</button>
+</div>

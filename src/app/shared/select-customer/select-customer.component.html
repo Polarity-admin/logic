@@ -1,0 +1,96 @@
+<div
+  class="header dialog-font-color custom-dialog-header"
+  cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+  cdkDragHandle
+>
+  <h2>{{ "sqrm.SQ_L09000" | translate }}</h2>
+  <button type="button" aria-label="Close this dialog" mat-dialog-close>×</button>
+  <hr />
+</div>
+
+<mat-dialog-content class="dialog-font-color" 
+  style="max-height: 80vh; min-width: 90vh"
+>  
+  <div class="sub-screen">
+    <div class="sub-screen-title">
+      <span>{{"sqrm.SQ_L09001" | translate }}</span>
+    </div>
+    <div class="sub-screen-container">
+      <table class="two">
+        <tr>
+          <td class="label-cell"><p class="required">{{ "sqrm.SQ_L09002" | translate }}</p></td>
+          <td>
+            <wj-combo-box
+              [itemsSource]="dropDownData1"
+              [isDroppedDown]="false"
+              [isAnimated]="true"
+            ></wj-combo-box> 
+          </td>
+
+          <td class="label-cell"><p>{{ "sqrm.SQ_L09003" | translate }}</p></td>
+          <td>
+            <wj-combo-box
+              [itemsSource]="dropDownData1"
+              [isDroppedDown]="false"
+              [isAnimated]="true"
+            ></wj-combo-box> 
+          </td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L09004" | translate }}</p></td>
+          <td><input type="text" /></td>
+
+          <td class="label-cell"><p>{{ "sqrm.SQ_L09005" | translate }}</p></td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td class="label-cell"><p>{{ "sqrm.SQ_L09006" | translate }}</p></td>
+          <td><input type="text" /></td>
+
+          <td class="label-cell"><p>{{ "sqrm.SQ_L09007" | translate }}</p></td>
+          <td><input type="text" /></td>
+        </tr>
+      </table>
+      <button class="btn btn-secondary" style="margin-top: 10px" (click)="onSearch()">{{ "sqrm.SQ_L09008" | translate }}</button>
+    </div>
+  </div>
+
+  <br *ngIf="searchResults.items.length === 0" />
+
+  <div class="sub-screen" *ngIf="searchResults.items.length > 0">
+    <div class="sub-screen-title">
+      <span>{{ "sqrm.SQ_L09009" | translate }} {{ searchResults.totalItemCount }}</span>
+      <div class="actions">
+        <button class="btn btn-secondary" (click)="moveToPrevPage()">{{ "sqrm.SQ_L09010" | translate }}</button>
+        <button class="btn btn-secondary" (click)="moveToNextPage()">{{ "sqrm.SQ_L09011" | translate }}</button>
+        <!-- <wj-collection-view-navigator headerFormat="{currentPage:n0} of {pageCount:n0}" 
+          [byPage]="true" 
+          [cv]="searchResults"
+        ></wj-collection-view-navigator> -->
+      </div>
+    </div>
+    <div class="sub-screen-container">
+      <wj-flex-grid #grid
+        class="wj-vertical-align"
+        [headersVisibility]="'All'" 
+        [isReadOnly]="true"
+        [itemsSource]="searchResults"
+        (initialized)="onInitialized(grid)"
+      >
+        <wj-flex-grid-column binding="customerCode" [header]="'sqrm.SQ_L09012' | translate" [minWidth]="100"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="customerNameAbbr" [header]="'sqrm.SQ_L09013' | translate" [minWidth]="200"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="customerName" [header]="'sqrm.SQ_L09014' | translate" [minWidth]="300"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="factoryLocation" [header]="'sqrm.SQ_L09015' | translate" [minWidth]="200"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="customerSection" [header]="'sqrm.SQ_L09016' | translate" [minWidth]="250"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="customerContactPerson" [header]="'sqrm.SQ_L09017' | translate" [minWidth]="200" [width]="'*'"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="salesType" [header]="'sqrm.SQ_L09018' | translate" [minWidth]="150"></wj-flex-grid-column>
+      </wj-flex-grid>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-btn">
+    <button class="btn btn-primary btn-fw" (click)="onSelectCustomer()">{{ "sqrm.SQ_L09019" | translate }}</button>
+    <button class="btn btn-primary btn-fw" (click)="onCloseDialog()">{{ "sqrm.SQ_L09020" | translate }}</button>
+  </div>
+</mat-dialog-content>

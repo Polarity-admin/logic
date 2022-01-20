@@ -1,0 +1,158 @@
+{
+    "sqrm": {
+        "SQ_L05000": "Initial Analysis IAR",
+        "SQ_L05001": "Outline of request",
+        "SQ_L05002": "Workflow",
+        "SQ_L05003": "Select destination *An e-mail will be sent to these addresses when you submit the request",
+        "SQ_L05004": "E-mail destination *An e-mail will be sent to these addresses when you submit the request",
+        "SQ_L05005": "Attached files *Size limit 3MB (1 file)",
+        "SQ_L05006": "Remarks* Up to 500 characters",
+        "SQ_L05007": "Workflow",
+        "SQ_L05008": "Select destination (the request side)",
+        "SQ_L05009": "E-mail destination (the request side)",
+        "SQ_L05010": "Select destination (the analysis side) *An email will be sent to these addresses when the request is submitted for approval, declined and approved",
+        "SQ_L05011": "E-mail destination (the analysis side) *An email will be sent to these addresses when the request is submitted for approval, declined and approved.",
+        "SQ_L05012": "Information of returned samples",
+        "SQ_L05013": "Select destination (the analysis side)",
+        "SQ_L05014": "E-mail destination (the analysis side)",
+
+        "SQ_L05015": "Navi",
+        "SQ_L05016": "Download Excel",
+        "SQ_L05017": "Select Item(s)",
+        "SQ_L05018": "Back",
+        "SQ_L05019": "Forward",
+        "SQ_L05020": "Delete",
+        "SQ_L05021": "Select destination of this request",
+        "SQ_L05022": "Select Destination",
+        "SQ_L05023": "Select All",
+        "SQ_L05024": "Edit",
+        "SQ_L05025": "Cancell all",
+        "SQ_L05026": "Submit",
+        "SQ_L05027": "Temporary",
+        "SQ_L05028": "Upload Excel",
+        "SQ_L05029": "Download Excel",
+        "SQ_L05030": "Illust Upload",
+        "SQ_L05031": "Upload2",
+        "SQ_L05032": "Add",
+        "SQ_L05033": "Select Approver",
+        "SQ_L05034": "Pushback",
+        "SQ_L05035": "Save",
+        "SQ_L05036": "Approve",
+        "SQ_L05037": "Reject",
+
+        "SQ_L05038": "Analysis request No.",
+        "SQ_L05039": "Required report date [Initial]",
+        "SQ_L05040": "Required report date [Final]",
+        "SQ_L05041": "Business group name",
+        "SQ_L05042": "PL category",
+        "SQ_L05043": "Outline of request",
+        "SQ_L05044": "*Up to 500 characters",
+
+
+        "SQ_L05045": "Reception No.",
+        "SQ_L05046": "Reception Date",
+        "SQ_L05047": "Customer name",
+        "SQ_L05048": "Product name",
+        "SQ_L05049": "Customer's Sample No.",
+        "SQ_L05050": "Sony's sample No.",
+        "SQ_L05051": "MarkLot No.",
+        "SQ_L05052": "ID (Panel ID / Chip ID)",
+        "SQ_L05053": "Date of failure occurence",
+        "SQ_L05054": "Region of failure",
+        "SQ_L05055": "Failure mode",
+        "SQ_L05056": "Details of the failure mode",
+        "SQ_L05057": "(including the address)",
+        "SQ_L05058": "Tester",
+        "SQ_L05059": "Customer's set",
+        "SQ_L05060": "Evaluation Board",
+        "SQ_L05061": "Details of analysis result",
+        "SQ_L05062": "Request By",
+        "SQ_L05063": "Process Failure",
+        "SQ_L05064": "Detail process of failure",
+        "SQ_L05065": "Failure mode",
+        "SQ_L05066": "Details of the failure mode",
+
+        "SQ_L05067": "Step",
+        "SQ_L05068": "Name",
+        "SQ_L05069": "Section Name",
+        "SQ_L05070": "Completion date [JST]",
+        "SQ_L05071": "Result",
+        "SQ_L05072": "Comments",
+        "SQ_L05073": "Delete",
+
+        "SQ_L05074": "Initial analysis request (IAR)(report)",
+        
+        
+        "SQ_L05075": "Details of analysis result",
+        "SQ_L05076": "Final Report",
+        "SQ_L05077": "Number of analysis request: ",
+        "SQ_L05078": "3/3",
+        "SQ_L05079": "E-mail notice",
+
+        "SQ_L05080": "Attached file * Size limit: 3MB (1 file)",
+        
+        "SQ_L05081": "File name",
+        "SQ_L05082": "File size",
+        "SQ_L05083": "Uploaded date and time",
+        "SQ_L05084": "Delete",
+
+        "SQ_L05085": "Initial analysis request test answer",
+        "SQ_L05086": "Remarks",
+        "SQ_L05087": "Delete",
+        "SQ_L05088": "Failure illustration by Customer",
+        "SQ_L05089": "Making",
+        "SQ_L05090": "Illust upload",
+        "SQ_L05091": "Delete",
+
+        "SQ_L05092": "Name",
+        "SQ_L05093": "Section name",
+        "SQ_L05094": "Email",
+        "SQ_L05095": "Delete",
+
+        "SQ_L05096": "Submit",
+        "SQ_L05097": "Save",
+
+        "SQ_L05098": "Illustration",
+
+        "SQ_L05099": "Failure illustration by Customer",
+
+        "SQ_L05100": "Appearance test",
+        "SQ_L05101": "Illustration",
+        "SQ_L05102": "Direction",
+        "SQ_L05103": "Result",
+        "SQ_L05104": "Detail's Less than 200 characters",
+
+        "SQ_L05105": "DT,ICT, FPC",
+        "SQ_L05106": "Result",
+        "SQ_L05107": "Detail* Less than 200 characters",
+
+        "SQ_L05108": "Customer's set, NR other",
+        "SQ_L05109": "Illustration",
+        "SQ_L05110": "Result",
+        "SQ_L05111": "Detail* Less than 200 characters",
+
+        "SQ_L05112": "Customer representive",
+        "SQ_L05113": "Result",
+        "SQ_L05114": "Detail* Less than 200 characters",
+
+        "SQ_L05115": "Confirmation symptom",
+
+        "SQ_L05116": "Details of the failure mode",
+        "SQ_L05117": "*Up to 500 characters",
+
+        "SQ_L05118": "Caused by an Outbreak",
+        "SQ_L05119": "Position",
+
+        "SQ_L05120": "Result",
+        "SQ_L05121": "Detail",
+        "SQ_L05122": "Detail",
+        "SQ_L05123": "Detail",
+        "SQ_L05124": "Detail"
+
+
+
+
+
+
+    }
+}

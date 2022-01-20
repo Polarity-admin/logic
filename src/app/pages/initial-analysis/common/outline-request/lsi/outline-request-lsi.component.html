@@ -1,0 +1,69 @@
+<div class="sub-screen"  *ngIf="currentRoute === 'lsi-request' || currentRoute === 'lsi-answer'">
+  
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L01001" | translate }}</p>
+    <button class="btn btn-secondary " *ngIf="currentRoute === 'lsi-request'" > {{ "sqrm.SQ_L01016" | translate }}</button>
+  </div>
+
+  <div class="sub-screen-container">
+    <form>
+      <table class="style1">
+        <tr>
+            <td>{{ 'sqrm.SQ_L01038' | translate }}</td>
+            <td> <label>{{ 'sqrm.SQ_L01038' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L01039' | translate }}</td>
+            <td><wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
+            <td>{{ 'sqrm.SQ_L01040' | translate }}<span *ngIf="currentRoute === 'lsi-request'" class="required"></span></td>
+            <td><wj-input-date id="reportDateInit" format="yyyy/MM/dd"></wj-input-date></td>
+        </tr>
+        <tr>
+            <td>{{ 'sqrm.SQ_L01041' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L01041' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L01042' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L01042' | translate }}</label></td>
+        </tr>
+        <tr>
+            <td>
+              {{ 'sqrm.SQ_L01043' | translate }}
+              <div *ngIf="currentRoute === 'lsi-request'">{{ 'sqrm.SQ_L01044' | translate }}</div>
+            </td>
+            <td colspan="5" >
+                <textarea class="form-textarea style1"></textarea>
+            </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+
+
+<!-- Outline Request for LSI Approval -->
+<div class="sub-screen"  *ngIf="currentRoute === 'lsi-approval'">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L01001" | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <form>
+      <table class="style1">
+        <tr>
+            <td>{{ 'sqrm.SQ_L01038' | translate }} </td>
+            <td><label>{{ 'sqrm.SQ_L01038' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L01039' | translate }} </td>
+            <td><label>{{ 'sqrm.SQ_L01039' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L01040' | translate }} </td>
+            <td><label>{{ 'sqrm.SQ_L01040' | translate }}</label></td>
+        </tr>
+        <tr>
+            <td>{{ 'sqrm.SQ_L01041' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L01041' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L01042' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L01042' | translate }}</label></td>
+        </tr>
+        <tr>
+            <td>{{ 'sqrm.SQ_L01043' | translate }}</td>
+            <td colspan="5" ><label>{{ 'sqrm.SQ_L01043' | translate }}</label></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>

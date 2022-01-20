@@ -1,0 +1,72 @@
+{
+  "sqrm": {
+
+    "SQ_L14702": "List of corrective actions",
+    "SQ_L14703": "Search conditions",
+    "SQ_L14704": "Close",
+    "SQ_L14705": "Category",
+    "SQ_L14706": "Product category",
+    "SQ_L14707": "Request No.",
+    "SQ_L14708": "Reception No.",
+    "SQ_L14709": "Reception date",
+    "SQ_L14710": "Recipient group",
+    "SQ_L14711": "Product name",
+    "SQ_L14712": "Customer name",
+    "SQ_L14713": "Select customer",
+    "SQ_L14714": "Status",
+    "SQ_L14715": "undone",
+    "SQ_L14716": "done",
+    "SQ_L14717": "Search",
+    "SQ_L14718": "Download",
+
+    "SQ_L14719": "Search result:",
+    "SQ_L14720": "1",
+    "SQ_L14721": "[1]",
+    "SQ_L14722": "[1]",
+    "SQ_L14723": "Back",
+    "SQ_L14724": "Forward",
+
+    "SQ_L14725": "Status",
+    "SQ_L14726": "Action No.",
+    "SQ_L14727": "Reception No.",
+    "SQ_L14728": "Reception date",
+    "SQ_L14729": "Product name",
+    "SQ_L14730": "Customer name",
+    "SQ_L14731": "DAR No.",
+    "SQ_L14732": "Outline of corrective actions",
+    "SQ_L14733": "Action for customer",
+    "SQ_L14734": "Action date [plan]",
+    "SQ_L14735": "Action date[done]",
+    "SQ_L14736": "Corrective actions MarkLot No",
+    "SQ_L14737": "Shipment date",
+    "SQ_L14738": "Last updated by",
+    "SQ_L14739": "Last update",
+
+    "SQ_L14740": "Corrective actions input",
+    "SQ_L14741": "Corrective actions info.",
+    "SQ_L14742": "K19",
+    "SQ_L14743": "9004",
+    "SQ_L14744": "G01",
+    "SQ_L14745": "3",
+    "SQ_L14746": "Action No.",
+    "SQ_L14747": "Delete",
+    "SQ_L14748": "Edit",
+    "SQ_L14749": "Status",
+    "SQ_L14750": "Under horizontal expansion",
+    "SQ_L14751": "Outline of corrective actions *Up to 500 characters",
+    "SQ_L14752": "Action for customer",
+    "SQ_L14753": "Horizontal expansion contents * Up to 500 characters",
+    "SQ_L14754": "Action date[plan]",
+    "SQ_L14755": "Action date[done]",
+    "SQ_L14756": "Corrective actions MarkLot No",
+    "SQ_L14757": "Shipment date",
+    "SQ_L14758": "Last updated by Last update",
+    "SQ_L14759": "Close",
+    "SQ_L14760": "Customer Open",
+    "SQ_L14761": "Horizontal expansion required"
+
+
+
+
+  }
+}

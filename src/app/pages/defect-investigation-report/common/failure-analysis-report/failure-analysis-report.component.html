@@ -1,0 +1,260 @@
+<div class="sub-screen" *ngIf="currentRoute.includes('is-')">
+  <div class="sub-screen-title">
+    <p>{{ 'sqrm.SQ_L10012' | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <wj-multi-row #returnedSamplesGrid [headersVisibility]="'Column'" [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData">
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="ver" header="{{'sqrm.SQ_L10147' | translate}}" [minWidth]="143" [width]="'*'" [align]="'center'">
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="reportNo" header="{{ 'sqrm.SQ_L10148' | translate }}" [minWidth]="143" 
+          [width]="'*'" [align]="'center'"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="reportDate" header="{{ 'sqrm.SQ_L10149' | translate }}" [minWidth]="143"
+          [width]="'*'" [align]="'center'"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="nextReportDate" header="{{ 'sqrm.SQ_L10150' | translate }}" [minWidth]="143"
+          [width]="'*'" [align]="'center'"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="final" header="{{ 'sqrm.SQ_L10151' | translate }}" [minWidth]="143" [width]="'*'" [align]="'center'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <input type="checkbox" value="final" [disabled]="currentRoute === 'is-approval'"/>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="reportTemplate" header="{{ 'sqrm.SQ_L10152' | translate }}" [minWidth]="143"
+          [width]="'*'" [align]="'center'"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="originalReport" header="{{ 'sqrm.SQ_L10153' | translate }}" [minWidth]="143"
+          [width]="'*'" [align]="'center'"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="pdfCheck" header="{{ 'sqrm.SQ_L10154' | translate }}" [minWidth]="143"
+          [width]="'*'" [align]="'center'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" align="center" let-item="item">
+            <button class="btn btn-secondary" (click)="viewPDF()"> Check report </button>
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="reportCheck" header="{{ 'sqrm.SQ_L10155' | translate }}" [minWidth]="143"
+          [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+            <input type="checkbox" />
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+    </wj-multi-row>
+
+  </div>
+</div>
+
+<!-- MDD Creation -->
+<div class="sub-screen" *ngIf="currentRoute === 'mdd-creation'">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L16039" | translate }}</p>
+    <div class="actions">
+      <div class="checkbox-input">
+        <input type="checkbox" id="checkbox_1" name="checkbox" />
+        <label for="checkbox_1">{{ "sqrm.SQ_L16040" | translate }}</label>
+      </div>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-flex-grid
+      class="wj-vertical-align"
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData"
+    >
+      <wj-flex-grid-column binding="ver" [header]="'sqrm.SQ_L16041' | translate" [minWidth]="100" align="center"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportNo" [header]="'sqrm.SQ_L16042' | translate" [minWidth]="200" align="center"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportDate" [header]="'sqrm.SQ_L16043' | translate" [minWidth]="250" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+          <span class="required">{{ 'sqrm.SQ_L16043' | translate }}</span>
+        </ng-template>
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <wj-input-date format="yyyy/MM/dd"></wj-input-date>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="nextReportDate" [header]="'sqrm.SQ_L16044' | translate" [minWidth]="250" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <wj-input-date format="yyyy/MM/dd"></wj-input-date>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="final" [header]="'sqrm.SQ_L16045' | translate" [minWidth]="100" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <input type="checkbox" />
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportTemplate" [header]="'sqrm.SQ_L16046' | translate" [minWidth]="300" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <wj-combo-box
+            class="full-width"
+            [itemsSource]="dropDownData"
+            [isDroppedDown]="false"
+            [isAnimated]="true"
+          ></wj-combo-box> 
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="actions" [header]="'sqrm.SQ_L16047' | translate" [minWidth]="300" [width]="'*'" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="column-row flex-row">
+            <button class="btn btn-secondary btn-fw" (click)="showAttachedSub('add-report')">{{ "sqrm.SQ_L16048" | translate }}</button>
+            <button class="btn btn-secondary btn-fw" (click)="showAttachedSub('view-report')">{{ "sqrm.SQ_L16049" | translate }}</button>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+    </wj-flex-grid>
+  </div>
+</div>
+
+<!-- MDD Approval -->
+<div class="sub-screen" *ngIf="currentRoute === 'mdd-approval'">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L16039" | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <wj-flex-grid
+      class="wj-vertical-align"
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData"
+      [allowMerging]="'Cells'"
+    >
+      <wj-flex-grid-column binding="ver" [header]="'sqrm.SQ_L16041' | translate" [minWidth]="100" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportNo" [header]="'sqrm.SQ_L16042' | translate" [minWidth]="200" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportDate" [header]="'sqrm.SQ_L16043' | translate" [minWidth]="150" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="nextReportDate" [header]="'sqrm.SQ_L16044' | translate" [minWidth]="150" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="final" [header]="'sqrm.SQ_L16045' | translate" [minWidth]="100" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportTemplate" [header]="'sqrm.SQ_L16046' | translate" [minWidth]="250" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="originalReport" [header]="'sqrm.SQ_L16084' | translate" [minWidth]="250" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <a>{{ cell.item.originalReport }}</a>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="pdfCheck" [header]="'sqrm.SQ_L16085' | translate" [minWidth]="150" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="column-row flex-row">
+            <button class="btn btn-secondary btn-fw" (click)="viewPDF()">{{ "sqrm.SQ_L16086" | translate }}</button>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportCheck" [header]="'sqrm.SQ_L16087' | translate" [minWidth]="100" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <input type="checkbox" />
+        </ng-template>
+      </wj-flex-grid-column>
+    </wj-flex-grid>
+  </div>
+</div>
+  
+<!-- LSI Creation -->
+<div class="sub-screen" *ngIf="currentRoute === 'lsi-creation'">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L04050" | translate }}</p>
+    <div class="actions">
+      <div class="checkbox-input">
+        <input type="checkbox" id="checkbox_1" name="checkbox" />
+        <label for="checkbox_1">{{ "sqrm.SQ_L04051" | translate }}</label>
+      </div>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-flex-grid
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData"
+    >
+      <wj-flex-grid-column binding="ver" [header]="'sqrm.SQ_L04052' | translate" [minWidth]="100" align="center"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportNo" [header]="'sqrm.SQ_L04053' | translate" [minWidth]="200" align="center"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportDate" [header]="'sqrm.SQ_L16043' | translate" [minWidth]="150" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+          <p class="required" style="margin: 0;">{{ 'sqrm.SQ_L04054' | translate }}</p>
+        </ng-template>
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <wj-input-date format="yyyy/MM/dd"></wj-input-date>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="nextReportDate"  [header]="'sqrm.SQ_L04055' | translate" [minWidth]="150" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <wj-input-date format="yyyy/MM/dd"></wj-input-date>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="final" [header]="'sqrm.SQ_L04056' | translate" [minWidth]="100" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <input type="checkbox" />
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportTemplate" [header]="'sqrm.SQ_L04057' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <wj-combo-box
+            class="full-width"
+            [itemsSource]="dropDownData"
+            [isDroppedDown]="false"
+            [isAnimated]="true"
+          ></wj-combo-box> 
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="actions" [header]="'sqrm.SQ_L04058' | translate" [minWidth]="400" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="column-row flex-row">
+            <button class="btn btn-secondary btn-fw" (click)="showAttachedSub('add-report')">{{ "sqrm.SQ_L04059" | translate }}</button>
+            <div class="checkbox-input">
+              <input type="checkbox" id="checkbox_1" name="checkbox" />
+              <label for="checkbox_1">{{ "sqrm.SQ_L04060" | translate }}</label>
+            </div>
+            <button class="btn btn-secondary btn-fw" (click)="showAttachedSub('view-report')">{{ "sqrm.SQ_L04061" | translate }}</button>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+    </wj-flex-grid>
+  </div>
+</div>
+<!-- LSI Approval -->
+<div class="sub-screen" *ngIf="currentRoute === 'lsi-approval'">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L04050" | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <wj-flex-grid
+      class="wj-vertical-align"
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="returnedSamplesData"
+      [allowMerging]="'Cells'"
+    >
+      <wj-flex-grid-column binding="ver" [header]="'sqrm.SQ_L04052' | translate" [minWidth]="100" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportNo" [header]="'sqrm.SQ_L04053' | translate" [minWidth]="200" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportDate" [header]="'sqrm.SQ_L04054' | translate" [minWidth]="150" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="nextReportDate" [header]="'sqrm.SQ_L04055' | translate" [minWidth]="150" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="final" [header]="'sqrm.SQ_L04056' | translate" [minWidth]="100" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportTemplate" [header]="'sqrm.SQ_L04057' | translate" [minWidth]="250" align="center" [allowMerging]="true"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="originalReport" [header]="'sqrm.SQ_L04062' | translate" [minWidth]="250" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <a>{{ cell.item.originalReport }}</a>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="pdfCheck" [header]="'sqrm.SQ_L04063' | translate" [minWidth]="150" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="column-row flex-row">
+            <button class="btn btn-secondary btn-fw" (click)="viewPDF()">{{ "sqrm.SQ_L04064" | translate }}</button>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="reportCheck" [header]="'sqrm.SQ_L04065' | translate" [minWidth]="100" align="center">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <input type="checkbox" />
+        </ng-template>
+      </wj-flex-grid-column>
+    </wj-flex-grid>
+  </div>
+</div>

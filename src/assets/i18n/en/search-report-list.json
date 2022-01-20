@@ -1,0 +1,55 @@
+{
+  "sqrm": {
+
+    "SQ_L14517": "List of failure analysis report",
+    "SQ_L14518": "Search conditions",
+    "SQ_L14519": "Close",
+    "SQ_L14520": "Category",
+    "SQ_L14521": "Product category",
+    "SQ_L14522": "Report No.",
+    "SQ_L14523": "Reception No.",
+    "SQ_L14524": "Reception date",
+    "SQ_L14525": "Recipient group",
+    "SQ_L14526": "Product name",
+    "SQ_L14527": "Customer name",
+    "SQ_L14528": "Select customer",
+    "SQ_L14529": "Status",
+    "SQ_L14530": "Download",
+
+
+    "SQ_L14531": "Required data",
+    "SQ_L14532": "Open",
+
+
+    "SQ_L14533": "Status",
+    "SQ_L14534": "Ver.",
+    "SQ_L14535": "Report No.",
+    "SQ_L14536": "Reception No.",
+    "SQ_L14537": "Reception date",
+    "SQ_L14538": "Urgency of report",
+    "SQ_L14539": "Customer name",
+    "SQ_L14540": "Product name",
+    "SQ_L14541": "Prepared by",
+    "SQ_L14542": "TAT for initial report",
+    "SQ_L14543": "TAT for final report",
+    "SQ_L14544": "Report date",
+    "SQ_L14545": "Next report date",
+    "SQ_L14546": "Last update",
+    "SQ_L14547": "Reported number each sample status",
+    "SQ_L14548": "Sample treatment",
+    "SQ_L14549": "Reset",
+    "SQ_L14550": "Select all",
+
+    "SQ_L14551": "Search result:",
+    "SQ_L14552": "1",
+    "SQ_L14553": "[1]",
+    "SQ_L14554": "[1]",
+    "SQ_L14555": "Reporting section",
+    "SQ_L14556": "Answer time limit (Initial)",
+    "SQ_L14557": "Answer time limit (Final)",
+    "SQ_L14558": "Back",
+    "SQ_L14559": "Forward",
+    "SQ_L14560": "Search"
+
+  }
+}

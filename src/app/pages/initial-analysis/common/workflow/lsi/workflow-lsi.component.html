@@ -1,0 +1,78 @@
+<!-- LSI request || answer || approval-->
+<div class="sub-screen">
+    <div class="sub-screen-title">
+        <div class="header-title">
+          <span *ngIf="currentRoute === 'lsi-request' || currentRoute === 'lsi-answer'" ngclass="required">{{ "sqrm.SQ_L01007" | translate }}</span>
+          <span *ngIf="currentRoute === 'lsi-approval'">{{ "sqrm.SQ_L01007" | translate }}</span>
+        </div>
+
+        <div class="actions">
+            <div class="checkbox-input">
+                <input id="emailNotice" type="checkbox" />
+                <label for="emailNotice">{{ "sqrm.SQ_L01079" | translate }}</label>
+            </div>
+            <button class="btn btn-secondary" *ngIf="currentRoute === 'lsi-request'">{{ "sqrm.SQ_L01021" | translate }}</button>
+            <button class="btn btn-secondary" *ngIf="currentRoute === 'lsi-answer'">{{ "sqrm.SQ_L01033" | translate }}</button> 
+        </div>
+    </div>
+    <div class="sub-screen-container">
+        <wj-multi-row class="girdlist " #multirow  [itemsSource]="workFlowData" [headersVisibility]="'Column'" [selectionMode]="'Cell'">
+            
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='step' header="{{ 'sqrm.SQ_L01067' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="80">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+            
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='name' header="{{ 'sqrm.SQ_L01068' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="150">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='sectionName' header="{{ 'sqrm.SQ_L01069' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="450">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='completionDate' header="{{ 'sqrm.SQ_L01070' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="180">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='result' header="{{ 'sqrm.SQ_L01071' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="80">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group>
+                <wj-multi-row-cell binding='comments' header="{{ 'sqrm.SQ_L01072' | translate }}" [allowSorting]='false'
+                    [align]="'left'" [width]="'*'">
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+
+            <wj-multi-row-cell-group *ngIf="currentRoute ==='lsi-request'">
+                <wj-multi-row-cell [allowSorting]='false'
+                    [align]="'center'" [width]="140">
+                    <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                        <button class="btn btn-secondary">{{ 'sqrm.SQ_L01020' | translate }}</button>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group> 
+
+            <wj-multi-row-cell-group header="saveDt" *ngIf="currentRoute === 'lsi-answer'">
+                <wj-multi-row-cell binding='saveDt' header="{{ 'sqrm.SQ_L01073' | translate }}" [allowSorting]='false'
+                    [align]="'center'" [width]="140">
+                    <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                        <button class="btn-btn-secondary">{{ 'sqrm.SQ_L01020' | translate }}</button>
+                    </ng-template>
+                </wj-multi-row-cell>
+            </wj-multi-row-cell-group>
+            
+            </wj-multi-row>
+
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="footer-btn" *ngIf="currentRoute === 'is-request'">
+  <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L03181" | translate }}</button>
+  </div>
+  <div>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L03026" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L03035" | translate }}</button>
+  </div>  
+</div>
+  
+<div class="footer-btn" *ngIf="currentRoute === 'is-answer'">
+    <div>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L03034" | translate }}</button>
+    </div>
+    <div>
+     <button class="btn btn-primary">{{ "sqrm.SQ_L03026" | translate }}</button>
+     <button class="btn btn-primary">{{ "sqrm.SQ_L03035" | translate }}</button>
+    </div>
+</div>
+
+<div class="footer-btn" [ngClass]="{ 'approval': currentRoute === 'is-approval' }" *ngIf="currentRoute === 'is-approval'">
+  <div>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L03186" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L03187" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L03188" | translate }}</button>
+  </div>
+</div>
+

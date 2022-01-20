@@ -1,0 +1,24 @@
+<div class="footer-btn" [ngClass]="{ 'request': currentRoute === 'lsi-request' }" *ngIf="currentRoute === 'lsi-request'">
+    <div>
+     <button class="btn btn-primary">{{ "sqrm.SQ_L01026" | translate }}</button>
+     <button class="btn btn-primary">{{ "sqrm.SQ_L01027" | translate }}</button>
+    </div>
+</div>
+
+<div class="footer-btn" *ngIf="currentRoute === 'lsi-answer'">
+  <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L01034" | translate }}</button>
+  </div>
+  <div>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L01026" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L01035" | translate }}</button>
+  </div>
+</div>
+
+<div class="footer-btn" [ngClass]="{ 'approval': currentRoute === 'lsi-approval' }" *ngIf="currentRoute === 'lsi-approval'">
+  <div>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L01036" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L01037" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L01035" | translate }}</button>
+  </div>
+</div>

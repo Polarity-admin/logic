@@ -1,0 +1,50 @@
+<div class="sub-screen"  *ngIf="currentRoute === 'laser-request' || currentRoute === 'laser-answer' || currentRoute === 'laser-approval'">
+  
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L06001" | translate }}</p>
+    <button class="btn btn-secondary " *ngIf="currentRoute === 'laser-request'" > {{ "sqrm.SQ_L01016" | translate }}</button>
+  </div>
+
+  <div class="sub-screen-container">
+    <form>
+      <table class="style1">
+        <tr>
+            <td>{{ 'sqrm.SQ_L06038' | translate }}</td>
+            <td> <label>{{ 'sqrm.SQ_L06038' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L06039' | translate }}</td>
+            <td>
+              <wj-input-date id="reportDateInit" format="yyyy/MM/dd"
+                *ngIf="currentRoute==='laser-request' || currentRoute ==='laser-answer'"></wj-input-date>
+                <label *ngIf="currentRoute === 'laser-approval'">{{ 'sqrm.SQ_L06039' | translate }}</label>
+            </td>
+            <td>{{ 'sqrm.SQ_L06040' | translate }}<span *ngIf="currentRoute === 'laser-request'" class="required"></span></td>
+            <td>
+              <wj-input-date id="reportDateInit" format="yyyy/MM/dd"
+              *ngIf="currentRoute==='laser-request' || currentRoute ==='laser-answer'"></wj-input-date>
+              <label *ngIf="currentRoute === 'laser-approval'">{{ 'sqrm.SQ_L06040' | translate }}</label>
+            </td>
+        </tr>
+        <tr>
+            <td>{{ 'sqrm.SQ_L06041' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L06041' | translate }}</label></td>
+            <td>{{ 'sqrm.SQ_L06042' | translate }}</td>
+            <td colspan="2"><label>{{ 'sqrm.SQ_L06042' | translate }}</label></td>
+        </tr>
+        <tr>
+            <td>
+              {{ 'sqrm.SQ_L06043' | translate }}
+              <div *ngIf="currentRoute === 'laser-request' || currentRoute ==='laser-answer'">{{ 'sqrm.SQ_L06044' | translate }}</div>
+            </td>
+            <td colspan="5" >
+              <textarea class="form-textarea style1" *ngIf="currentRoute === 'laser-answer'">□End face observation (through glass)&#13;&#10;□Baraana measurement&#13;&#10;□Appearance observation(engraved)
+              </textarea>
+              <ul class="code-editor-options-menu" *ngIf="currentRoute === 'laser-approval'">
+                <li *ngFor="let item of outlineReqData" class="block"><span>{{ item.name }}</span></li>
+              </ul>
+            </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+

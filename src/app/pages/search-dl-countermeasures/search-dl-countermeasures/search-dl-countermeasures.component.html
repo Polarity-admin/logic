@@ -1,0 +1,213 @@
+<div class="search-dl-countermeasures page-content">
+  <div class="main-screen">
+    <p class="main-screen-title">{{ "sqrm.SQ_L14702" | translate }}</p>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L14703" | translate }}
+      <a href="#" style="float: right;"><u>{{ "sqrm.SQ_L14704" | translate }}</u></a>
+    </div>
+    <div class="sub-screen-container">
+      <table>
+        <tr>
+          <td><p class="required">{{ "sqrm.SQ_L14705" | translate }}</p></td>
+          <td>
+            <select style="width:40%">
+              <option>IS</option>
+              <option></option>
+            </select>
+          </td>
+          <td><p>{{ "sqrm.SQ_L14706" | translate }}</p></td>
+        <td><select style="width: 30%;">
+              <option>-</option>
+            </select>
+        </td>
+          <td><p>{{ "sqrm.SQ_L14707" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(60% - 18px);">
+          </td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L14708" | translate }}</p></td>
+          <td>
+            <input type="text" class="text" style="width: calc(60% - 18px)">
+          </td>
+          <td><p>{{ "sqrm.SQ_L14709" | translate }}</p></td>
+          <td><wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 45%;"></wj-input-date>&nbsp;-&nbsp;
+            <wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 45%;"></wj-input-date></td>
+          <td><p>{{ "sqrm.SQ_L14710" | translate }}</p></td>
+          <td><select style="width: 70%;"><option>-</option></select></td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L14711" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(50% - 18px);"></td>
+          <td><p>{{ "sqrm.SQ_L14712" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(40% - 18px);">&nbsp;
+            <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L14713" | translate }}</button></td>
+            <td><p>{{ "sqrm.SQ_L14714" | translate }}</p></td>
+            
+              <td colspan="3">
+                <input type="checkbox" class="checkmark" name="selection" style="width: auto;text-align: left;vertical-align: left;">{{ "" | translate }}&nbsp;-&nbsp;
+                <input type="checkbox" class="checkmark" name="selection" style="width: auto;text-align: left;vertical-align: left;">{{ "sqrm.SQ_L14715" | translate }}
+                <input type="checkbox" class="checkmark" name="selection" style="width: auto;text-align: left;vertical-align: left;">{{ "sqrm.SQ_L14750" | translate }}<br>
+                <input type="checkbox" class="checkmark" name="selection" style="width: auto;text-align: left;vertical-align: left;">{{ "sqrm.SQ_L14716" | translate }}
+              </td>
+            
+        </tr>
+      </table>
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L14717" | translate }}</button>&nbsp;
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L14718" | translate }}</button>
+    </div>
+  </div>
+
+    <div class="sub-screen-container">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L14719" | translate }}&nbsp;
+      {{ "sqrm.SQ_L14720" | translate }}&nbsp;
+      {{ "sqrm.SQ_L14721" | translate }}&nbsp;-&nbsp;
+      {{ "sqrm.SQ_L14722" | translate }}
+     
+      <div class="btnright">
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L14723" | translate }}</button>&nbsp;
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L14724" | translate }}</button>        
+      </div>
+    </div>
+
+      <wj-multi-row #returnedSamplesGrid
+        [headersVisibility]="'Column'" 
+        [selectionMode]="'None'"
+        [itemsSource]="SampleData"
+      >
+
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="status" header="{{ 'sqrm.SQ_L14725' | translate }}" [width]="100"></wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="actionNo" header="{{ 'sqrm.SQ_L14726' | translate }}" [width]="100"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L14727' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L14728' | translate }}" [width]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="productName" header="{{ 'sqrm.SQ_L14729' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="customerName" header="{{ 'sqrm.SQ_L14730' | translate }}" [width]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="darNo" header="{{ 'sqrm.SQ_L14731' | translate }}" [width]="100"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="outlineOfCorrectiveActions" header="{{ 'sqrm.SQ_L14732' | translate }}" [width]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="actionForCustomer" header="{{ 'sqrm.SQ_L14733' | translate }}" [width]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="actionDatePlan" header="{{ 'sqrm.SQ_L14734' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="actionDateDone" header="{{ 'sqrm.SQ_L14735' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="correctiveActionsMarkLotNo" header="{{ 'sqrm.SQ_L14736' | translate }}" [width]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="shipmentDate" header="{{ 'sqrm.SQ_L14737' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="lastUpdateBy" header="{{ 'sqrm.SQ_L14738' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="lastUpdate" header="{{ 'sqrm.SQ_L14739' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+      </wj-multi-row>
+    </div>
+
+    <div class="main-screen">
+      <p class="main-screen-title">{{ "sqrm.SQ_L14740" | translate }}</p>
+    </div>
+
+    <div class="sub-screen-container">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L14741" | translate }}&nbsp;
+      {{ "sqrm.SQ_L14742" | translate }}-
+      {{ "sqrm.SQ_L14743" | translate }}-
+      {{ "sqrm.SQ_L14744" | translate }}:
+      {{ "sqrm.SQ_L14745" | translate }}
+     
+    </div>
+
+      <wj-multi-row #returnedSamplesGrid
+        [headersVisibility]="'Column'" 
+        [selectionMode]="'None'"
+        [itemsSource]="SampleData"
+      >
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="actionNo" [header]="'sqrm.SQ_L14746' | translate" [rowspan]="3" [width]="100"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="delete" [header]="'sqrm.SQ_L14747' | translate" [rowspan]="3" [width]="100"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="edit" [header]="'sqrm.SQ_L14748' | translate" [rowspan]="3" [width]="100"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="status" header="{{ 'sqrm.SQ_L14749' | translate }}" [width]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="customeropen" header="{{ 'sqrm.SQ_L14760' | translate }}" [width]="200">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <input type="checkbox" style="vertical-align: 0%;">
+          </ng-template></wj-multi-row-cell>
+          <wj-multi-row-cell binding="ePart" header="{{ 'sqrm.SQ_L14761' | translate }}" [width]="200">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <input type="checkbox" style="vertical-align: 0%;">
+          </ng-template></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="outlineOfCorrectiveActions" header="{{ 'sqrm.SQ_L14751' | translate }}" [width]="350"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="actionForCustomer" header="{{ 'sqrm.SQ_L14752' | translate }}" [width]="350"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="Eupto500" header="{{ 'sqrm.SQ_L14753' | translate }}" [width]="350"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="actionDatePlan" [header]="'sqrm.SQ_L14754' | translate" [rowspan]="3" [width]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="actiondatedone" [header]="'sqrm.SQ_L14755' | translate" [rowspan]="3" [width]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="correctiveactionsmarklotNo" [header]="'sqrm.SQ_L14756' | translate" [rowspan]="3" [width]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="shipmentDate" [header]="'sqrm.SQ_L14757' | translate" [rowspan]="3" [width]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="lastupdated" [header]="'sqrm.SQ_L14758' | translate" [rowspan]="3" [width]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+      </wj-multi-row>
+    </div>
+
+    <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L14759" | translate }}</button>&nbsp;
+    

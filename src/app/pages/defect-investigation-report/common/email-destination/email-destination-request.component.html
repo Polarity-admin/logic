@@ -1,0 +1,42 @@
+<div class="sub-screen" *ngIf="currentRoute.includes('is-')">
+  <div class="sub-screen-title">
+    <div>
+      {{ "sqrm.SQ_L10011" | translate }}
+    </div>
+    <div>
+      <button class="btn btn-secondary" *ngIf="currentRoute ==='is-creation'">{{ "sqrm.SQ_L10119" | translate }}</button>
+    </div>
+
+  </div>
+  <div class="sub-screen-container">
+    <div>
+      <textarea class="form-textarea style1" disabled="{'disabled': currentRoute === 'is-creation'}"></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- MDD -->
+<div class="sub-screen" *ngIf="currentRoute.includes('mdd-')">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L16078" | translate }}</p>
+    <div class="actions" *ngIf="currentRoute ==='mdd-creation'">
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L16079" | translate }}</button>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <textarea maxlength="1000" class="form-textarea style1"  rows="3" style="width: calc(100% - 20px);" [disabled]="currentRoute === 'mdd-approval'"></textarea>
+  </div>
+</div>
+
+<!-- LSI -->
+<div class="sub-screen" *ngIf="currentRoute.includes('lsi-')">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L04098" | translate }}</p>
+    <div class="actions" *ngIf="currentRoute ==='lsi-creation'">
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L04099" | translate }}</button>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <textarea maxlength="1000" class="form-textarea style1" rows="3" style="width: calc(100% - 20px);" [disabled]="disabled"></textarea>
+  </div>
+</div>

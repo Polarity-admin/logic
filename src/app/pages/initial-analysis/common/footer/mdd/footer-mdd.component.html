@@ -1,0 +1,27 @@
+<div class="footer-btn" *ngIf="currentRoute === 'mdd-request'">
+    <div>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L05091" | translate }}</button>
+    </div>
+    <div>
+     <button class="btn btn-primary">{{ "sqrm.SQ_L05026" | translate }}</button>
+     <button class="btn btn-primary">{{ "sqrm.SQ_L05035" | translate }}</button>
+    </div>
+</div>
+
+<div class="footer-btn" *ngIf="currentRoute === 'mdd-answer'">
+  <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L05034" | translate }}</button>
+  </div>
+  <div>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L05096" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L05097" | translate }}</button>
+  </div>
+</div>
+
+<div class="footer-btn" [ngClass]="{ 'approval': currentRoute === 'mdd-approval' }" *ngIf="currentRoute === 'mdd-approval'">
+  <div>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L05036" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L05037" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L05035" | translate }}</button>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="login-page">
+    <div class="page-title">
+        {{ 'sqrm.SQ_L00000' | translate }}
+    </div>
+    <div class="sub-screen">
+        <div class="sub-screen-title">
+            {{ "sqrm.SQ_L00001" | translate }}
+        </div>
+        <div class="sub-screen-content">
+            <p [innerHTML]="'sqrm.SQ_L00310' | translate"></p>
+        </div>
+    </div>
+    <div class="sub-screen">
+        <div class="sub-screen-title">
+            {{ "sqrm.SQ_L00002" | translate }}
+        </div>
+        <div class="sub-screen-content">
+            <p [innerHTML]="'sqrm.SQ_L00311' | translate"></p>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <wj-flex-grid #grid class="grid" [itemsSource]="tableInfo" (initialized)="initializeGrid(grid)"
+            [selectionMode]="'None'" [allowResizing]="false" [headersVisibility]="'Column'">
+            <wj-flex-grid-column [width]="'*'" header="{{ 'sqrm.SQ_L00313' | translate }}" binding="title"
+                [allowMerging]="true">
+            </wj-flex-grid-column>
+            <wj-flex-grid-column [width]="'*'" header="{{ 'sqrm.SQ_L00313' | translate }}" binding="subtitle">
+            </wj-flex-grid-column>
+            <wj-flex-grid-column [width]="'3*'" header="{{ 'sqrm.SQ_L00313' | translate }}" binding="user">
+                <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+                    {{ item.section }}<br />
+                    {{ "sqrm.SQ_L00312" | translate }}：
+                    <a href="mailto:{{ item.user }} <{{ item.email }}>">{{ item.user }}（{{ item.email }}）</a>
+                    <ng-container *ngIf="item.title !== item.subtitle">
+                        &nbsp;<a href="
+							mailto:Mine, Jitsuo (SCK) <Jitsuo.Mine@sony.com>
+							?cc=SCK/QUALITY/INFORMATION/OWNER <sck-quality-information-owner@jp.sony.com>
+							&subject=[sqrm]ユーザー登録依頼/Request for User Registration
+							&body=[ユーザー登録依頼/Request for User Registration]
+							%0D%0AグローバルID/GloablID:
+							%0D%0A氏名/Name:
+							%0D%0A部署/Dept.:
+							%0D%0A申請理由/Reason for application:">{{ "sqrm.SQ_L00314" | translate }}</a>
+                    </ng-container>
+                </ng-template>
+            </wj-flex-grid-column>
+        </wj-flex-grid>
+    </div>
+</div>

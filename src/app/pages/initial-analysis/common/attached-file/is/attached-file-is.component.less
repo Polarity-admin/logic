@@ -1,0 +1,72 @@
+span.red{ color:red }
+.sub-screen-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3px auto;
+  
+    p {
+      display: inline-block;
+      margin: auto 0;
+      font-size: 16px;
+    }
+  
+    button {
+      margin-top: -11px;
+    }
+  }
+
+  table {
+    border: 1px solid #757474;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    input,
+    textarea {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 4px 8px;
+      width: calc(100% - 18px);
+    }
+
+    tr {
+      td {
+        border: 1px solid #757474;
+        padding: 3px 5px;
+
+        p {
+          margin: 5px 0;
+        }
+      }
+
+      td:first-child,
+      td:nth-child(odd) {
+        background-color: #eaeaea;
+        font-weight: bold;
+        width: 15%;
+      }
+
+      td:nth-child(even) {
+        background-color: #fff;
+      }
+    }
+  }
+  .file-upload {
+    input[type="file"] {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 4px 8px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    input[type="file"]::webkit-file-upload-button {
+      display: none;
+      visibility: hidden;
+    }
+
+    button {
+      margin-right: 5px;
+    }
+  }
+
+

@@ -1,0 +1,243 @@
+<div class="menu">
+    <i class="fas fa-times imgstyle menuclose" (click)="sidebarClose()"></i>
+    <wj-accordion #accordion [showIcons]="true" [allowCollapseAll]="true" [isAnimated]="false">
+        <wj-accordion-pane>
+            <!-- HOME -->
+            <div class="main-pane">
+                <div class="float-left">
+                    <img class="icon" src="/assets/images/invalid-name-o.png" />
+                </div>
+                <div class="label">
+                    <a class="routername menu-item" [routerLink]="'/index'" (click)="sidebarClose()">
+                        {{ 'sqrm.SQ_M00001' | translate }}</a>
+                </div>
+            </div>
+            <div class="menu-pane">
+                <ul class="list">
+                    <li><a class="linkname" (click)="sidebarClose()"> {{ 'sqrm.SQ_M00021' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()"> {{ 'sqrm.SQ_M00022' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()"> {{ 'sqrm.SQ_M00023' | translate }}</a></li>
+                </ul>
+            </div>
+        </wj-accordion-pane>
+        <wj-accordion-pane>
+            <!-- new draft -->
+            <div class="main-pane">
+                <div class="float-left">
+                    <img class="icon" src="/assets/images/invalid-name-o.png" />
+                </div>
+                <div class="label">
+                    <span class="routername menu-item">{{ 'sqrm.SQ_M00002' | translate }}</span>
+                </div>
+            </div>
+            <div class="menu-pane">
+                <ul class="list">
+                    <!-- Reception -->
+                    <li><a class="linkname" [routerLink]="'/reception/reception'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00041' | translate }}</a></li>
+                    <!-- Initial Analysis Request -->
+                    <li><a class="linkname" [routerLink]="'/initial-analysis/lsi-request'"
+                        (click)="sidebarClose()"> {{ 'sqrm.SQ_M00042' | translate }}</a></li>
+                    <!-- Various Survey Requests -->
+                    <li><a class="linkname" [routerLink]="'/various-survey/request'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00043' | translate }}</a></li>
+                    <!-- Defect Investigation Request -->
+                    <li><a class="linkname" [routerLink]="'/defect-investigation-report/is-creation'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00044' | translate }}</a></li>
+                    <!-- Mail Creation - Destination Selection, Reference, Report Selection, Checking of Content -->
+                    <li><a class="linkname" [routerLink]="'/mail/mail'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00045' | translate }}</a></li> 
+                </ul>
+            </div>
+        </wj-accordion-pane>
+        <wj-accordion-pane>
+            <div class="main-pane">
+                <div class="float-left">
+                    <img class="icon" src="/assets/images/invalid-name-o.png" />
+                </div>
+                <div class="label">
+                    <span class="routername menu-item">{{ 'sqrm.SQ_M00003' | translate }}</span>
+                </div>
+            </div>
+            <div class="menu-pane">
+                <ul class="list">
+                    <li><a class="linkname" [routerLink]="'/device'"
+                        (click)="sidebarClose()"> {{ 'sqrm.SQ_M00061' | translate }}</a></li>
+                    <li><a class="linkname" [routerLink]="'/device/temporary-saved'"
+                        (click)="sidebarClose()"> {{ 'sqrm.SQ_M00062' | translate }}</a></li>
+                </ul>
+            </div>
+        </wj-accordion-pane>
+        <wj-accordion-pane>
+            <div class="main-pane">
+                <div class="float-left">
+                    <img class="icon" src="/assets/images/invalid-name-o.png" />
+                </div>
+                <div class="label">
+                    <span class="routername menu-item">{{ 'sqrm.SQ_M00004' | translate }}</span>
+                </div>
+            </div>
+            <div class="menu-pane">
+                <ul class="list">
+                    <!-- Search and DL (List of FARs) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-reception-list/search-reception-list'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00081' | translate }}</a></li>
+                    <!-- Search and DL (List of Initial Analysis Requests) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-initial-analysis-request-list/search-initial-analysis-request-list'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00082' | translate }}</a></li>
+                    <!-- Search and DL (List of Detailed Analysis Requests) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-list-survey-requests/search-list-survey-requests'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00083' | translate }}</a></li>                
+                    <!-- Search and DL (List of Corrective Actions) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-dl-countermeasures/search-dl-countermeasures'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00084' | translate }}</a></li>
+                    <!-- Search and DL (List of Failure Analysis Reports) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-report-list/search-report-list'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00085' | translate }}</a></li>
+                    <!-- Search and DL (List of  Sending Failure Analysis Report) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-report-sending-history/search-report-sending-history'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00086' | translate }}</a></li>                        
+                    <!-- Search and DL List of defective products (LSI) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-list-defective-products-lsi/search-list-defective-products-lsi'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00087' | translate }} - LSI</a></li>
+                    <!-- Search and DL List of Defective Products (IS) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-list-defective-products-is/search-list-defective-products-is'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00087' | translate }} - IS</a></li>
+                    <!-- Search and DL List of Defective Products (DD) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-list-defective-products-dd/search-list-defective-products-dd'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00087' | translate }} - DD</a></li>
+                    <!-- Search and DL List of Defective Products (LASER) -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-list-defective-products-laser/search-list-defective-products-laser'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00087' | translate }} - Laser</a></li>
+                    <!-- Project Selection -->
+                    <li><a class="linkname"
+                        [routerLink]="'/search-project-selection/search-project-selection'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00301' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00088' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00089' | translate }}</a></li>
+                </ul>
+            </div>
+        </wj-accordion-pane>
+        <wj-accordion-pane>
+            <div class="main-pane">
+                <div class="float-left">
+                    <img class="icon" src="/assets/images/invalid-name-o.png" />
+                </div>
+                <div class="label">
+                    <span class="routername menu-item">{{ 'sqrm.SQ_M00005' | translate }}</span>
+                </div>
+            </div>
+            <div class="menu-pane">
+                <ul class="list">
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00101' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00102' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00103' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00104' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00105' | translate }}</a></li>
+                    <li><a class="linkname" 
+                        [routerLink]="'/product-shipment'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00106' | translate }}</a></li>
+                </ul>
+            </div>
+        </wj-accordion-pane>
+        <wj-accordion-pane>
+            <div class="main-pane">
+                <div class="float-left">
+                    <img class="icon" src="/assets/images/invalid-name-o.png" />
+                </div>
+                <div class="label">
+                    <span class="routername menu-item">{{ 'sqrm.SQ_M00006' | translate }}</span>
+                </div>
+            </div>
+            <div class="menu-pane">
+                <ul class="list">
+                    <!-- Processing of Failure Items -->
+                    <li><a class="linkname" [routerLink]="'/processing/processing'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00141' | translate }}</a></li>
+                </ul>
+            </div>
+        </wj-accordion-pane>
+        <wj-accordion-pane>
+            <div class="main-pane">
+                <div class="float-left">
+                    <img class="icon" src="/assets/images/invalid-name-o.png" />
+                </div>
+                <div class="label">
+                    <span class="routername menu-item">{{ 'sqrm.SQ_M00007' | translate }}</span>
+                </div>
+            </div>
+            <div class="menu-pane">
+                <ul class="list">
+                    <li><a class="linkname" [routerLink]="'/import-information/new-creation'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00161' | translate }}</a></li>
+                    <li><a class="linkname" [routerLink]="'/export-information/new-creation'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00162' | translate }}</a></li>
+                    <li><a class="linkname" [routerLink]="'/import-information/list'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00163' | translate }}</a></li>
+                    <li><a class="linkname" [routerLink]="'/export-information/list'"
+                        (click)="sidebarClose()">{{ 'sqrm.SQ_M00164' | translate }}</a></li>
+                </ul>
+            </div>
+        </wj-accordion-pane>
+        <wj-accordion-pane>
+            <div class="main-pane">
+                <div class="float-left">
+                    <img class="icon" src="/assets/images/invalid-name-o.png" />
+                </div>
+                <div class="label">
+                    <span class="routername menu-item">{{ 'sqrm.SQ_M00008' | translate }}</span>
+                </div>
+            </div>
+            <div class="menu-pane">
+                <ul class="list">
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00181' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00182' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00183' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00184' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00185' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00186' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00187' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00188' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00189' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00190' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00191' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00192' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00193' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00194' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00195' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00196' | translate }}</a></li>
+                </ul>
+            </div>
+        </wj-accordion-pane>
+        <wj-accordion-pane>
+            <div class="main-pane">
+                <div class="float-left">
+                    <img class="icon" src="/assets/images/invalid-name-o.png" />
+                </div>
+                <div class="label">
+                    <span class="routername menu-item">{{ 'sqrm.SQ_M00009' | translate }}</span>
+                </div>
+            </div>
+            <div class="menu-pane">
+                <ul class="list">
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00201' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00202' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00203' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00204' | translate }}</a></li>
+                    <li><a class="linkname" (click)="sidebarClose()">{{ 'sqrm.SQ_M00205' | translate }}</a></li>
+                </ul>
+            </div>
+        </wj-accordion-pane>
+    </wj-accordion>
+        
+</div>

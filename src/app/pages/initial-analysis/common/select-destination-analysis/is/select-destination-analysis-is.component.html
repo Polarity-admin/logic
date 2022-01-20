@@ -1,0 +1,48 @@
+<!-- IS answer -->
+<div class="sub-screen" *ngIf="currentRoute === 'is-answer' || currentRoute === 'is-approval'">
+  <div class="sub-screen-title">
+      <div class="header-title" >
+        <span *ngIf="currentRoute ==='is-answer'">{{ "sqrm.SQ_L03010" | translate }}</span>
+        <span *ngIf="currentRoute === 'is-approval'">{{ "sqrm.SQ_L03013" | translate }}</span>
+      </div>
+      <div class="actions" *ngIf="currentRoute ==='is-answer'">
+        <button class="btn btn-secondary">{{ "sqrm.SQ_L03054" | translate }}</button>
+        <button class="btn btn-secondary">{{ "sqrm.SQ_L03055" | translate }}</button>
+        <button class="btn btn-secondary">{{ "sqrm.SQ_L03056" | translate }}</button>
+      </div>
+      
+  </div>
+  <div class="sub-screen-container"> 
+    <wj-multi-row class="girdlist" #multirow [itemsSource]="selDestinationData" [headersVisibility]="'Column'" [isReadOnly]="false"
+      [selectionMode]="'Cell'"  [allowDelete]="true" [allowMerging]="true" *ngIf="currentRoute === 'is-approval'">
+      
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='name' header="{{ 'sqrm.SQ_L03182' | translate }}" [allowSorting]='false'
+                [align]="'left'" [width]="150">
+            </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='sectionName' header="{{ 'sqrm.SQ_L03183' | translate }}" [allowSorting]='false'
+                [align]="'left'" [width]="350">
+            </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        
+        <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding='eMail' header="{{ 'sqrm.SQ_L03184' | translate }}" [allowSorting]='false'
+                [align]="'left'" [width]="'*'">
+            </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <!-- <wj-multi-row-cell-group header="saveDt">
+            <wj-multi-row-cell binding='saveDt' header="{{ 'sqrm.SQ_L03185' | translate }}" [allowSorting]='false'
+                [align]="'center'" [width]="140">
+                <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                    <input type="checkbox">
+                </ng-template>
+            </wj-multi-row-cell>
+        </wj-multi-row-cell-group> -->
+      </wj-multi-row>
+  </div>
+</div>

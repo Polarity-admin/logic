@@ -1,0 +1,172 @@
+<div class="header dialog-font-color custom-dialog-header"
+  cdkDragHandle cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+>
+<button type="button" aria-label="Close this dialog" mat-dialog-close style="cursor: pointer;">×</button>
+  <p class="main-screen-title">{{ "sqrm.SQ_L02223" | translate }}</p>
+  <hr />
+</div>
+
+<mat-dialog-content class="dialog-font-color popup-90vh">
+<div class="reference">
+  <div class="sub-screen">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L02224" | translate }}</div>
+
+    <div class="sub-screen" *ngFor="let item of testData">
+      <div class="sub-screen-container">
+        <wj-multi-row #workFlowGrid
+          [allowMerging]="'ColumnHeaders'"
+          [itemsSource]="item.data"
+          [headersVisibility]="'Column'" 
+          [selectionMode]="'None'"
+          (initialized)="onInitialized(workFlowGrid)"
+        >
+            
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="ver" [header]="'sqrm.SQ_L02225' | translate" [minWidth]="150"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="customername" [header]="'sqrm.SQ_L02226' | translate" [minWidth]="150">
+              
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="productname" [header]="'sqrm.SQ_L02227' | translate" [minWidth]="150 ">
+              
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="reportno" [header]="'sqrm.SQ_L02228' | translate" [minWidth]="150"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="filename" [header]="'sqrm.SQ_L02229' | translate" [minWidth]="150">
+              
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="password" [header]="'sqrm.SQ_L02230' | translate" [minWidth]="150 ">
+              
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="filesize" [header]="'sqrm.SQ_L02231' | translate" [minWidth]="150"></wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+        </wj-multi-row>
+      </div>
+    </div>
+      
+    <div class="sub-screen-title">{{ "sqrm.SQ_L02233" | translate }}
+    </div>
+    <div class="sub-screen-title">{{ "sqrm.SQ_L02234" | translate }}
+    </div>
+  
+    <table>
+      <tr>
+        <td class="label-cell" style="width: 5%;"><p>{{ "sqrm.SQ_L02235" | translate }}</p></td>
+        <td><input type="text" class="text" style="width: calc(90% - 18px);" disabled></td>
+      </tr>
+      <tr>
+        <td class="label-cell" style="width: 5%;"><p>{{ "sqrm.SQ_L02236" | translate }}</p></td>
+        <td><input type="text" class="text" style="width: calc(90% - 18px);" disabled></td>
+      </tr>
+      <tr>
+        <td class="label-cell" style="width: 5%;"><p>{{ "sqrm.SQ_L02237" | translate }}</p></td>
+        <td><input type="text" class="text" style="width: calc(90% - 18px);" disabled></td>
+      </tr>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L02238" | translate }}</p></td>
+        <td>test</td>
+      </tr>
+    </table>
+  
+    <div class="sub-screen-title">{{ "sqrm.SQ_L02239" | translate }}
+    </div>
+    <table>
+      <tr>
+        <td class="label-cell" style="width: 18%;"><p>{{ "sqrm.SQ_L02240" | translate }}</p></td>
+        <td colspan="3"><select style="width: calc(10%);" disabled><option>MOS</option></select></td>
+      </tr>
+      <tr>
+        <td class="label-cell" style="width: 18%;"><p>{{ "sqrm.SQ_L02241" | translate }}</p></td>
+        <td colspan="3"><input type="text" class="text" style="width: calc(90% - 18px);"></td>
+      </tr>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L02242" | translate }}</p></td>
+        <td colspan="3"><textarea type ="text" rows ="15" cols="100%" max=500 style="overflow-y: scroll; width: calc(90% - 18px);"></textarea></td>
+      </tr>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L02243" | translate }}</p></td>
+        <td colspan="3"><textarea type ="text" rows ="8" cols="100%" max=500 style="overflow-y: scroll; width: calc(90% - 18px);"></textarea></td>
+      </tr>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L02244" | translate }}</p></td>
+        <td><input type="radio" name="available" style="width: auto;">{{ "sqrm.SQ_L02245" | translate }}
+          <input type="radio" name="available" style="width: auto;">{{ "sqrm.SQ_L02246" | translate }}</td>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L02247" | translate }}</p></td>
+        <td><input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02248" | translate }}</td>
+      </tr>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L02249" | translate }}</p></td>
+        <td><input type="checkbox" style="width: auto;" checked disabled></td>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L02250" | translate }}</p></td>
+        <td><input type="text" class="text" style="width: calc(80% - 18px);"></td>
+      </tr>
+    </table>
+  </div>
+
+    <div class="sub-screen-title">{{ "sqrm.SQ_L02251" | translate }}
+      <a href="#" style="float: right;"><u>{{ "sqrm.SQ_L03339" | translate }}</u></a>
+    </div>
+    <div class="sub-screen-container">
+      <wj-multi-row #grid
+      [itemsSource]="SampleAttachment" 
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+    >
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="filename" [header]="'sqrm.SQ_L02229' | translate" [width]="500">
+              
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="filesize" [header]="'sqrm.SQ_L02231' | translate" [width]="200">
+              
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+  
+          <wj-multi-row-cell-group>
+            <wj-multi-row-cell binding="uploadeddateandtime" [header]="'sqrm.SQ_L03338' | translate" [width]="263">
+              
+            </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+        </wj-multi-row>
+    </div>
+
+    <div class="sub-screen-container">
+      <form>
+        <table>
+          <tr>
+            <td class="label-cell"><p>{{ "sqrm.SQ_L02253" | translate }}</p></td>
+            <td>1102-00001</td>
+            <td class="label-cell"><p>{{ "sqrm.SQ_L02254" | translate }}</p></td>
+            <td>2011/02/07 18:20:15</td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <footer>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L02255" | translate }}</button>
+   </footer>
+   
+</div>
+</mat-dialog-content>
+

@@ -1,0 +1,203 @@
+<div class="sub-screen-divided" *ngIf="currentRoute.includes('is-')">
+    <div class="sub-screen" [ngStyle]="{ 'width': '55%' }">
+        <div class="sub-screen-title">
+            <p>{{ "sqrm.SQ_L10007" | translate }}</p>
+            <div class="actions">
+                <div class="checkbox-input">
+                    <input type="checkbox" id="checkbox_1" name="checkbox" [disabled]="currentRoute === 'is-approval'"/>
+                    <label for="checkbox_1">{{ "sqrm.SQ_L10142" | translate }}</label>
+                </div>
+            </div>
+        </div>
+        <div class="sub-screen-container">
+            <wj-multi-row [headersVisibility]="'Column'" [selectionMode]="'None'" [itemsSource]="testData">
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell binding="" [header]="'sqrm.SQ_L10099' | translate" [minWidth]="100"
+                        [width]="'*'">
+                        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" *ngIf="currentRoute === 'is-creation'" >
+                            <input type="text" class="full-width right-align" />
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell [header]="'sqrm.SQ_L10100' | translate" [minWidth]="100" [width]="'*'" >
+                        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" *ngIf="currentRoute === 'is-creation'">
+                            <input type="text" class="full-width right-align" />
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell [header]="'sqrm.SQ_L10101' | translate" [minWidth]="100" [width]="'*'" >
+                        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" *ngIf="currentRoute === 'is-creation'">
+                            <input type="text" class="full-width right-align" />
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell [header]="'sqrm.SQ_L10102' | translate" [minWidth]="100" [width]="'*'" >
+                        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" *ngIf="currentRoute === 'is-creation'">
+                            <input type="text" class="full-width right-align" />
+                        </ng-template>
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+
+                <wj-multi-row-cell-group>
+                    <wj-multi-row-cell [header]="'sqrm.SQ_L10103' | translate" [minWidth]="100" [width]="'*'">
+                    </wj-multi-row-cell>
+                </wj-multi-row-cell-group>
+            </wj-multi-row>
+        </div>
+    </div>
+
+    <div class="sub-screen" [ngStyle]="{ 'width': '45%' }">
+        <div class="sub-screen-title">
+            <div class="header-title">
+                <span>{{ "sqrm.SQ_L10104" | translate }}</span>
+                <span *ngIf="currentRoute === 'is-creation'">{{ "sqrm.SQ_L10105" | translate }}</span>
+            </div>
+        </div>
+        <div class="sub-screen-container">
+            <textarea rows="5" style="margin-top: 10px; width: calc(100% - 20px);"
+                [ngClass]="{'display-none': currentRoute ==='is-approval'}"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- MDD -->
+<div class="sub-screen-divided" *ngIf="currentRoute.includes('mdd-')">
+  <div class="sub-screen" [ngStyle]="{ 'width': '55%' }">
+    <div class="sub-screen-title">
+      <p>{{ "sqrm.SQ_L16050" | translate }}</p>
+      <div class="actions">
+        <div class="checkbox-input">
+          <input type="checkbox" id="checkbox_1" name="checkbox" />
+          <label for="checkbox_1">{{ "sqrm.SQ_L16051" | translate }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="sub-screen-container">
+      <wj-flex-grid
+        [itemsSource]="testData"
+        [headersVisibility]="'Column'" 
+        [selectionMode]="'None'"
+      >
+        <wj-flex-grid-column binding="debitNote" [header]="'sqrm.SQ_L16052' | translate" [minWidth]="150" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="full-width right-align">
+              <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+              <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.debitNote}}</span>
+            </div>
+          </ng-template>
+        </wj-flex-grid-column>
+        <wj-flex-grid-column binding="customerResponsibility" [header]="'sqrm.SQ_L16053' | translate" [minWidth]="150" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="full-width right-align">
+              <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+              <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.customerResponsibility}}</span>
+            </div>
+          </ng-template>
+        </wj-flex-grid-column>
+        <wj-flex-grid-column binding="goodSample" [header]="'sqrm.SQ_L16054' | translate" [minWidth]="150" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="full-width right-align">
+              <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+              <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.goodSample}}</span>
+            </div>
+          </ng-template>
+        </wj-flex-grid-column>
+        <wj-flex-grid-column binding="others" [header]="'sqrm.SQ_L16055' | translate" [minWidth]="150" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <div class="full-width right-align">
+              <input type="number" class="full-width right-align" *ngIf="currentRoute === 'mdd-creation'"/>
+              <span *ngIf="currentRoute === 'mdd-approval'">{{cell.item.others}}</span>
+            </div>
+          </ng-template>
+        </wj-flex-grid-column>
+        <wj-flex-grid-column binding="total" [header]="'sqrm.SQ_L16056' | translate" [minWidth]="150" [width]="'*'"></wj-flex-grid-column>
+      </wj-flex-grid>
+    </div>
+  </div>
+
+  <div class="sub-screen" [ngStyle]="{ 'width': '45%' }">
+    <div class="sub-screen-title">
+      <div class="header-title">
+        <span>{{ "sqrm.SQ_L16057" | translate }}</span>
+        <span *ngIf="currentRoute === 'mdd-creation'">{{ "sqrm.SQ_L16058" | translate }}</span>
+      </div>
+    </div>
+    <div class="sub-screen-container">
+      <textarea rows="5" style="margin-top: 10px; width: calc(100% - 20px);" *ngIf="currentRoute === 'mdd-creation'"></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- LSI -->
+<div class="sub-screen-divided" *ngIf="currentRoute.includes('lsi-')">
+  <div class="sub-screen" [ngStyle]="{ 'width': '55%' }">
+    <div class="sub-screen-title">
+      <p>{{ "sqrm.SQ_L04066" | translate }}</p>
+      <div class="actions">
+        <div class="checkbox-input">
+          <input type="checkbox" id="checkbox_1" name="checkbox" [disabled]="currentRoute === 'lsi-approval'" />
+          <label for="checkbox_1">{{ "sqrm.SQ_L04067" | translate }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="sub-screen-container">
+      <wj-flex-grid
+        [headersVisibility]="'Column'"
+        [selectionMode]="'None'"
+        [itemsSource]="testData"
+      >
+          <wj-flex-grid-column binding="debitNote" [header]="'sqrm.SQ_L04068' | translate" [minWidth]="100" [width]="'*'">
+            <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+              <div class="full-width right-align">
+                <input type="number" class="full-width right-align" *ngIf="currentRoute === 'lsi-creation'"/>
+                <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.debitNote}}</span>
+              </div>
+            </ng-template>
+          </wj-flex-grid-column>
+          <wj-flex-grid-column binding="customerResponsibility" [header]="'sqrm.SQ_L04069' | translate" [minWidth]="100" [width]="'*'">
+            <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+              <div class="full-width right-align">
+                <input type="number" class="full-width right-align" *ngIf="currentRoute === 'lsi-creation'"/>
+                <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.customerResponsibility}}</span>
+              </div>
+            </ng-template>
+          </wj-flex-grid-column>
+          <wj-flex-grid-column binding="goodSample" [header]="'sqrm.SQ_L04070' | translate" [minWidth]="100" [width]="'*'">
+            <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+              <div class="full-width right-align">
+                <input type="number" class="full-width right-align" *ngIf="currentRoute === 'lsi-creation'"/>
+                <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.goodSample}}</span>
+              </div>
+            </ng-template>
+          </wj-flex-grid-column>
+          <wj-flex-grid-column binding="other" [header]="'sqrm.SQ_L04071' | translate" [minWidth]="100" [width]="'*'">
+            <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+              <div class="full-width right-align">
+                <input type="number" class="full-width right-align" *ngIf="currentRoute === 'lsi-creation'"/>
+                <span *ngIf="currentRoute === 'lsi-approval'">{{cell.item.other}}</span>
+              </div>
+            </ng-template>
+          </wj-flex-grid-column>
+          <wj-flex-grid-column binding="total" [header]="'sqrm.SQ_L04072' | translate" [minWidth]="100" [width]="'*'"></wj-flex-grid-column>
+      </wj-flex-grid>
+    </div>
+  </div>
+
+  <div class="sub-screen" [ngStyle]="{ 'width': '45%' }">
+    <div class="sub-screen-title">
+      <div class="header-title">
+        <span>{{ "sqrm.SQ_L04073" | translate }}</span>
+        <span *ngIf="currentRoute === 'lsi-creation'">{{ "sqrm.SQ_L04074" | translate }}</span>
+      </div>
+    </div>
+    <div class="sub-screen-container">
+      <textarea rows="5" style="margin-top: 10px; width: calc(100% - 20px);" *ngIf="currentRoute === 'lsi-creation'"></textarea>
+    </div>
+  </div>
+</div>

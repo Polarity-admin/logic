@@ -1,0 +1,230 @@
+<!-- IS-Creation -->
+<div class="sub-screen" *ngIf="currentRoute === 'is-creation'">
+  <div class="sub-screen-title">
+    <p>{{ 'sqrm.SQ_L10004' | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <form>
+      <table class="style1">
+        <tr>
+          <td>
+            <p>{{"sqrm.SQ_L10025" | translate }}</p>
+          </td>
+          <td> <label>{{ "sqrm.SQ_L10014" | translate }}</label></td>
+          <td>
+            <p>{{ "sqrm.SQ_L10015" | translate }}</p>
+          </td>
+          <td><label>{{ "sqrm.SQ_L10015" | translate }}</label></td>
+          <td>
+            <p>{{ "sqrm.SQ_L10016" | translate }}</p>
+          </td>
+          <td><label>{{ 'sqrm.SQ_L10016' | translate }}</label></td>
+        </tr>
+
+        <tr>
+          <td>
+            <p>{{ 'sqrm.SQ_L10017' | translate }}</p>
+          </td>
+          <td> <label>{{ 'sqrm.SQ_L10017' | translate }}</label></td>
+          <td>
+            <p>{{ 'sqrm.SQ_L10018' | translate }}</p>
+          </td>
+          <td><label>{{ 'sqrm.SQ_L10018' | translate }}</label></td>
+          <td>
+            <p>{{ 'sqrm.SQ_L10019' | translate }}</p>
+          </td>
+          <td><label>{{ 'sqrm.SQ_L10019' | translate }}</label></td>
+        </tr>
+      </table>
+      <table class="style1" style="margin-top:5px">
+        <tr>
+          <td>
+            <p>{{ 'sqrm.SQ_L10020' | translate }}</p>
+          </td>
+          <td><input type="text" /></td>
+          <td>
+            <p>{{ 'sqrm.SQ_L10021' | translate }}</p>
+          </td>
+          <td><input type="text" /></td>
+        </tr>
+
+        <tr>
+          <td>
+            <p>{{ 'sqrm.SQ_L10022' | translate }}</p>
+          </td>
+          <td><input type="text" /></td>
+          <td>
+            <p>{{ 'sqrm.SQ_L10023' | translate }}</p>
+          </td>
+          <td><input type="text" /></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+<!-- IS APRROVAL -->
+<div class="sub-screen" *ngIf="currentRoute === 'is-approval'">
+  <div class="sub-screen-title">
+    <p>{{ 'sqrm.SQ_L10004' | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <form>
+      <table class="style1">
+        <tr>
+          <td><p>{{ 'sqrm.SQ_L10020' | translate }}</p></td>
+          <td colspan="3"><label>{{ 'sqrm.SQ_L10020' | translate }}</label></td>
+        </tr>
+        <tr>
+          <td>
+            <p>{{ 'sqrm.SQ_L10017' | translate }}</p>
+          </td>
+          <td> <label>{{ 'sqrm.SQ_L10017' | translate }}</label></td>
+         
+          <td>
+            <p>{{ 'sqrm.SQ_L10019' | translate }}</p>
+          </td>
+          <td><label>{{ 'sqrm.SQ_L10019' | translate }}</label></td>
+        </tr>
+      </table>
+    
+    </form>
+  </div>
+</div>
+
+<!-- MDD-Creation -->
+<div class="sub-screen" *ngIf="currentRoute === 'mdd-creation'">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L16002" | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <table>
+      <tr class="three">
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16003" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16004" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16005" | translate }}</p></td>
+        <td>2021/12/10</td>
+      </tr>
+      <tr class="three">
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16006" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16007" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16008" | translate }}</p></td>
+        <td>Test Data</td>
+      </tr>
+    </table>
+    <table style="margin-top: 5px">
+      <tr class="two">
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16009" | translate }}</p></td>
+        <td><input type="text" /></td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16010" | translate }}</p></td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr class="two">
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16011" | translate }}</p></td>
+        <td><input type="text" /></td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16012" | translate }}</p></td>
+        <td><input type="text" /></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- MDD-Approval -->
+<div class="sub-screen" *ngIf="currentRoute === 'mdd-approval'">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L16002" | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <table>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16009" | translate }}</p></td>
+        <td colspan="3">Test Data</td>
+      </tr>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16006" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L16008" | translate }}</p></td>
+        <td>Test Data</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- LSI Creation -->
+<div class="sub-screen" *ngIf="currentRoute === 'lsi-creation'">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L04005" | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <table>
+      <tr class="three">
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04006" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04007" | translate }}</p></td>
+        <td>2021/12/10</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04008" | translate }}</p></td>
+        <td>2021/12/10</td>
+      </tr>
+      <tr class="three">
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04009" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04010" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04011" | translate }}</p></td>
+        <td>Test Data</td>
+      </tr>
+    </table>
+    <table style="margin-top: 5px;">
+      <tr class="two">
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04012" | translate }}</p></td>
+        <td><input type="text" /></td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04013" | translate }}</p></td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr class="two">
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04014" | translate }}</p></td>
+        <td><input type="text" /></td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04015" | translate }}</p></td>
+        <td><input type="text" /></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- LSI Approval -->
+<div class="sub-screen" *ngIf="currentRoute === 'lsi-approval'">
+  <div class="sub-screen-title">
+    <p>{{ "sqrm.SQ_L04005" | translate }}</p>
+  </div>
+  <div class="sub-screen-container">
+    <table>
+      <tr >
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04012" | translate }}</p></td>
+        <td colspan="3">Test Data</td>
+      </tr>
+      <tr>
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04009" | translate }}</p></td>
+        <td>Test Data</td>
+
+        <td class="label-cell"><p>{{ "sqrm.SQ_L04011" | translate }}</p></td>
+        <td>Test Data</td>
+      </tr>
+    </table>
+  </div>
+</div>

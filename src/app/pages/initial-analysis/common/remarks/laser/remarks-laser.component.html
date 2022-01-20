@@ -1,0 +1,19 @@
+<!-- Laser answer -->
+<div class="sub-screen" *ngIf="currentRoute === 'laser-answer' || currentRoute === 'laser-approval'">
+  <div class="sub-screen-title">
+      <div *ngIf="currentRoute === 'laser-answer'">
+        {{ "sqrm.SQ_L01006" | translate }}
+      </div>
+      <div *ngIf="currentRoute === 'laser-approval'">
+        {{ "sqrm.SQ_L01086" | translate }}
+      </div>
+  </div>
+  <div class="sub-screen-container">
+    <div  *ngIf="currentRoute === 'laser-answer'">
+      <textarea class="form-textarea style1"></textarea>
+      <!-- <p *ngIf="currentRoute === 'laser-approval'">{{ "sqrm.SQ_L01085" | translate }}</p> -->
+    </div>
+    
+    
+  </div>
+</div>

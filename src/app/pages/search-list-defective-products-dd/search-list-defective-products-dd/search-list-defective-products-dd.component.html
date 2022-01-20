@@ -1,0 +1,266 @@
+<div class="search-list-defective-products-dd page-content">
+  <div class="main-screen">
+    <p class="main-screen-title">{{ "sqrm.SQ_L13844" | translate }}</p>
+  </div>
+
+  <div class="sub-screen">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L13845" | translate }}
+      <a href="#" style="float: right;"><u>{{ "sqrm.SQ_L13846" | translate }}</u></a>
+    </div>
+    <div class="sub-screen-container">
+      <table>
+        <tr>
+          <td><p class="required">{{ "sqrm.SQ_L13847" | translate }}</p></td>
+          <td>
+            <select style="width:40%">
+              <option>DD</option>
+              <option></option>
+            </select>
+          </td>
+          <td><p>{{ "sqrm.SQ_L13848" | translate }}</p></td>
+        <td><select style="width: 40%;">
+              <option>-</option>
+            </select>&nbsp;
+            <select>
+              <option>-</option>
+            </select>
+        </td>
+          <td><p>{{ "sqrm.SQ_L13849" | translate }}</p></td>
+          <td><select style="width: 70%;">
+            <option>-</option>
+          </select>   
+          </td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13850" | translate }}</p></td>
+          <td>
+            <input type="text" class="text" style="width: calc(60% - 18px)">
+          </td>
+          <td><p>{{ "sqrm.SQ_L13851" | translate }}</p></td>
+          <td><wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 55%;"></wj-input-date>&nbsp;-<br>
+            <wj-input-date id="reportDateInit" format="yyyy/MM/dd" style="width: 55%;"></wj-input-date></td>
+          <td><p>{{ "sqrm.SQ_L13852" | translate }}</p></td>
+          <td><select style="width: 70%;"><option>-</option></select></td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13853" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(70% - 18px);"></td>
+          <td><p>{{ "sqrm.SQ_L13854" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(50% - 18px);"><br>
+            <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13855" | translate }}</button></td>
+            <td><p>{{ "sqrm.SQ_L13856" | translate }}</p></td>
+            <td>
+              <input type="text" class="text" style="width: calc(70% - 18px)">
+            </td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13857" | translate }}</p></td>
+          <td><select style="width: 100%;"><option>-</option></select></td>
+          <td><p>{{ "sqrm.SQ_L13858" | translate }}</p></td>
+        <td><select style="width: 40%;"><option>-</option></select><br>
+        <select style="width: 45%;"><option>-</option></select></td>
+        <td><p>{{ "sqrm.SQ_L13859" | translate }}</p></td>
+        <td><select style="width: 100%;"><option>-</option></select></td>
+        </tr>
+        <tr>
+          <td><p>{{ "sqrm.SQ_L13860" | translate }}</p></td>
+          <td><input type="text" class="text" style="width: calc(60% - 18px)"></td>
+          <td><p>{{ "sqrm.SQ_L13861" | translate }}</p></td>
+          <td>
+            <input type="text" class="text" style="width: calc(60% - 18px)">
+          </td>
+        </tr>
+      </table>
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13862" | translate }}</button>&nbsp;
+      <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13863" | translate }}</button>
+      <button type="button" class="btn btn-secondary" style="float: right;">{{ "sqrm.SQ_L13864" | translate }}</button>
+    </div>
+  </div>
+
+    <div class="main-screen">
+      <p class="main-screen-title">{{ "sqrm.SQ_L13844" | translate }}</p>
+    </div>
+
+    <div class="sub-screen-container">
+    <div class="sub-screen-title">{{ "sqrm.SQ_L13865" | translate }}&nbsp;
+      {{ "sqrm.SQ_L13866" | translate }}&nbsp;
+      {{ "sqrm.SQ_L13867" | translate }}&nbsp;-&nbsp;
+      {{ "sqrm.SQ_L13868" | translate }}
+     
+      <div class="btnright">
+        <div class="file-upload">
+          <input type="file" />
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13869" | translate }}</button>&nbsp;
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13870" | translate }}</button>
+          <input type="checkbox" style="width: auto;">
+          {{ "sqrm.SQ_L13922" | translate }}
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13871" | translate }}</button>&nbsp;
+          <button type="button" class="btn" style="border:1px solid">{{ "sqrm.SQ_L13872" | translate }}</button>
+        </div>
+      </div>
+    </div>
+
+      <wj-multi-row #returnedSamplesGrid
+        [headersVisibility]="'Column'" 
+        [selectionMode]="'None'"
+        [itemsSource]="SampleData"
+        [frozenColumns]="6"
+      >
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="select" [header]="'sqrm.SQ_L13873' | translate" [width]="50">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <input type="checkbox" style="text-align: center;vertical-align: middle;width: 100%;">
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="navi" [header]="'sqrm.SQ_L13874' | translate" [width]="80">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <button type="button" class="btn" style="border: 1px solid;width: 60px;">Navi</button>
+            </ng-template>
+          </wj-multi-row-cell>
+          </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="registrationCategory" [header]="'sqrm.SQ_L13875' | translate" [minWidth]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="receptionNo" header="{{ 'sqrm.SQ_L13876' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="customerName" header="{{ 'sqrm.SQ_L13878' | translate }}" [width]="250"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="productCategory" header="{{ 'sqrm.SQ_L13880' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="receptionDate" header="{{ 'sqrm.SQ_L13877' | translate }}" [width]="250"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="productName" header="{{ 'sqrm.SQ_L13879' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="type" header="{{ 'sqrm.SQ_L13881' | translate }}" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell  [colspan]="3" [width]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="customerSampleNo" [header]="'sqrm.SQ_L13882' | translate" [minWidth]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="sonySampleNo" [header]="'sqrm.SQ_L13883' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="markLotNo" [header]="'sqrm.SQ_L13884' | translate" [minWidth]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="id" [header]="'sqrm.SQ_L13885' | translate" [minWidth]="150"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group >
+          <wj-multi-row-cell binding="dateOfFailureOccurence" [header]="'sqrm.SQ_L13886' | translate" [minWidth]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="regionOfFailure" [header]="'sqrm.SQ_L13887' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="processOfFailure" [header]="'sqrm.SQ_L13888' | translate" [minWidth]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="detailProcessOfFailure" [header]="'sqrm.SQ_L13889' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+        
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="failureMode" [header]="'sqrm.SQ_L13890' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="confirmationSymptom" [header]="'sqrm.SQ_L13891' | translate" [minWidth]="300"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="detailOfFailureMode" [header]="'sqrm.SQ_L13892' | translate" [minWidth]="350">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <textarea type ="text" rows ="2" max=500 style="overflow-y: scroll;width: 100%;"></textarea>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="causedbyanoutbreak" [header]="'sqrm.SQ_L13893' | translate" [minWidth]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="position" [header]="'sqrm.SQ_L13894' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="result" [header]="'sqrm.SQ_L13895' | translate" [minWidth]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="sampletreatment" [header]="'sqrm.SQ_L13896' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="defectivenessmodeNo" [header]="'sqrm.SQ_L13897' | translate" [minWidth]="200"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="defectivemodename" [header]="'sqrm.SQ_L13898' | translate" [minWidth]="200"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="poormodeclassification" [header]="'sqrm.SQ_L13899' | translate" [minWidth]="270">
+            <ng-template wjMultiRowCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+              <div style="display: block;justify-content: left;">
+                  {{ 'sqrm.SQ_L13899' | translate }} &nbsp; 
+                  <button style="color: #409eff; border: 1px solid #409eff; background-color: #ecf5ff; border-radius: 3px;">{{ 'sqrm.SQ_L13900' | translate }}</button>
+              </div>
+          </ng-template>
+          </wj-multi-row-cell>
+          <wj-multi-row-cell binding="kpiaddingupmoon" [header]="'sqrm.SQ_L13901' | translate" [minWidth]="270"></wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="resultofdetailedinvestigation" [header]="'sqrm.SQ_L13902' | translate" [minWidth]="350">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <textarea type ="text" rows ="2" max=500 style="overflow-y: scroll;width: 100%;"></textarea>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="appearancetest" header="{{ 'sqrm.SQ_L13904' | translate }}"  [colspan]="3" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="direction" header="{{ 'sqrm.SQ_L13906' | translate }}" [width]="80"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="result" header="{{ 'sqrm.SQ_L13907' | translate }}" [width]="80"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="detail" header="{{ 'sqrm.SQ_L13908' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <textarea type ="text" rows ="2" max=500 style="overflow-y: scroll;width: 100%;"></textarea>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="dt" header="{{ 'sqrm.SQ_L13909' | translate }}"  [colspan]="2" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="result" header="{{ 'sqrm.SQ_L13910' | translate }}" [width]="80"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="detail" header="{{ 'sqrm.SQ_L13911' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <textarea type ="text" rows ="2" max=500 style="overflow-y: scroll;width: 100%;"></textarea>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="customerset" header="{{ 'sqrm.SQ_L13912' | translate }}"  [colspan]="2" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="result" header="{{ 'sqrm.SQ_L13914' | translate }}" [width]="80"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="detail" header="{{ 'sqrm.SQ_L13915' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <textarea type ="text" rows ="2" max=500 style="overflow-y: scroll;width: 100%;"></textarea>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="customerrepresentative" header="{{ 'sqrm.SQ_L13916' | translate }}"  [colspan]="2" [width]="150"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="result" header="{{ 'sqrm.SQ_L13917' | translate }}" [width]="80"></wj-multi-row-cell>
+          <wj-multi-row-cell binding="detail" header="{{ 'sqrm.SQ_L13918' | translate }}" [width]="200">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <textarea type ="text" rows ="2" max=500 style="overflow-y: scroll;width: 100%;"></textarea>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="remarks" [header]="'sqrm.SQ_L13919' | translate" [minWidth]="100">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <textarea type ="text" rows ="2" max=500 style="overflow-y: scroll;width: 100%;"></textarea>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+      </wj-multi-row>
+    </div>
+
+    <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13920" | translate }}</button>&nbsp;
+    <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L13921" | translate }}</button>
+
+ 

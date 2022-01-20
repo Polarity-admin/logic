@@ -1,0 +1,24 @@
+<mat-dialog-content class="dialog-font-color popup-90vh">
+  <div class="sub-screen">
+    <div class="sub-screen-title">
+      <span>{{ 'sqrm.SQ_L06098' | translate}}</span>
+    </div>
+    <div class="sub-screen-container">
+      <p>{{ 'sqrm.SQ_L06099' | translate}}</p>
+      <table>
+        <tr>
+          <td>{{ 'sqrm.SQ_L06100' | translate }}</td>
+        </tr>
+        <tr><td style="background-color: #fff;"><input type="checkbox" /></td></tr>
+      </table>
+    </div>
+  </div>
+
+<!-- Dialog Footer -->
+  <div class="footer-btn" [ngStyle]="{ 'justify-content': 'flex-end' }">
+    <div>
+      <button class="btn btn-primary btn-fw" > {{ 'sqrm.SQ_L06101' | translate }}</button>
+      <button class="btn btn-primary btn-fw" mat-dialog-close> {{ 'sqrm.SQ_L06102' | translate }}</button>
+    </div>
+  </div>
+</mat-dialog-content>

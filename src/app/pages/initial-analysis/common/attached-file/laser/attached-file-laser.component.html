@@ -1,0 +1,51 @@
+<!-- Laser answer -->
+<div class="sub-screen">
+  <div class="sub-screen-title">
+      <div>
+        {{ "sqrm.SQ_L01005" | translate }}
+      </div>
+  </div>
+  <div class="sub-screen-container">
+    <div *ngIf="currentRoute === 'laser-answer'">
+      <input type="file" id="myFile" name="filename">
+      <button class="btn btn-secondary">{{ "sqrm.SQ_L01032" | translate }}</button>
+    </div>
+    <wj-multi-row class="girdlist " #multirow    
+      [itemsSource]="attachedFileData"
+      headersVisibility="Column"
+      [alternatingRowStep]="1"
+    >
+    <wj-multi-row-cell-group header="fileName">
+      <wj-multi-row-cell binding='fileName' header="{{ 'sqrm.SQ_L06081' | translate }}" [allowSorting]='false'
+          [align]="'left'" [width]="'*'">
+          <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item" v-slot="cell">
+              <a href="#" style="text-decoration: underline;">{{cell.item.fileName}}</a>
+          </ng-template>
+      </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+      <wj-multi-row-cell binding='fileSize' header="{{ 'sqrm.SQ_L06082' | translate }}" [allowSorting]='false'
+          [align]="'left'" [width]="'*'">
+      </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    <wj-multi-row-cell-group>
+      <wj-multi-row-cell binding='UploadDateTime' header="{{ 'sqrm.SQ_L06083' | translate }}" [allowSorting]='false'
+          [align]="'left'" [width]="'*'">
+      </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+    
+    <wj-multi-row-cell-group header="delete" *ngIf="currentRoute === 'laser-answer'">
+        <wj-multi-row-cell binding='delete' header="{{ 'sqrm.SQ_L06084' | translate }}" [allowSorting]='false'
+            [align]="'center'" [width]="140">
+            <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell" let-item="item">
+                <button class="btn btn-secondary">{{ 'sqrm.SQ_L06084' | translate }}</button>
+            </ng-template>
+        </wj-multi-row-cell>
+    </wj-multi-row-cell-group>
+
+    
+  </wj-multi-row>
+  </div>
+</div>

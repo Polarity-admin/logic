@@ -1,0 +1,78 @@
+<div class="sub-screen">
+
+  <div class="sub-screen-title"><p>{{ "sqrm.SQ_L02272" | translate }}
+    {{ "sqrm.SQ_L02287" | translate }}
+    {{ "sqrm.SQ_L02288" | translate }} -
+    {{ "sqrm.SQ_L02289" | translate }}
+  </p>
+    <div class="btnright" style="float: right;">
+    <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02273" | translate }}</button>&nbsp;
+    <button type="button" class="btn btn-secondary">{{ "sqrm.SQ_L02274" | translate }}</button>
+    </div>
+  </div>
+
+  <div class="sub-screen-container">
+    <wj-multi-row #grid
+    [itemsSource]="SampleData" 
+    [headersVisibility]="'Column'" 
+    [selectionMode]="'None'"
+  >
+      <wj-multi-row-cell-group>
+        <wj-multi-row-cell binding="select" [header]="'sqrm.SQ_L02275' | translate" [width]="100">
+          <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+            <input type="checkbox" />
+          </ng-template>
+        </wj-multi-row-cell>
+      </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="ver" [header]="'sqrm.SQ_L02276' | translate" [width]="100">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="customername" [header]="'sqrm.SQ_L02277' | translate" [width]="200">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="productname" [header]="'sqrm.SQ_L02278' | translate" [width]="200">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="reportno" [header]="'sqrm.SQ_L02279' | translate" [width]="200">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="filename" [header]="'sqrm.SQ_L02280' | translate" [width]="200">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="password" [header]="'sqrm.SQ_L02281' | translate" [width]="200">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="filesize" [header]="'sqrm.SQ_L02282' | translate" [width]="200">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="sentdate" [header]="'sqrm.SQ_L02283' | translate" [width]="200">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+      </wj-multi-row>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="footer-btn" *ngIf="currentRoute === 'laser-request'">
+    <div>
+      <button class="btn btn-primary">{{ "sqrm.SQ_L06088" | translate }}</button>
+    </div>
+    <div>
+     <button class="btn btn-primary">{{ "sqrm.SQ_L06026" | translate }}</button>
+     <button class="btn btn-primary">{{ "sqrm.SQ_L06035" | translate }}</button>
+    </div>
+</div>
+
+<div class="footer-btn" *ngIf="currentRoute ==='laser-answer'">
+  <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L06103" | translate }}</button>
+  </div>
+  <div>
+   <button class="btn btn-primary" (click)="showActions()">{{ "sqrm.SQ_L06104" | translate }}</button>
+   <button class="btn btn-primary" (click)="close()">{{ "sqrm.SQ_L06105" | translate }}</button>
+  </div>
+</div>
+
+<div class="footer-btn" [ngClass]="{ 'approval': currentRoute === 'laser-approval' }" *ngIf="currentRoute === 'laser-approval'">
+  <div>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L06036" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L06037" | translate }}</button>
+   <button class="btn btn-primary">{{ "sqrm.SQ_L06035" | translate }}</button>
+  </div>
+</div>
+
+
+

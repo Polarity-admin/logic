@@ -1,0 +1,28 @@
+{
+  "sqrm": {
+    "SQ_L14678": "Select item(s): 初期解析依頼",
+    "SQ_L14679": "Search conditions",
+    "SQ_L14680": "Close",
+    "SQ_L14681": "Category",
+    "SQ_L14682": "Product category",
+    "SQ_L14683": "Reception No.",
+    "SQ_L14684": "Reception date",
+    "SQ_L14685": "Product name",
+    "SQ_L14686": "Customer name",
+    "SQ_L14687": "Select customer",
+    "SQ_L14688": "Recipient group/Customer representative",
+    "SQ_L14689": "Search",
+    "SQ_L14690": "Search result:",
+    "SQ_L14691": "5",
+    "SQ_L14692": "[1]",
+    "SQ_L14693": "[5]",
+    "SQ_L14694": "Back",
+    "SQ_L14695": "Forward",
+    "SQ_L14696": "Scope",
+    "SQ_L14697": "Progress for customer",
+    "SQ_L14698": "Progress for analysis",
+    "SQ_L14699": "Urgency of report",
+    "SQ_L14700": "Failure mode Ouline of request",
+    "SQ_L14701": "Business group name PL category"
+  }
+}

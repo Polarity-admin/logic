@@ -1,0 +1,22 @@
+{
+  "40": [
+    {
+      "val": "",
+      "label": "-"
+    },
+    {
+      "val": "01",
+      "label": "外販"
+    },
+    {
+      "val": "02",
+      "label": "内販"
+    }
+  ],
+  "_TMP-D2001-COMPANY": [
+    {
+      "val": "sony",
+      "label": "Sony Semiconductor Corporation (SCK)"
+    }
+  ]
+}

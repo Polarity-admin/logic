@@ -1,0 +1,17 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-clip-rotate" [fullScreen]="true">
+  <p style="color: white">処理中</p>
+</ngx-spinner>
+<div id="overlay" class="overlay"></div>
+<app-top-bar id="top-bar"></app-top-bar>
+<mat-sidenav-container>
+  <mat-sidenav mode="over" #sidenav>
+    <app-sidebar-nav (closeClick)="sidenav.toggle()"></app-sidebar-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header-bar (menuClick)="sidenav.toggle()" id="header-bar"></app-header-bar>
+    <div class="container" [ngxWatermark]="options">
+      <!--This is to avoid reload during acquireTokenSilent() because of hidden iframe -->
+      <router-outlet *ngIf="!isIframe"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

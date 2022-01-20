@@ -1,0 +1,46 @@
+{
+  "sqrm": {
+
+    "SQ_L14561": "List of sending failure analysis report",
+    "SQ_L14562": "Search conditions",
+    "SQ_L14563": "Close",
+    "SQ_L14564": "Category",
+    "SQ_L14565": "Product category",
+    "SQ_L14566": "Delivery No.",
+    "SQ_L14567": "Reception No.",
+    "SQ_L14568": "Reception date",
+    "SQ_L14569": "Recipient group/Customer representative",
+    "SQ_L14570": "Product name",
+    "SQ_L14571": "Customer name",
+    "SQ_L14572": "Select customer",
+    "SQ_L14573": "Download",
+    "SQ_L14574": "Search",
+
+    "SQ_L14575": "Required data",
+    "SQ_L14576": "Open",
+
+
+    "SQ_L14577": "Delivery No.",
+    "SQ_L14578": "Report No.",
+    "SQ_L14579": "Ver.",
+    "SQ_L14580": "Customer name",
+    "SQ_L14581": "Product name",
+    "SQ_L14582": "TAT for initial report",
+    "SQ_L14583": "TAT for final report",
+    "SQ_L14584": "Report date",
+    "SQ_L14585": "Sent date and time",
+    "SQ_L14586": "Sender",
+    "SQ_L14587": "Customer representative",
+    "SQ_L14588": "Reset",
+    "SQ_L14589": "Select all",
+
+    "SQ_L14590": "Search result:",
+    "SQ_L14591": "1",
+    "SQ_L14592": "[1]",
+    "SQ_L14593": "[1]",
+    "SQ_L14596": "Answer time limit (Initial)",
+    "SQ_L14597": "Answer time limit (Final)",
+    "SQ_L14594": "Back",
+    "SQ_L14595": "Forward"
+  }
+}

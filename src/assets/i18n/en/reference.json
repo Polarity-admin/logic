@@ -1,0 +1,42 @@
+{
+  "sqrm": {
+    "SQ_L02223": "Send e-mailPreview",
+    "SQ_L02224": "Analysis report",
+    "SQ_L02225": "Ver",
+    "SQ_L02226": "Customer Name",
+    "SQ_L02227": "Product Name",
+    "SQ_L02228": "Report No.",
+    "SQ_L02229": "File Name",
+
+    "SQ_L02230": "Password",
+    "SQ_L02231": "File size",
+    "SQ_L02232": "Total",
+    "SQ_L02233": "FAR",
+    "SQ_L02234": "Destinations",
+    "SQ_L02235": "To",
+    "SQ_L02236": "CC",
+    "SQ_L02237": "BCC",
+    "SQ_L02238": "From",
+    "SQ_L02239": "Subject / body",
+    "SQ_L02240": "Template",
+    "SQ_L02241": "Subject",
+    "SQ_L02242": "Body",
+    "SQ_L02243": "Signature",
+    "SQ_L02244": "Upload a report",
+    "SQ_L02245": "Available",
+    "SQ_L02246": "Unavailable",
+    "SQ_L02247": "URL",
+    "SQ_L02248": "Add",
+
+    "SQ_L02249": "Compress the attachment",
+    "SQ_L02250": "Zip password",
+
+    "SQ_L02251": "Attachment file *Size limit: 3MB (1 file)",
+    "SQ_L02252": "Open",
+    "SQ_L02253": "Sender",
+    "SQ_L02254": "Sent date",
+    "SQ_L02255": "Resend",
+    "SQ_L03338": "Uploaded date and time",
+    "SQ_L03339": "Close"
+  }
+}

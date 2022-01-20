@@ -1,0 +1,48 @@
+<div class="sub-screen">
+  <div class="sub-screen-title">
+    <p class="required">{{ "sqrm.SQ_L00157" | translate }}</p> 
+    <div class="actions">
+      <div class="checkbox-input">
+        <input type="checkbox" id="checkbox_1" name="checkbox" [disabled]="currentRoute === 'approve'"/>
+        <label for="checkbox_1">{{ "sqrm.SQ_L00158" | translate }}</label>
+      </div>
+      <button class="btn btn-secondary" *ngIf="currentRoute === 'request'" (click)="showSelectRequestDestinationDialog()">{{ "sqrm.SQ_L00159" | translate }}</button>
+      <button class="btn btn-secondary" *ngIf="currentRoute === 'answer'" (click)="showSelectApproverDialog()">{{ "sqrm.SQ_L00184" | translate }}</button>
+    </div>
+  </div>
+  <div class="sub-screen-container">
+    <wj-flex-grid
+      [headersVisibility]="'Column'" 
+      [selectionMode]="'None'"
+      [itemsSource]="workFlowData" 
+    >
+      <wj-flex-grid-column binding="step" [header]="'sqrm.SQ_L00160' | translate" [minWidth]="100"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="name" [header]="'sqrm.SQ_L00161' | translate" [minWidth]="150"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="sectionName" [header]="'sqrm.SQ_L00162' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <div class="full-width">
+            <wj-combo-box
+              [itemsSource]="dropDownData"
+              [isDroppedDown]="false"
+              [isAnimated]="true"
+              *ngIf="currentRoute === 'request'"
+            ></wj-combo-box> 
+            <span *ngIf="currentRoute !== 'request'">{{ cell.item.sectionName }}</span>
+          </div>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="completionDate" [header]="'sqrm.SQ_L00163' | translate" [minWidth]="150"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="result" [header]="'sqrm.SQ_L00164' | translate" [minWidth]="150"></wj-flex-grid-column>
+      <wj-flex-grid-column binding="comments" [header]="'sqrm.SQ_L00165' | translate" [minWidth]="150" [width]="'*'">
+        <ng-template wjMultiRowCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <input type="text" class="full-width"/>
+        </ng-template>
+      </wj-flex-grid-column>
+      <wj-flex-grid-column binding="delete" [header]="'sqrm.SQ_L00166' | translate" [minWidth]="150" *ngIf="currentRoute !== 'approve'">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+          <button class="btn btn-secondary">{{ 'sqrm.SQ_L00166' | translate }}</button>
+        </ng-template>
+      </wj-flex-grid-column>
+    </wj-flex-grid>
+  </div>
+</div>

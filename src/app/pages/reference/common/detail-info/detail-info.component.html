@@ -1,0 +1,114 @@
+<div class="sub-screen">
+  <div class="sub-screen-title">{{ "sqrm.SQ_L02224" | translate }}
+  </div>
+
+
+  <div class="sub-screen-container">
+    <wj-multi-row #grid
+    [itemsSource]="returnedSamplesData" 
+    [headersVisibility]="'Column'" 
+    [selectionMode]="'None'"
+  >
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="ver" [header]="'sqrm.SQ_L02225' | translate" [width]="200">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="customername" [header]="'sqrm.SQ_L02226' | translate" [width]="250">
+           
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="productname" [header]="'sqrm.SQ_L02227' | translate" [width]="250">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="reportno" [header]="'sqrm.SQ_L02228' | translate" [width]="250">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="filename" [header]="'sqrm.SQ_L02229' | translate" [width]="250">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="password" [header]="'sqrm.SQ_L02230' | translate" [width]="250">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="filesize" [header]="'sqrm.SQ_L02231' | translate" [width]="250">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+      </wj-multi-row>
+  </div>
+
+  <div class="sub-screen-title">{{ "sqrm.SQ_L02233" | translate }}
+  </div>
+  <div class="sub-screen-title">{{ "sqrm.SQ_L02234" | translate }}
+  </div>
+
+  <table>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02235" | translate }}</p></td>
+      <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+    </tr>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02236" | translate }}</p></td>
+      <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+    </tr>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02237" | translate }}</p></td>
+      <td><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+    </tr>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02238" | translate }}</p></td>
+      <td>test</td>
+    </tr>
+  </table>
+
+  <div class="sub-screen-title">{{ "sqrm.SQ_L02239" | translate }}
+  </div>
+  <table>
+    <tr>
+      <td class="label-cell" style="width: 20%;"><p>{{ "sqrm.SQ_L02240" | translate }}</p></td>
+      <td colspan="3"><select style="width: calc(10%);"><option>MOS</option></select></td>
+    </tr>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02241" | translate }}</p></td>
+      <td colspan="3"><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+    </tr>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02242" | translate }}</p></td>
+      <td colspan="3"><textarea type ="text" rows ="15" cols="100%" max=500 style="overflow-y: scroll;"></textarea></td>
+    </tr>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02243" | translate }}</p></td>
+      <td colspan="3"><textarea type ="text" rows ="8" cols="100%" max=500 style="overflow-y: scroll;"></textarea></td>
+    </tr>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02244" | translate }}</p></td>
+      <td><input type="radio" name="available" style="width: auto;">{{ "sqrm.SQ_L02245" | translate }}
+        <input type="radio" name="available" style="width: auto;">{{ "sqrm.SQ_L02246" | translate }}</td>
+      <td class="label-cell" style="background-color: #eaeaea;"><p>{{ "sqrm.SQ_L02247" | translate }}</p></td>
+      <td style="width: 30%;"><input type="checkbox" style="width: auto;">{{ "sqrm.SQ_L02248" | translate }}</td>
+    </tr>
+    <tr>
+      <td class="label-cell"><p>{{ "sqrm.SQ_L02249" | translate }}</p></td>
+      <td><input type="checkbox" style="width: auto;"></td>
+      <td class="label-cell" style="background-color: #eaeaea;"><p>{{ "sqrm.SQ_L02250" | translate }}</p></td>
+      <td style="width: 30%;"><input type="text" class="text" style="width: calc(100% - 18px);"></td>
+    </tr>
+  </table>
+
+</div>

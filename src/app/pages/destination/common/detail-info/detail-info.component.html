@@ -1,0 +1,44 @@
+<div class="sub-screen">
+  <div class="sub-screen-container">
+    <wj-multi-row #grid
+    [itemsSource]="returnedSamplesData" 
+    [headersVisibility]="'Column'" 
+    [selectionMode]="'None'"
+  >
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="select" [header]="'sqrm.SQ_L02195' | translate" [width]="150">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <input type="checkbox" />
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="customername" [header]="'sqrm.SQ_L02196' | translate" [width]="250">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="name" [header]="'sqrm.SQ_L02197' | translate" [width]="250">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="email" [header]="'sqrm.SQ_L02198' | translate" [width]="250">
+            
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+
+        <wj-multi-row-cell-group>
+          <wj-multi-row-cell binding="tocc" [header]="'sqrm.SQ_L02199' | translate" [width]="250">
+            <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-item="item">
+              <select><option>To</option></select>
+            </ng-template>
+          </wj-multi-row-cell>
+        </wj-multi-row-cell-group>
+      </wj-multi-row>
+  </div>
+
+  

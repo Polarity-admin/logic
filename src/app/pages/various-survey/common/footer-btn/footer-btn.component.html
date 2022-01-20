@@ -1,0 +1,20 @@
+<div class="footer-btn align-right" *ngIf="currentRoute === 'request'">
+  <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L00175" | translate }}</button>
+  <button class="btn btn-primary">{{ "sqrm.SQ_L00176" | translate }}</button>
+</div>
+
+<div class="footer-btn" *ngIf="currentRoute === 'answer'">
+  <button class="btn btn-primary">{{ "sqrm.SQ_L00194" | translate }}</button>
+  <div>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L00195" | translate }}</button>
+    <button class="btn btn-primary">{{ "sqrm.SQ_L00196" | translate }}</button>
+  </div>
+</div>
+
+  <div class="footer-btn align-right" *ngIf="currentRoute === 'approve'">
+    <div>
+      <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L00197" | translate }}</button>
+      <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L00198" | translate }}</button>
+      <button class="btn btn-primary btn-fw">{{ "sqrm.SQ_L00199" | translate }}</button>
+    </div>
+  </div>
